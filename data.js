@@ -584,30 +584,596 @@ export const bannerLinks = [
 ];
 
 export const categories_menu = [
-  { id: 1, name: "Beauty", slug: "beauty" },
-  { id: 2, name: "Fragrances", slug: "fragrances" },
-  { id: 3, name: "Furniture", slug: "furniture" },
-  { id: 4, name: "Groceries", slug: "groceries" },
-  { id: 5, name: "Home Decoration", slug: "home-decoration" },
-  { id: 6, name: "Kitchen Accessories", slug: "kitchen-accessories" },
-  { id: 7, name: "Laptops", slug: "laptops" },
-  { id: 8, name: "Mens Shirts", slug: "mens-shirts" },
-  { id: 9, name: "Mens Shoes", slug: "mens-shoes" },
-  { id: 10, name: "Mens Watches", slug: "mens-watches" },
-  { id: 11, name: "Mobile Accessories", slug: "mobile-accessories" },
-  { id: 12, name: "Motorcycle", slug: "motorcycle" },
-  { id: 13, name: "Skin Care", slug: "skin-care" },
-  { id: 14, name: "Smartphones", slug: "smartphones" },
-  { id: 15, name: "Sports Accessories", slug: "sports-accessories" },
-  { id: 16, name: "Sunglasses", slug: "sunglasses" },
-  { id: 17, name: "Tablets", slug: "tablets" },
-  { id: 18, name: "Tops", slug: "tops" },
- { id: 19, name: "Vehicle", slug: "vehicle" },
-  { id: 20, name: "Womens Bags", slug: "womens-bags" },
-  { id: 21, name: "Womens Dresses", slug: "womens-dresses" },
-  { id: 22, name: "Womens Jewellery", slug: "womens-jewellery" },
-  { id: 23, name: "Womens Shoes", slug: "womens-shoes" },
-  { id: 24, name: "Womens Watches", slug: "womens-watches" }];
+	{ id: 1, name: "Beauty", slug: "beauty" },
+	{ id: 2, name: "Fragrances", slug: "fragrances" },
+	{ id: 3, name: "Furniture", slug: "furniture" },
+	{ id: 4, name: "Groceries", slug: "groceries" },
+	{ id: 5, name: "Home Decoration", slug: "home-decoration" },
+	{ id: 6, name: "Kitchen Accessories", slug: "kitchen-accessories" },
+	{ id: 7, name: "Laptops", slug: "laptops" },
+	{ id: 8, name: "Mens Shirts", slug: "mens-shirts" },
+	{ id: 9, name: "Mens Shoes", slug: "mens-shoes" },
+	{ id: 10, name: "Mens Watches", slug: "mens-watches" },
+	{ id: 11, name: "Mobile Accessories", slug: "mobile-accessories" },
+	{ id: 12, name: "Motorcycle", slug: "motorcycle" },
+	{ id: 13, name: "Skin Care", slug: "skin-care" },
+	{ id: 14, name: "Smartphones", slug: "smartphones" },
+	{ id: 15, name: "Sports Accessories", slug: "sports-accessories" },
+	{ id: 16, name: "Sunglasses", slug: "sunglasses" },
+	{ id: 17, name: "Tablets", slug: "tablets" },
+	{ id: 18, name: "Tops", slug: "tops" },
+	{ id: 19, name: "Vehicle", slug: "vehicle" },
+	{ id: 20, name: "Womens Bags", slug: "womens-bags" },
+	{ id: 21, name: "Womens Dresses", slug: "womens-dresses" },
+	{ id: 22, name: "Womens Jewellery", slug: "womens-jewellery" },
+	{ id: 23, name: "Womens Shoes", slug: "womens-shoes" },
+	{ id: 24, name: "Womens Watches", slug: "womens-watches" },
+];
+
+export const productsByCategory = {
+	beauty: [
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/makeup/makeup1.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "300$",
+			discount: "200$",
+		},
+		,
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/makeup/makeup2.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "200$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/makeup/makeup3.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "150$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/makeup/makeup4.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "1000$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/makeup/makeup5.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "400$",
+			discount: "200$",
+		},
+	],
+	fragrances: [
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum1.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "1050$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum2.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "2050$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum3.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "3050$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum4.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "4050$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum5.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "2050$",
+			discount: "200$",
+		},
+
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum6.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "1000$",
+			discount: "200$",
+		},
+
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum7.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "1500$",
+			discount: "200$",
+		},
+
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum8.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "1450$",
+			discount: "200$",
+		},
+
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum9.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "1200$",
+			discount: "200$",
+		},
+
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum10.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "3500$",
+			discount: "200$",
+		},
+
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum11.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "1050$",
+			discount: "200$",
+		},
+
+		{
+			id: crypto.randomUUID(),
+			img: "/basket/Perfums/perfum12.png",
+			label: "Vegetables",
+			title: "Chanel Coco Noir Eau De",
+			stock: "IN STOCK",
+			rate: 4.5,
+			offer: "16.5%",
+			price: "1050$",
+			discount: "200$",
+		},
+	],
+	furniture: [
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/furn/bed1.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "2500$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/furn/bed1.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "2000$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/furn/bed3.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "1500$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/furn/bed2.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "1500$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/furn/bed4.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "1000$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/furn/caution.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "2050$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/furn/caution2.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "1050$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/furn/caution3.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "1050$",
+			discount: "200$",
+		},
+
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/furn/sufa.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "4050$",
+			discount: "200$",
+		},
+
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/furn/chair.webp",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "800$",
+			discount: "200$",
+		},
+	],
+	groceries: [
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/animalFood.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "20$",
+			discount: "200$",
+		},
+		,
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/animalFood2.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "35$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/bread.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "3$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/chicken.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "10$",
+			discount: "200$",
+		},
+
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/egg.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "5$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/honey.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "25$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/kewei.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "40$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/meat1.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "50$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/pepper.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "15$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/snacks1.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "30$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/steak.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "60$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/salmon.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "100$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/oil.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "4$",
+			discount: "200$",
+		},
+		{
+			id: crypto.randomUUID(),
+
+			img: "/basket/gros/vegetables.png",
+			label: "Pan Pizza",
+			title: "Annibale Colombo Bed",
+			stock: "IN STOCK",
+			rate: 3,
+			offer: "20%",
+			price: "10$",
+			discount: "200$",
+		},
+	],
+	// ... add more for each slug
+};
+
+export const brands = [
+  { name: "Essence", count: 1 },
+  { name: "Glamour Beauty", count: 1 },
+  { name: "Velvet Touch", count: 1 },
+  { name: "Chic Cosmetics", count: 1 },
+  { name: "Nail Couture", count: 1 },
+  { name: "Calvin Klein", count: 2 },
+  { name: "Chanel", count: 1 },
+  { name: "Dior", count: 1 },
+  { name: "Dolce & Gabbana", count: 1 },
+  { name: "Gucci", count: 1 },
+  { name: "Annibale Colombo", count: 2 },
+  { name: "Furniture Co.", count: 1 },
+  { name: "Knoll", count: 1 },
+  { name: "Bath Trends", count: 1 },
+  { name: "Apple", count: 14 },
+  { name: "Asus", count: 1 },
+  { name: "Huawei", count: 1 },
+  { name: "Lenovo", count: 1 },
+  { name: "Dell", count: 1 },
+  { name: "Fashion Trends", count: 1 },
+  { name: "Gigabyte", count: 1 },
+  { name: "Classic Wear", count: 1 },
+  { name: "Casual Comfort", count: 1 },
+  { name: "Urban Chic", count: 2 },
+  { name: "Nike", count: 2 },
+  { name: "Puma", count: 1 },
+  { name: "Off White", count: 2 },
+  { name: "Fashion Timepieces", count: 1 },
+  { name: "Longines", count: 1 },
+  { name: "Rolex", count: 6 },
+  { name: "Amazon", count: 1 },
+  { name: "Beats", count: 1 },
+  { name: "TechGear", count: 1 },
+  { name: "GadgetMaster", count: 1 },
+  { name: "SnapTech", count: 1 },
+  { name: "ProVision", count: 1 },
+  { name: "Generic Motors", count: 1 },
+  { name: "Kawasaki", count: 1 },
+  { name: "MotoGP", count: 1 },
+  { name: "ScootMaster", count: 1 },
+  { name: "SpeedMaster", count: 1 },
+  { name: "Attitude", count: 1 },
+  { name: "Olay", count: 1 },
+  { name: "Vaseline", count: 1 },
+  { name: "Oppo", count: 3 },
+  { name: "Realme", count: 3 },
+  { name: "Samsung", count: 5 },
+  { name: "Vivo", count: 3 },
+  { name: "Fashion Shades", count: 4 },
+  { name: "Fashion Fun", count: 1 },
+  { name: "Chrysler", count: 2 },
+  { name: "Dodge", count: 3 },
+  { name: "Fashionista", count: 1 },
+  { name: "Heshe", count: 1 },
+  { name: "Prada", count: 1 },
+  { name: "Elegance Collection", count: 1 },
+  { name: "Comfort Trends", count: 1 },
+  { name: "Fashion Diva", count: 1 },
+  { name: "Pampi", count: 1 },
+  { name: "Fashion Express", count: 1 },
+  { name: "IWC", count: 1 },
+  { name: "Fashion Gold", count: 1 },
+  { name: "Fashion Co.", count: 1 }
+];
 
 
 export const E_NavLinks = [
@@ -680,6 +1246,26 @@ export const E_Slider = [
 		btnText: "Shop Now",
 		slide: "/basket/slide6.webp",
 	},
+];
+
+export const E_Shop_Slider = [
+	{
+		slide: "/basket/banner1.jpg",
+	},
+
+	{
+		slide: "/basket/banner2.jpg",
+	},
+	{
+		slide: "/basket/banner3.jpg",
+	},
+	{
+		slide: "/basket/banner4.jpg",
+	},
+	// {
+
+	// 	slide: "/basket/banner6.webp",
+	// },
 ];
 
 export const E_Catagories = [
@@ -839,7 +1425,7 @@ export const E_WeekDeals = [
 	{
 		id: crypto.randomUUID(),
 
-		img: "/basket/bed1.png",
+		img: "/basket/furn/bed1.png",
 		label: "Pan Pizza",
 		title: "Annibale Colombo Bed",
 		stock: "IN STOCK",
@@ -852,7 +1438,7 @@ export const E_WeekDeals = [
 	{
 		id: crypto.randomUUID(),
 
-		img: "/basket/bed2.png",
+		img: "/basket/furn/bed2.png",
 		label: "Carbonara",
 		title: "Annibale Colombo Bed",
 		stock: "LOW STOCK",
@@ -864,7 +1450,7 @@ export const E_WeekDeals = [
 	{
 		id: crypto.randomUUID(),
 
-		img: "/basket/bed3.png",
+		img: "/basket/furn/bed3.png",
 		label: "Tomato Flavor",
 		title: "Annibale Colombo Bed",
 		stock: "LOW STOCK",
@@ -875,7 +1461,7 @@ export const E_WeekDeals = [
 	},
 	{
 		id: crypto.randomUUID(),
-		img: "/basket/caution2.png",
+		img: "/basket/furn/caution2.png",
 		label: "Tomato Flavor",
 		title: "Annibale Colombo Bed",
 		stock: "LOW STOCK",
@@ -887,7 +1473,7 @@ export const E_WeekDeals = [
 	{
 		id: crypto.randomUUID(),
 
-		img: "/basket/caution.png",
+		img: "/basket/furn/caution.png",
 		label: "Tomato Flavor",
 		title: "Annibale Colombo Bed",
 		stock: "LOW STOCK",
@@ -928,7 +1514,7 @@ export const E_WeekDeals = [
 	// },
 ];
 
-export const  E_HotDeal = [
+export const E_HotDeal = [
 	{
 		id: crypto.randomUUID(),
 		img: "/basket/Perfums/perfum9.png",
@@ -981,7 +1567,7 @@ export const  E_HotDeal = [
 	{
 		id: crypto.randomUUID(),
 
-		img: "/basket/bed1.png",
+		img: "/basket/furn/bed1.png",
 		label: "Pan Pizza",
 		title: "Annibale Colombo Bed",
 		stock: "IN STOCK",
@@ -994,7 +1580,7 @@ export const  E_HotDeal = [
 	{
 		id: crypto.randomUUID(),
 
-		img: "/basket/bed2.png",
+		img: "/basket/furn/bed2.png",
 		label: "Carbonara",
 		title: "Annibale Colombo Bed",
 		stock: "LOW STOCK",
@@ -1006,7 +1592,7 @@ export const  E_HotDeal = [
 	{
 		id: crypto.randomUUID(),
 
-		img: "/basket/bed3.png",
+		img: "/basket/furn/bed3.png",
 		label: "Tomato Flavor",
 		title: "Annibale Colombo Bed",
 		stock: "LOW STOCK",
@@ -1017,7 +1603,7 @@ export const  E_HotDeal = [
 	},
 	{
 		id: crypto.randomUUID(),
-		img: "/basket/caution2.png",
+		img: "/basket/furn/caution2.png",
 		label: "Tomato Flavor",
 		title: "Annibale Colombo Bed",
 		stock: "LOW STOCK",
@@ -1029,7 +1615,7 @@ export const  E_HotDeal = [
 	{
 		id: crypto.randomUUID(),
 
-		img: "/basket/caution.png",
+		img: "/basket/furn/caution.png",
 		label: "Tomato Flavor",
 		title: "Annibale Colombo Bed",
 		stock: "LOW STOCK",
@@ -1069,216 +1655,236 @@ export const  E_HotDeal = [
 	// 	title: "Canederli",
 	// },
 ];
-export const E_CardDiscount =[
+export const E_CardDiscount = [
 	{
-		img:'/basket/bg/offer1.png',
-		label:'Weekend Discount 40%',
-		Title:'Organic Eggs',
-		slugon:'Eat one every day'
+		img: "/basket/bg/offer1.png",
+		label: "Weekend Discount 40%",
+		Title: "Organic Eggs",
+		slugon: "Eat one every day",
 	},
-		{
-		img:'/basket/bg/offer2.png',
-		label:'Weekend Discount 40%',
-		Title:'Organic Eggs',
-		slugon:'Eat one every day'
+	{
+		img: "/basket/bg/offer2.png",
+		label: "Weekend Discount 40%",
+		Title: "Organic Eggs",
+		slugon: "Eat one every day",
 	},
-		{
-		img:'/basket/bg/offer3.png',
-		label:'Weekend Discount 40%',
-		Title:'Organic Eggs',
-		slugon:'Eat one every day'
-	}
-]
+	{
+		img: "/basket/bg/offer3.png",
+		label: "Weekend Discount 40%",
+		Title: "Organic Eggs",
+		slugon: "Eat one every day",
+	},
+];
 
-export const E_LocalBanner =[
+export const E_LocalBanner = [
 	{
-		img:'/basket/bg/local1.png'
+		img: "/basket/bg/local1.png",
 	},
 	{
-		img:'/basket/bg/local2.png'
+		img: "/basket/bg/local2.png",
 	},
 	{
-		img:'/basket/bg/local3.png'
+		img: "/basket/bg/local3.png",
 	},
 	{
-		img:'/basket/bg/local1.png'
+		img: "/basket/bg/local1.png",
 	},
 	{
-		img:'/basket/bg/local2.png'
+		img: "/basket/bg/local2.png",
 	},
 	{
-		img:'/basket/bg/local3.png'
+		img: "/basket/bg/local3.png",
 	},
-]
+];
 
 export const paymentMethods = [
-  {
-    name: "Visa",
-    icon: (
-      <svg
-        className="icon icon--full-color"
-        viewBox="0 0 38 24"
-        xmlns="http://www.w3.org/2000/svg"
-        role="img"
-        width="50"
-        height="30"
-        aria-labelledby="pi-visa"
-      >
-        <title id="pi-visa">Visa</title>
-        <path
-          opacity=".07"
-          d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
-        />
-        <path
-          fill="#fff"
-          d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
-        />
-        <path
-          d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
-          fill="#142688"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "Mastercard",
-    icon: (
-      <svg
-        className="icon icon--full-color"
-        viewBox="0 0 38 24"
-        xmlns="http://www.w3.org/2000/svg"
-        role="img"
-        width="50"
-        height="30"
-        aria-labelledby="pi-master"
-      >
-        <title id="pi-master">Mastercard</title>
-        <path
-          opacity=".07"
-          d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
-        />
-        <path
-          fill="#fff"
-          d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
-        />
-        <circle fill="#EB001B" cx="15" cy="12" r="7" />
-        <circle fill="#F79E1B" cx="23" cy="12" r="7" />
-        <path
-          fill="#FF5F00"
-          d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "PayPal",
-    icon: (
-      <svg
-        className="icon icon--full-color"
-        viewBox="0 0 38 24"
-        xmlns="http://www.w3.org/2000/svg"
-        width="50"
-        height="30"
-        role="img"
-        aria-labelledby="pi-paypal"
-      >
-        <title id="pi-paypal">PayPal</title>
-        <path
-          opacity=".07"
-          d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
-        />
-        <path
-          fill="#fff"
-          d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
-        />
-        <path
-          fill="#003087"
-          d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"
-        />
-        <path
-          fill="#3086C8"
-          d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"
-        />
-        <path
-          fill="#012169"
-          d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"
-        />
-      </svg>
-    ),
-  },
+	{
+		name: "Visa",
+		icon: (
+			<svg
+				className="icon icon--full-color"
+				viewBox="0 0 38 24"
+				xmlns="http://www.w3.org/2000/svg"
+				role="img"
+				width="50"
+				height="30"
+				aria-labelledby="pi-visa"
+			>
+				<title id="pi-visa">Visa</title>
+				<path
+					opacity=".07"
+					d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+				/>
+				<path
+					fill="#fff"
+					d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+				/>
+				<path
+					d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+					fill="#142688"
+				/>
+			</svg>
+		),
+	},
+	{
+		name: "Mastercard",
+		icon: (
+			<svg
+				className="icon icon--full-color"
+				viewBox="0 0 38 24"
+				xmlns="http://www.w3.org/2000/svg"
+				role="img"
+				width="50"
+				height="30"
+				aria-labelledby="pi-master"
+			>
+				<title id="pi-master">Mastercard</title>
+				<path
+					opacity=".07"
+					d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+				/>
+				<path
+					fill="#fff"
+					d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+				/>
+				<circle fill="#EB001B" cx="15" cy="12" r="7" />
+				<circle fill="#F79E1B" cx="23" cy="12" r="7" />
+				<path
+					fill="#FF5F00"
+					d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"
+				/>
+			</svg>
+		),
+	},
+	{
+		name: "PayPal",
+		icon: (
+			<svg
+				className="icon icon--full-color"
+				viewBox="0 0 38 24"
+				xmlns="http://www.w3.org/2000/svg"
+				width="50"
+				height="30"
+				role="img"
+				aria-labelledby="pi-paypal"
+			>
+				<title id="pi-paypal">PayPal</title>
+				<path
+					opacity=".07"
+					d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+				/>
+				<path
+					fill="#fff"
+					d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+				/>
+				<path
+					fill="#003087"
+					d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"
+				/>
+				<path
+					fill="#3086C8"
+					d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"
+				/>
+				<path
+					fill="#012169"
+					d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"
+				/>
+			</svg>
+		),
+	},
 ];
 
 export const categoriesFooter = [
-  {
-    title: "Fruit & Vegetables",
-    items: [
-      { name: "Fresh Vegetables", path: "/fruit-vegetables/fresh-vegetables" },
-      { name: "Herbs & Seasonings", path: "/fruit-vegetables/herbs-seasonings" },
-      { name: "Fresh Fruits", path: "/fruit-vegetables/fresh-fruits" },
-      { name: "Cuts & Sprouts", path: "/fruit-vegetables/cuts-sprouts" },
-      { name: "Exotic Fruits & Veggies", path: "/fruit-vegetables/exotic-fruits-veggies" },
-      { name: "Packaged Produce", path: "/fruit-vegetables/packaged-produce" },
-      { name: "Party Trays", path: "/fruit-vegetables/party-trays" }
-    ]
-  },
-  {
-    title: "Breakfast & Dairy",
-    items: [
-      { name: "Milk & Flavoured Milk", path: "/breakfast-dairy/milk-flavoured-milk" },
-      { name: "Butter and Margarine", path: "/breakfast-dairy/butter-and-margarine" },
-      { name: "Cheese", path: "/breakfast-dairy/cheese" },
-      { name: "Eggs Substitutes", path: "/breakfast-dairy/eggs-substitutes" },
-      { name: "Honey", path: "/breakfast-dairy/honey" },
-      { name: "Marmalades", path: "/breakfast-dairy/marmalades" },
-      { name: "Sour Cream and Dips", path: "/breakfast-dairy/sour-cream-dips" },
-      { name: "Yogurt", path: "/breakfast-dairy/yogurt" }
-    ]
-  },
-  {
-    title: "Meat & Seafood",
-    items: [
-      { name: "Breakfast Sausage", path: "/meat-seafood/breakfast-sausage" },
-      { name: "Breakfast Sausage", path: "/meat-seafood/breakfast-sausage" }, // duplicate in original
-      { name: "Dinner Sausage", path: "/meat-seafood/dinner-sausage" },
-      { name: "Beef", path: "/meat-seafood/beef" },
-      { name: "Chicken", path: "/meat-seafood/chicken" },
-      { name: "Sliced Deli Meat", path: "/meat-seafood/sliced-deli-meat" },
-      { name: "Shrimp", path: "/meat-seafood/shrimp" },
-      { name: "Wild Caught Fillets", path: "/meat-seafood/wild-caught-fillets" },
-      { name: "Crab and Shellfish", path: "/meat-seafood/crab-shellfish" },
-      { name: "Farm Raised Fillets", path: "/meat-seafood/farm-raised-fillets" }
-    ]
-  },
-  {
-    title: "Beverages",
-    items: [
-      { name: "Sparkling Water", path: "/beverages/sparkling-water" },
-      { name: "Soda & Pop", path: "/beverages/soda-pop" },
-      { name: "Coffee", path: "/beverages/coffee" },
-      { name: "Milk & Plant-Based Milk", path: "/beverages/milk-plant-based-milk" },
-      { name: "Tea & Kombucha", path: "/beverages/tea-kombucha" },
-      { name: "Drink Boxes & Pouches", path: "/beverages/drink-boxes-pouches" },
-      { name: "Craft Beer", path: "/beverages/craft-beer" },
-      { name: "Wine", path: "/beverages/wine" }
-    ]
-  },
-  {
-    title: "Breads & Bakery",
-    items: [
-      { name: "Milk & Flavoured Milk", path: "/breads-bakery/milk-flavoured-milk" },
-      { name: "Butter and Margarine", path: "/breads-bakery/butter-and-margarine" },
-      { name: "Eggs Substitutes", path: "/breads-bakery/eggs-substitutes" },
-      { name: "Honey", path: "/breads-bakery/honey" },
-      { name: "Marmalades", path: "/breads-bakery/marmalades" },
-      { name: "Sour Cream and Dips", path: "/breads-bakery/sour-cream-dips" },
-      { name: "Yogurt", path: "/breads-bakery/yogurt" }
-    ]
-  }
+	{
+		title: "Fruit & Vegetables",
+		items: [
+			{ name: "Fresh Vegetables", path: "/fruit-vegetables/fresh-vegetables" },
+			{
+				name: "Herbs & Seasonings",
+				path: "/fruit-vegetables/herbs-seasonings",
+			},
+			{ name: "Fresh Fruits", path: "/fruit-vegetables/fresh-fruits" },
+			{ name: "Cuts & Sprouts", path: "/fruit-vegetables/cuts-sprouts" },
+			{
+				name: "Exotic Fruits & Veggies",
+				path: "/fruit-vegetables/exotic-fruits-veggies",
+			},
+			{ name: "Packaged Produce", path: "/fruit-vegetables/packaged-produce" },
+			{ name: "Party Trays", path: "/fruit-vegetables/party-trays" },
+		],
+	},
+	{
+		title: "Breakfast & Dairy",
+		items: [
+			{
+				name: "Milk & Flavoured Milk",
+				path: "/breakfast-dairy/milk-flavoured-milk",
+			},
+			{
+				name: "Butter and Margarine",
+				path: "/breakfast-dairy/butter-and-margarine",
+			},
+			{ name: "Cheese", path: "/breakfast-dairy/cheese" },
+			{ name: "Eggs Substitutes", path: "/breakfast-dairy/eggs-substitutes" },
+			{ name: "Honey", path: "/breakfast-dairy/honey" },
+			{ name: "Marmalades", path: "/breakfast-dairy/marmalades" },
+			{ name: "Sour Cream and Dips", path: "/breakfast-dairy/sour-cream-dips" },
+			{ name: "Yogurt", path: "/breakfast-dairy/yogurt" },
+		],
+	},
+	{
+		title: "Meat & Seafood",
+		items: [
+			{ name: "Breakfast Sausage", path: "/meat-seafood/breakfast-sausage" },
+			{ name: "Breakfast Sausage", path: "/meat-seafood/breakfast-sausage" }, // duplicate in original
+			{ name: "Dinner Sausage", path: "/meat-seafood/dinner-sausage" },
+			{ name: "Beef", path: "/meat-seafood/beef" },
+			{ name: "Chicken", path: "/meat-seafood/chicken" },
+			{ name: "Sliced Deli Meat", path: "/meat-seafood/sliced-deli-meat" },
+			{ name: "Shrimp", path: "/meat-seafood/shrimp" },
+			{
+				name: "Wild Caught Fillets",
+				path: "/meat-seafood/wild-caught-fillets",
+			},
+			{ name: "Crab and Shellfish", path: "/meat-seafood/crab-shellfish" },
+			{
+				name: "Farm Raised Fillets",
+				path: "/meat-seafood/farm-raised-fillets",
+			},
+		],
+	},
+	{
+		title: "Beverages",
+		items: [
+			{ name: "Sparkling Water", path: "/beverages/sparkling-water" },
+			{ name: "Soda & Pop", path: "/beverages/soda-pop" },
+			{ name: "Coffee", path: "/beverages/coffee" },
+			{
+				name: "Milk & Plant-Based Milk",
+				path: "/beverages/milk-plant-based-milk",
+			},
+			{ name: "Tea & Kombucha", path: "/beverages/tea-kombucha" },
+			{ name: "Drink Boxes & Pouches", path: "/beverages/drink-boxes-pouches" },
+			{ name: "Craft Beer", path: "/beverages/craft-beer" },
+			{ name: "Wine", path: "/beverages/wine" },
+		],
+	},
+	{
+		title: "Breads & Bakery",
+		items: [
+			{
+				name: "Milk & Flavoured Milk",
+				path: "/breads-bakery/milk-flavoured-milk",
+			},
+			{
+				name: "Butter and Margarine",
+				path: "/breads-bakery/butter-and-margarine",
+			},
+			{ name: "Eggs Substitutes", path: "/breads-bakery/eggs-substitutes" },
+			{ name: "Honey", path: "/breads-bakery/honey" },
+			{ name: "Marmalades", path: "/breads-bakery/marmalades" },
+			{ name: "Sour Cream and Dips", path: "/breads-bakery/sour-cream-dips" },
+			{ name: "Yogurt", path: "/breads-bakery/yogurt" },
+		],
+	},
 ];
-
-
-
-
-
-
-

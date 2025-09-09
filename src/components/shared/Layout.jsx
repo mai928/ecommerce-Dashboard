@@ -10,7 +10,7 @@ import AuthNav from './AuthNav'
 const Layout = ({ children }) => {
   const pathname = usePathname()
 
-  // 🟣 Match pages like /sign-in and /sign-up even if they have query strings
+  //  Match pages like /sign-in and /sign-up even if they have query strings
   const isAuthPage = pathname.includes('/sign-in') || pathname.includes('/sign-up')
 
   const [openMinSideBar, setHandleMinSideBar] = useState(false)

@@ -2,14 +2,24 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { bannerLinks, categories_menu, E_NavLinks } from '../../data'
 import Link from 'next/link'
-import { AlignLeft, ChevronDown, Menu, Search, ShoppingBasket, ShoppingCart, User2, X } from 'lucide-react'
-import { usePathname } from 'next/navigation'
+import { AlignLeft, ChevronDown, Heart, Menu, Search, ShoppingBasket, ShoppingCart, User2, X } from 'lucide-react'
+import { usePathname, useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
+import useWishListStore from './zustand/WishListStore'
+import useCartStore from './zustand/CartStore'
+import { ClerkLoaded, SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 
 const Banner = () => {
+  const router = useRouter()
+  const items = useWishListStore((state) => state.items)
+  const Cart = useCartStore((state) => state.Cart)
   const [toggle, setToggle] = useState(false)
   const [openCatagory, setOpenCatagory] = useState(false)
   const wrapperRef = useRef(null)
+
+  const total = Cart.reduce((sum, item) => sum + item.quantity, 0)
+  // console.log('total>>>>', total)
+
   useEffect(() => {
 
     const handleCatagory = (e) => {
@@ -38,7 +48,7 @@ const Banner = () => {
 
         <div className='flex items-center gap-4 '>
           {
-            bannerLinks?.map((Item ,index) => (
+            bannerLinks?.map((Item, index) => (
               <div key={index}>
                 <Link className='text-gray-600 hover:text-e_primaryColor' href={Item.path}>{Item.label}</Link>
               </div>
@@ -51,28 +61,60 @@ const Banner = () => {
           <p className=' border-s-[1px] border-gray-200 me-5'> <span className='ms-10 font-bold text-gray-700'>Need help? Call Us:</span> <span className='font-semibold text-e_primaryColor'>+ 0020 500</span></p>
           <div className='py-3 border-s-[1px] border-gray-200  '> <span className='mx-5'>English</span></div>
         </div>
-
       </div>
 
 
       {/* third Banner */}
 
-      <div className='flex items-center  lg:gap-5 justify-between w-full px-5 lg:px-40 lg:py-2'>
+      <div className='flex items-center  lg:gap-5  w-full px-5 lg:px-32 lg:py-2'>
         <div className='flex items-center'>
           <AlignLeft onClick={() => setToggle(!toggle)} className='block md:hidden lg:hidden' />
           <img className='w-28 lg:w-32' src={'/basket/ai-logo1.png'} />
 
         </div>
 
-        <div className='hidden lg:block relative w-full'>
+        <div className='hidden lg:block relative w-[66%]'>
           <input className=' rounded-md w-full bg-gray-100 py-3 ps-5 ' placeholder='Search For Products .....' />
           <div className='absolute top-3 end-5'><Search /></div>
         </div>
 
-        <div className='flex  gap-3 items-center'>
+        <div className='flex  gap-3  items-center'>
           <div className='p-2 border-[1px] border-gray-200 rounded-full'><User2 size={20} /></div>
           <div className='font-semibold'>$0.00</div>
-          <div className='bg-red-100 p-2 rounded-full'><ShoppingCart color='red' size={20} /></div>
+
+
+          <div className='relative'>
+            <p className='absolute z-10 bottom-5 start-5 px-[5px] bg-red-300 text-red-600 text-sm font-semibold rounded-full'>{items.length}</p>
+            <button onClick={() => router.push('/Store/wishList')} className=' relative p-2  z-0 rounded-full'>
+              <Heart size={20} />
+            </button>
+          </div>
+
+          <div className='relative'>
+            <p className='absolute z-10 bottom-5 start-5 px-[5px] bg-red-300 text-red-600 text-sm font-semibold rounded-full'>{Cart.length}</p>
+            <button onClick={() => router.push('/Store/cart')} className=' relative p-2  z-0 rounded-full'>
+              <ShoppingCart size={20} />
+            </button>
+          </div>
+
+          <div>
+            <ClerkLoaded>
+              <div className="text-[15px] font-semibold">
+                <SignedOut>
+                  <div className="">
+                    <SignInButton />
+                  </div>
+                </SignedOut>
+                <SignedIn>
+                  <UserButton />
+                </SignedIn>
+              </div>
+            </ClerkLoaded>
+
+          </div>
+
+
+
         </div>
 
       </div>
@@ -86,7 +128,7 @@ const Banner = () => {
           <p className='bg-gray-200 border-[1px] border-white rounded-full text-[10px] font-semibold text-gray-500 px-3 py-1 absolute -bottom-4 start-14 '>TOTAL 30 PRODUCTS</p>
           {/* mini catagory */}
 
-          <div  className='absolute  top-16 bg-gray-50 w-full rounded-md shadow-md text-start   z-50'>{
+          <div className='absolute  top-16 bg-gray-50 w-full rounded-md shadow-md text-start   z-50'>{
             openCatagory && <div className='overflow-y-scroll overflow-visible h-[450px] '>
               {
                 categories_menu?.map((item, index) => (
@@ -105,7 +147,7 @@ const Banner = () => {
 
 
         <div className='hidden lg:flex items-center  p-2  rounded-full'>
-          {E_NavLinks?.map((item ) => {
+          {E_NavLinks?.map((item) => {
             const isActive = path === item.path;
 
             return (
@@ -198,7 +240,7 @@ const Banner = () => {
               </button>
               <nav className='mt-10 space-y-5 mx-5'>
                 {
-                  E_NavLinks?.map((item ,index) => {
+                  E_NavLinks?.map((item, index) => {
                     const isActive = item.path === path
                     return (
                       <div key={index}>

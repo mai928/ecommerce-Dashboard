@@ -2,6 +2,7 @@ import CardDiscount from '@/StoreComponents/CardDiscount'
 import CardOffer from '@/StoreComponents/CardOffer'
 import Catagories from '@/StoreComponents/Catagories'
 import CollectionFood from '@/StoreComponents/CollectionFood'
+import Features from '@/StoreComponents/Features'
 import HotDeal from '@/StoreComponents/HotDeal'
 import LocalsBanner from '@/StoreComponents/LocalsBanner'
 import Slider from '@/StoreComponents/Slider'
@@ -12,9 +13,11 @@ export default function StoreHome() {
   return (
     <div>
       <Slider />
-      <LocalsBanner />
+      <Features/>
 
       <Catagories />
+      <LocalsBanner />
+
       <WeelDeals />
       <CardOffer />    {/* */}
 

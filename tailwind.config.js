@@ -76,6 +76,18 @@ module.exports = {
 				pacifico: ["Pacifico", "cursive"],
 				"jakarta-sans": ['"Plus Jakarta Sans"', "sans-serif"],
 			},
+
+			keyframes:{
+				'spin-reverse':{
+					from:{transform:'rotate(360deg)'},
+					to: {transform: 'rotate(0deg)'}
+				}
+				},
+					
+				  animation: {
+					'spin-reverse': 'spin-reverse 1s linear infinite'
+				}
+		
 		},
 	},
 	plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar")],

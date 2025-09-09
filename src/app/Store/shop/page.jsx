@@ -4,12 +4,23 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { brands, categories_menu, EmptyStar, FullStar, HalfStar, productsByCategory } from '../../../../data'
 import { ChevronDown, ChevronUp, List, ListCheck, ListCollapse, ListCollapseIcon, ListEnd, ListEndIcon, ListFilter, ListTree, ListTreeIcon } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
+import useCartStore from '@/StoreComponents/zustand/CartStore'
+import { ShowToast } from '@/StoreComponents/Toast'
+import { ToastWrapper } from '@/StoreComponents/Toast'
 
 const Shop = () => {
 
   const [showBrand, setShowBrand] = useState(false)
   const [showCategory, setSHowCategory] = useState(true)
   const [showCategorySideBar, setSHowCategorySideBar] = useState(false)
+
+
+  const increaseQuantity = useCartStore((state) => state.increaseQuantity)
+  const addToCart = useCartStore((state) => state.addToCart)
+  const Cart = useCartStore((state) => state.Cart)
+  const decreaseQuantity = useCartStore((state) => state.decreaseQuantity)
+
+
 
 
   useEffect(() => {
@@ -51,26 +62,48 @@ const Shop = () => {
 
   const [count, setCount] = useState({})
 
+  // const handleDecrement = (id) => {
+
+  //   setCount((prev) => (
+  //     {
+  //       ...prev,
+  //       [id]: Math.max((prev[id] || 0) - 1, 0)
+  //     }
+  //   ))
+
+  // }
+
+  // const handleIncrement = (id, item) => {
+  //   setCount((prev) => (
+  //     {
+  //       ...prev,
+  //       [id]: (prev[id] || 0) + 1
+  //     }
+  //   ))
+  //   // increaseQuantity(id)
+  //   addToCart(item)
+  //   ShowToast('Product addded Successfully to Your Cart', { isLoading: false })
+
+
+  // }
+
+  const handleIncrement = (prod) => {
+    addToCart(prod)
+    ShowToast('Product added successfully to your cart', { isLoading: false })
+  }
+
   const handleDecrement = (id) => {
-
-    setCount((prev) => (
-      {
-        ...prev,
-        [id]: Math.max((prev[id] || 0) - 1, 0)
-      }
-    ))
+    decreaseQuantity(id)
+    ShowToast('Product removed successfully to your cart', { isLoading: true })
 
   }
 
-  const handleIncrement = (id) => {
-    setCount((prev) => (
-      {
-        ...prev,
-        [id]: (prev[id] || 0) + 1
-      }
-    ))
+  const isDecrement =(id)=>{
+      const cartItem = Cart.find((item) => item.id === id)
+       return   !cartItem || cartItem.quantity <1
 
   }
+
   const [checkedCategories, setProductChecked] = useState([])
   const [hasInteracted, sethasInteracted] = useState(false)
 
@@ -85,6 +118,8 @@ const Shop = () => {
         [...prev, slug]
     )
   }
+
+
 
 
   const intialPage = 1
@@ -177,6 +212,7 @@ const Shop = () => {
 
   return (
     <div>
+      <ToastWrapper />
       <div className={` w-full flex ${showCategory ? ' lex-row  items-start  ' : 'flex-col items-center'} px-5 lg:px-10 py-14`}>
         {
           !showCategory ? (
@@ -307,9 +343,19 @@ const Shop = () => {
                               </div>
                               {/* btn Counter */}
                               <div className=' flex justify-center items-center gap-6 mt-6'>
-                                <button className='bg-gray-200 px-4 py-1 rounded-s-lg' onClick={() => handleDecrement(prod.id)}>-</button>
-                                {count[prod.id] || 0}
-                                <button className='bg-e_secondaryColor px-4 py-1 rounded-e-lg' onClick={() => handleIncrement(prod.id)}>+</button>
+                                <button
+    disabled={isDecrement(prod.id)}
+    className="bg-gray-200 px-4 py-1 rounded-s-lg disabled:cursor-not-allowed"
+                                  onClick={() => handleDecrement(prod.id)}
+                                >
+                                  -
+                                </button>
+                                {/* {count[prod.id] || 0} 
+                                */}  {Cart.find(item => item.id === prod.id)?.quantity || 0}
+
+                                <button className='bg-e_secondaryColor px-4 py-1 rounded-e-lg' onClick={() => handleIncrement(prod)}
+
+                                >+</button>
                               </div>
                             </div>
                           )

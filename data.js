@@ -251,6 +251,45 @@ export const EmptyStar = () => (
 	</svg>
 );
 
+
+export const global = (fill) => (
+	<svg fill={fill} width={15}  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M415.9 344L225 344C227.9 408.5 242.2 467.9 262.5 511.4C273.9 535.9 286.2 553.2 297.6 563.8C308.8 574.3 316.5 576 320.5 576C324.5 576 332.2 574.3 343.4 563.8C354.8 553.2 367.1 535.8 378.5 511.4C398.8 467.9 413.1 408.5 416 344zM224.9 296L415.8 296C413 231.5 398.7 172.1 378.4 128.6C367 104.2 354.7 86.8 343.3 76.2C332.1 65.7 324.4 64 320.4 64C316.4 64 308.7 65.7 297.5 76.2C286.1 86.8 273.8 104.2 262.4 128.6C242.1 172.1 227.8 231.5 224.9 296zM176.9 296C180.4 210.4 202.5 130.9 234.8 78.7C142.7 111.3 74.9 195.2 65.5 296L176.9 296zM65.5 344C74.9 444.8 142.7 528.7 234.8 561.3C202.5 509.1 180.4 429.6 176.9 344L65.5 344zM463.9 344C460.4 429.6 438.3 509.1 406 561.3C498.1 528.6 565.9 444.8 575.3 344L463.9 344zM575.3 296C565.9 195.2 498.1 111.3 406 78.7C438.3 130.9 460.4 210.4 463.9 296L575.3 296z" /></svg>
+)
+
+export const lock = (fill) => (
+	<svg fill={fill} width={15} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M256 160L256 224L384 224L384 160C384 124.7 355.3 96 320 96C284.7 96 256 124.7 256 160zM192 224L192 160C192 89.3 249.3 32 320 32C390.7 32 448 89.3 448 160L448 224C483.3 224 512 252.7 512 288L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 288C128 252.7 156.7 224 192 224z" /></svg>
+)
+
+export const trash =(fill)=>(
+	<svg fill={fill} width={25} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M232.7 69.9L224 96L128 96C110.3 96 96 110.3 96 128C96 145.7 110.3 160 128 160L512 160C529.7 160 544 145.7 544 128C544 110.3 529.7 96 512 96L416 96L407.3 69.9C402.9 56.8 390.7 48 376.9 48L263.1 48C249.3 48 237.1 56.8 232.7 69.9zM512 208L128 208L149.1 531.1C150.7 556.4 171.7 576 197 576L443 576C468.3 576 489.3 556.4 490.9 531.1L512 208z"/></svg>
+)
+
+export const money =(fill)=>(
+	<svg fill={fill} width={30} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M64 483.6L64 173.5C64 150.3 88.1 134.9 110.3 141.5C198 167.7 260 147 322.4 126.2C386.9 104.7 451.8 83.1 545.7 113.1C564.2 119 576 136.9 576 156.4L576 466.5C576 489.7 551.9 505.1 529.8 498.5C442.1 472.3 380 493 317.7 513.8C253.2 535.3 188.3 556.9 94.4 526.9C75.9 521 64.1 503.1 64.1 483.6zM400 320C400 267 364.2 224 320 224C275.8 224 240 267 240 320C240 373 275.8 416 320 416C364.2 416 400 373 400 320zM184 477.6C188.4 477.6 191.9 473.8 191.2 469.5C186.6 441.7 164.2 420 136 416.5C131.6 416 128 419.6 128 424L128 463.9C128 467.5 130.4 470.7 134 471.6C151.9 475.8 168.3 477.7 184 477.7zM502.5 426.5C507.5 427.3 512 423.5 512 418.5L512 375.9C512 371.5 508.4 367.8 504 368.4C478.8 371.5 458.1 389.3 450.8 413C449.4 417.7 453.1 422.1 458 422.2C472.2 422.6 487 423.9 502.4 426.5zM512 216L512 176.1C512 172.5 509.5 169.3 506 168.4C488.1 164.2 471.7 162.3 456 162.3C451.6 162.3 448.1 166.1 448.8 170.4C453.4 198.2 475.8 219.9 504 223.4C508.4 223.9 512 220.3 512 215.9zM189.2 226.9C190.6 222.2 186.9 217.8 182 217.7C167.8 217.3 153 216 137.6 213.4C132.6 212.6 128.1 216.4 128.1 221.4L128 264C128 268.4 131.6 272.1 136 271.5C161.2 268.4 181.9 250.6 189.2 226.9z"/></svg>
+)
+
+export const visa=(fill)=>(
+	<svg fill={fill} width={30} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M502.1 295.3C502.1 295.3 509.7 332.5 511.4 340.3L478 340.3C481.3 331.4 494 296.8 494 296.8C493.8 297.1 497.3 287.7 499.3 281.9L502.1 295.3zM608 144L608 496C608 522.5 586.5 544 560 544L80 544C53.5 544 32 522.5 32 496L32 144C32 117.5 53.5 96 80 96L560 96C586.5 96 608 117.5 608 144zM184.5 395.2L247.7 240L205.2 240L165.9 346L161.6 324.5L147.6 253.1C145.3 243.2 138.2 240.4 129.4 240L64.7 240L64 243.1C79.8 247.1 93.9 252.9 106.2 260.2L142 395.2L184.5 395.2zM278.9 395.4L304.1 240L263.9 240L238.8 395.4L278.9 395.4zM418.8 344.6C419 326.9 408.2 313.4 385.1 302.3C371 295.2 362.4 290.4 362.4 283.1C362.6 276.5 369.7 269.7 385.5 269.7C398.6 269.4 408.2 272.5 415.4 275.6L419 277.3L424.5 243.7C416.6 240.6 404 237.1 388.5 237.1C348.8 237.1 320.9 258.3 320.7 288.5C320.4 310.8 340.7 323.2 355.9 330.7C371.4 338.3 376.7 343.3 376.7 350C376.5 360.4 364.1 365.2 352.6 365.2C336.6 365.2 328 362.7 314.9 356.9L309.6 354.4L304 389.3C313.4 393.6 330.8 397.4 348.8 397.6C391 397.7 418.5 376.8 418.8 344.6zM560 395.4L527.6 240L496.5 240C486.9 240 479.6 242.8 475.5 252.9L415.8 395.4L458 395.4C458 395.4 464.9 376.2 466.4 372.1L518 372.1C519.2 377.6 522.8 395.4 522.8 395.4L560 395.4z"/></svg>
+)
+
+export const master =(fill)=>(
+	<svg fill={fill} width={30} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+	<path d="M514.9 474.3C514.9 481.1 510.3 486 503.7 486C496.9 486 492.5 480.8 492.5 474.3C492.5 467.8 496.9 462.6 503.7 462.6C510.3 462.6 514.9 467.8 514.9 474.3zM204.1 462.6C197 462.6 192.9 467.8 192.9 474.3C192.9 480.8 197 486 204.1 486C210.6 486 215 481.1 215 474.3C214.9 467.8 210.6 462.6 204.1 462.6zM321.6 462.3C316.2 462.3 312.9 465.8 312.1 471L331.2 471C330.3 465.3 326.8 462.3 321.6 462.3zM429.4 462.6C422.6 462.6 418.5 467.8 418.5 474.3C418.5 480.8 422.6 486 429.4 486C436.2 486 440.6 481.1 440.6 474.3C440.6 467.8 436.2 462.6 429.4 462.6zM535.3 488.7C535.3 489 535.6 489.2 535.6 489.8C535.6 490.1 535.3 490.3 535.3 490.9C535 491.2 535 491.4 534.8 491.7C534.5 492 534.3 492.2 533.7 492.2C533.4 492.5 533.2 492.5 532.6 492.5C532.3 492.5 532.1 492.5 531.5 492.2C531.2 492.2 531 491.9 530.7 491.7C530.4 491.4 530.2 491.2 530.2 490.9C529.9 490.4 529.9 490.1 529.9 489.8C529.9 489.3 529.9 489 530.2 488.7C530.2 488.2 530.5 487.9 530.7 487.6C531 487.3 531.2 487.3 531.5 487.1C532 486.8 532.3 486.8 532.6 486.8C533.1 486.8 533.4 486.8 533.7 487.1C534.2 487.4 534.5 487.4 534.8 487.6C535.1 487.8 535 488.2 535.3 488.7zM533.1 490.1C533.6 490.1 533.6 489.8 533.9 489.8C534.2 489.5 534.2 489.3 534.2 489C534.2 488.7 534.2 488.5 533.9 488.2C533.6 488.2 533.4 487.9 532.8 487.9L531.2 487.9L531.2 491.4L532 491.4L532 490L532.3 490L533.4 491.4L534.2 491.4L533.1 490.1zM608 145L608 497C608 523.5 586.5 545 560 545L80 545C53.5 545 32 523.5 32 497L32 145C32 118.5 53.5 97 80 97L560 97C586.5 97 608 118.5 608 145zM96 284.6C96 361.1 158.1 423.1 234.5 423.1C261.7 423.1 288.4 414.9 311 400C238.1 340.7 238.6 228.8 311 169.5C288.4 154.5 261.7 146.4 234.5 146.4C158.1 146.3 96 208.4 96 284.6zM320 393.4C390.5 338.4 390.2 231.2 320 175.9C249.8 231.2 249.5 338.5 320 393.4zM177.7 469.7C177.7 461 172 455.3 163 455C158.4 455 153.5 456.4 150.2 461.5C147.8 457.4 143.7 455 138 455C134.2 455 130.4 456.4 127.4 460.4L127.4 456L119.2 456L119.2 492.7L127.4 492.7C127.4 473.8 124.9 462.5 136.4 462.5C146.6 462.5 144.6 472.7 144.6 492.7L152.5 492.7C152.5 474.4 150 462.5 161.5 462.5C171.7 462.5 169.7 472.5 169.7 492.7L177.9 492.7L177.9 469.7L177.7 469.7zM222.6 456L214.7 456L214.7 460.4C212 457.1 208.2 455 203 455C192.7 455 184.8 463.2 184.8 474.3C184.8 485.5 192.7 493.6 203 493.6C208.2 493.6 212 491.7 214.7 488.2L214.7 492.8L222.6 492.8L222.6 456zM263.1 481.6C263.1 466.6 240.2 473.4 240.2 466.4C240.2 460.7 252.1 461.6 258.7 465.3L262 458.8C252.6 452.7 231.8 452.8 231.8 467C231.8 481.3 254.7 475.3 254.7 482C254.7 488.3 241.2 487.8 234 482.8L230.5 489.1C241.7 496.7 263.1 495.1 263.1 481.6zM298.5 490.9L296.3 484.1C292.5 486.2 284.1 488.5 284.1 480L284.1 463.4L297.2 463.4L297.2 456L284.1 456L284.1 444.8L275.9 444.8L275.9 456L268.3 456L268.3 463.3L275.9 463.3L275.9 480C275.9 497.6 293.2 494.4 298.5 490.9zM311.8 477.5L339.3 477.5C339.3 461.3 331.9 454.9 321.9 454.9C311.3 454.9 303.7 462.8 303.7 474.2C303.7 494.7 326.3 498.1 337.5 488.4L333.7 482.4C325.9 488.8 314.1 488.2 311.8 477.5zM370.9 456C366.3 454 359.3 454.2 355.7 460.4L355.7 456L347.5 456L347.5 492.7L355.7 492.7L355.7 472C355.7 460.4 365.2 461.9 368.5 463.6L370.9 456zM381.5 474.3C381.5 462.9 393.1 459.2 402.2 465.9L406 459.4C394.4 450.3 373.3 455.3 373.3 474.4C373.3 494.2 395.7 498.2 406 489.4L402.2 482.9C393 489.4 381.5 485.5 381.5 474.3zM448.2 456L440 456L440 460.4C431.7 449.4 410.1 455.6 410.1 474.3C410.1 493.5 432.5 499 440 488.2L440 492.8L448.2 492.8L448.2 456zM481.9 456C479.5 454.8 470.9 453.1 466.7 460.4L466.7 456L458.8 456L458.8 492.7L466.7 492.7L466.7 472C466.7 461 475.7 461.7 479.5 463.6L481.9 456zM522.2 441.1L514.3 441.1L514.3 460.4C506.1 449.5 484.4 455.3 484.4 474.3C484.4 493.7 506.9 498.9 514.3 488.2L514.3 492.8L522.2 492.8L522.2 441.1zM529.8 366L529.8 370.6L530.6 370.6L530.6 366L532.5 366L532.5 365.2L527.9 365.2L527.9 366L529.8 366zM536.4 489.8C536.4 489.3 536.4 488.7 536.1 488.2C535.8 487.9 535.6 487.4 535.3 487.1C535 486.8 534.5 486.6 534.2 486.3C533.7 486.3 533.1 486 532.6 486C532.3 486 531.8 486.3 531.2 486.3C530.7 486.6 530.4 486.8 530.1 487.1C529.6 487.4 529.3 487.9 529.3 488.2C529 488.7 529 489.3 529 489.8C529 490.1 529 490.6 529.3 491.2C529.3 491.5 529.6 492 530.1 492.3C530.4 492.6 530.6 492.8 531.2 493.1C531.7 493.4 532.3 493.4 532.6 493.4C533.1 493.4 533.7 493.4 534.2 493.1C534.5 492.8 535 492.6 535.3 492.3C535.6 492 535.8 491.5 536.1 491.2C536.4 490.6 536.4 490.1 536.4 489.8zM539.6 365.1L538.2 365.1L536.6 368.6L535 365.1L533.6 365.1L533.6 370.5L534.4 370.5L534.4 366.4L536 369.9L537.1 369.9L538.5 366.4L538.5 370.5L539.6 370.5L539.6 365.1zM544 284.6C544 208.4 481.9 146.3 405.5 146.3C378.3 146.3 351.6 154.5 329 169.4C401.1 228.7 402.2 340.9 329 399.9C351.6 414.9 378.5 423 405.5 423C481.9 423.1 544 361.1 544 284.6z"/>
+	</svg>
+)
+
+export const paypal =(fill)=>(
+	<svg fill={fill} width={30} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+	<path d="M218.3 322.2C218.3 334.4 208.6 343.7 196.3 343.7C187.1 343.7 180.3 338.5 180.3 328.7C180.3 316.5 189.8 306.7 202 306.7C211.3 306.7 218.3 312.4 218.3 322.2zM112.5 273.7L107.8 273.7C106.3 273.7 104.8 274.7 104.6 276.4L100.3 303.1L108.5 302.8C119.5 302.8 128 301.3 130 288.6C132.3 275.2 123.8 273.7 112.5 273.7zM396.5 273.7L392 273.7C390.2 273.7 389 274.7 388.8 276.4L384.6 303.1L392.6 302.8C405.6 302.8 414.6 299.8 414.6 284.8C414.5 274.2 405 273.7 396.5 273.7zM608 144L608 496C608 522.5 586.5 544 560 544L80 544C53.5 544 32 522.5 32 496L32 144C32 117.5 53.5 96 80 96L560 96C586.5 96 608 117.5 608 144zM160.3 279.4C160.3 258.4 144.1 251.4 125.6 251.4L85.6 251.4C83.1 251.4 80.6 253.4 80.4 256.1L64 358.2C63.7 360.2 65.2 362.2 67.2 362.2L86.2 362.2C88.9 362.2 91.4 359.3 91.7 356.5L96.2 329.9C97.2 322.7 109.4 325.2 114.2 325.2C142.8 325.2 160.3 308.2 160.3 279.4zM244.5 288.2L225.5 288.2C221.7 288.2 221.5 293.7 221.3 296.4C215.5 287.9 207.1 286.4 197.6 286.4C173.1 286.4 154.4 307.9 154.4 331.6C154.4 351.1 166.6 363.8 186.1 363.8C195.1 363.8 206.3 358.9 212.6 351.9C212.1 353.4 211.6 356.6 211.6 358.1C211.6 360.4 212.6 362.1 214.8 362.1L232 362.1C234.7 362.1 237 359.2 237.5 356.4L247.7 292.1C248 290.2 246.5 288.2 244.5 288.2zM285 386.1L348.7 293.5C349.2 293 349.2 292.5 349.2 291.8C349.2 290.1 347.7 288.3 346 288.3L326.8 288.3C325.1 288.3 323.3 289.3 322.3 290.8L295.8 329.8L284.8 292.3C284 290.1 281.8 288.3 279.3 288.3L260.6 288.3C258.9 288.3 257.4 290.1 257.4 291.8C257.4 293 276.9 348.6 278.6 353.9C275.9 357.7 258.1 382.5 258.1 385.5C258.1 387.3 259.6 388.7 261.3 388.7L280.5 388.7C282.3 388.6 284 387.6 285 386.1zM444.3 279.4C444.3 258.4 428.1 251.4 409.6 251.4L369.9 251.4C367.2 251.4 364.7 253.4 364.4 256.1L348.2 358.1C348 360.1 349.5 362.1 351.4 362.1L371.9 362.1C373.9 362.1 375.4 360.6 375.9 358.9L380.4 329.9C381.4 322.7 393.6 325.2 398.4 325.2C426.8 325.2 444.3 308.2 444.3 279.4zM528.5 288.2L509.5 288.2C505.7 288.2 505.5 293.7 505.2 296.4C499.7 287.9 491.2 286.4 481.5 286.4C457 286.4 438.3 307.9 438.3 331.6C438.3 351.1 450.5 363.8 470 363.8C479.3 363.8 490.5 358.9 496.5 351.9C496.2 353.4 495.5 356.6 495.5 358.1C495.5 360.4 496.5 362.1 498.7 362.1L516 362.1C518.7 362.1 521 359.2 521.5 356.4L531.7 292.1C532 290.2 530.5 288.2 528.5 288.2zM576 254.9C576 252.9 574.5 251.4 572.8 251.4L554.3 251.4C552.8 251.4 551.3 252.6 551.1 254.1L534.9 358.1L534.6 358.6C534.6 360.4 536.1 362.1 538.1 362.1L554.6 362.1C557.1 362.1 559.6 359.2 559.8 356.4L576 255.2L576 254.9zM486 306.7C473.8 306.7 464.3 316.4 464.3 328.7C464.3 338.4 471.3 343.7 480.5 343.7C492.5 343.7 502.2 334.5 502.2 322.2C502.3 312.4 495.3 306.7 486 306.7z"/>
+	</svg>
+)
+
+export const apple_paypal =(fill)=>(
+<svg fill={fill} width={30} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M334.2 282.4C334.2 299.6 323.7 309.5 305.2 309.5L280.9 309.5L280.9 255.3L305.3 255.3C323.7 255.3 334.2 265.1 334.2 282.4zM381.7 345C381.7 353.3 388.9 358.7 400.2 358.7C414.6 358.7 425.4 349.6 425.4 336.8L425.4 329.1L401.9 330.6C388.6 331.5 381.7 336.4 381.7 345zM608 143L608 495C608 521.5 586.5 543 560 543L80 543C53.5 543 32 521.5 32 495L32 143C32 116.5 53.5 95 80 95L560 95C586.5 95 608 116.5 608 143zM159.8 261.2C168.2 261.9 176.6 257 181.9 250.8C187.1 244.4 190.5 235.8 189.6 227.1C182.2 227.4 173 232 167.7 238.4C162.9 243.9 158.8 252.8 159.8 261.2zM220.4 335.7C220.2 335.5 200.8 328.1 200.6 305.7C200.4 287 215.9 278 216.6 277.5C207.8 264.5 194.2 263.1 189.5 262.8C177.3 262.1 166.9 269.7 161.1 269.7C155.2 269.7 146.4 263.1 136.8 263.3C124.3 263.5 112.6 270.6 106.3 281.9C93.2 304.5 102.9 337.9 115.6 356.3C121.8 365.4 129.3 375.4 139.1 375C148.4 374.6 152.1 369 163.3 369C174.6 369 177.8 375 187.6 374.9C197.8 374.7 204.1 365.8 210.4 356.7C217.3 346.3 220.2 336.3 220.4 335.7zM355.8 282.3C355.8 255.7 337.3 237.5 310.9 237.5L259.7 237.5L259.7 373.9L280.9 373.9L280.9 327.3L310.2 327.3C337 327.3 355.8 308.9 355.8 282.3zM445.8 306C445.8 286.3 430 273.6 405.8 273.6C383.3 273.6 366.7 286.5 366.1 304.1L385.2 304.1C386.8 295.7 394.6 290.2 405.2 290.2C418.2 290.2 425.4 296.2 425.4 307.4L425.4 314.9L399 316.5C374.4 318 361.1 328.1 361.1 345.6C361.1 363.3 374.8 375 394.5 375C407.8 375 420.1 368.3 425.7 357.6L426.1 357.6L426.1 374L445.7 374L445.7 306L445.8 306zM548 274.9L526.5 274.9L501.6 355.5L501.2 355.5L476.3 274.9L454 274.9L489.9 374.2L488 380.2C484.8 390.4 479.5 394.4 470.1 394.4C468.4 394.4 465.2 394.2 463.9 394.1L463.9 410.5C465.1 410.9 470.4 411 472 411C492.7 411 502.4 403.1 510.9 379.2L548 274.9z"/></svg>
+
+)
+
+
 export const logo = (
 	<svg
 		width="24"
@@ -583,6 +622,30 @@ export const bannerLinks = [
 	},
 ];
 
+export const featuresData = [
+	{
+		icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck-icon lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></svg>,
+		title: 'Free Delivery',
+		details: 'Order $50 or more'
+	},
+	{
+		icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-ccw-icon lucide-rotate-ccw"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" /></svg>,
+		title: '30 Days Return',
+		details: 'Satisfaction guaranteed'
+	},
+	{
+		icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-half-icon lucide-shield-half"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="M12 22V2" /></svg>,
+		title: 'Secure Payment',
+		details: '100% protected checkout'
+	},
+	{
+		icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones-icon lucide-headphones"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" /></svg>,
+		title: '24/7 Support',
+		details: 'Ready to help anytime'
+	},
+
+]
+
 export const categories_menu = [
 	{ id: 1, name: "Beauty", slug: "beauty" },
 	{ id: 2, name: "Fragrances", slug: "fragrances" },
@@ -610,10 +673,18 @@ export const categories_menu = [
 	{ id: 24, name: "Womens Watches", slug: "womens-watches" },
 ];
 
+// function generateId (title ,index){
+// 	return title.toLowerCase().replace(/\s+/g,"-")+"-"+index
+// }
+
+
+
+
+
 export const productsByCategory = {
 	beauty: [
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/makeup/makeup1.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -625,7 +696,7 @@ export const productsByCategory = {
 		},
 		,
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/makeup/makeup2.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -636,7 +707,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/makeup/makeup3.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -647,7 +718,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/makeup/makeup4.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -658,7 +729,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/makeup/makeup5.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -671,7 +742,7 @@ export const productsByCategory = {
 	],
 	fragrances: [
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum1.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -682,7 +753,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum2.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -693,7 +764,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum3.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -704,7 +775,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum4.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -715,7 +786,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum5.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -727,7 +798,7 @@ export const productsByCategory = {
 		},
 
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum6.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -739,7 +810,7 @@ export const productsByCategory = {
 		},
 
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum7.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -751,7 +822,7 @@ export const productsByCategory = {
 		},
 
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum8.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -763,7 +834,7 @@ export const productsByCategory = {
 		},
 
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum9.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -775,7 +846,7 @@ export const productsByCategory = {
 		},
 
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum10.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -787,7 +858,7 @@ export const productsByCategory = {
 		},
 
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum11.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -799,7 +870,7 @@ export const productsByCategory = {
 		},
 
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 			img: "/basket/Perfums/perfum12.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -812,7 +883,7 @@ export const productsByCategory = {
 	],
 	furniture: [
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/furn/bed1.png",
 			label: "Pan Pizza",
@@ -824,7 +895,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/furn/bed1.png",
 			label: "Pan Pizza",
@@ -836,7 +907,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/furn/bed3.png",
 			label: "Pan Pizza",
@@ -848,7 +919,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/furn/bed2.png",
 			label: "Pan Pizza",
@@ -860,7 +931,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/furn/bed4.png",
 			label: "Pan Pizza",
@@ -872,7 +943,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/furn/caution.png",
 			label: "Pan Pizza",
@@ -884,7 +955,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/furn/caution2.png",
 			label: "Pan Pizza",
@@ -896,7 +967,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/furn/caution3.png",
 			label: "Pan Pizza",
@@ -909,7 +980,7 @@ export const productsByCategory = {
 		},
 
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/furn/sufa.png",
 			label: "Pan Pizza",
@@ -922,7 +993,7 @@ export const productsByCategory = {
 		},
 
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/furn/chair.webp",
 			label: "Pan Pizza",
@@ -936,7 +1007,7 @@ export const productsByCategory = {
 	],
 	groceries: [
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/animalFood.png",
 			label: "Pan Pizza",
@@ -949,7 +1020,7 @@ export const productsByCategory = {
 		},
 		,
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/animalFood2.png",
 			label: "Pan Pizza",
@@ -961,7 +1032,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/bread.png",
 			label: "Pan Pizza",
@@ -973,7 +1044,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/chicken.png",
 			label: "Pan Pizza",
@@ -986,7 +1057,7 @@ export const productsByCategory = {
 		},
 
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/egg.png",
 			label: "Pan Pizza",
@@ -998,7 +1069,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/honey.png",
 			label: "Pan Pizza",
@@ -1010,7 +1081,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/kewei.png",
 			label: "Pan Pizza",
@@ -1022,7 +1093,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/meat1.png",
 			label: "Pan Pizza",
@@ -1034,7 +1105,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/pepper.png",
 			label: "Pan Pizza",
@@ -1046,7 +1117,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/snacks1.png",
 			label: "Pan Pizza",
@@ -1058,7 +1129,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/steak.png",
 			label: "Pan Pizza",
@@ -1070,7 +1141,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/salmon.png",
 			label: "Pan Pizza",
@@ -1082,7 +1153,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/oil.png",
 			label: "Pan Pizza",
@@ -1094,7 +1165,7 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 		{
-			id: crypto.randomUUID(),
+			id: generateId(),
 
 			img: "/basket/gros/vegetables.png",
 			label: "Pan Pizza",
@@ -1108,71 +1179,75 @@ export const productsByCategory = {
 	],
 	// ... add more for each slug
 };
+export function generateStableIds(productsByCategory){
+
+}
+
 
 export const brands = [
-  { name: "Essence", count: 1 },
-  { name: "Glamour Beauty", count: 1 },
-  { name: "Velvet Touch", count: 1 },
-  { name: "Chic Cosmetics", count: 1 },
-  { name: "Nail Couture", count: 1 },
-  { name: "Calvin Klein", count: 2 },
-  { name: "Chanel", count: 1 },
-  { name: "Dior", count: 1 },
-  { name: "Dolce & Gabbana", count: 1 },
-  { name: "Gucci", count: 1 },
-  { name: "Annibale Colombo", count: 2 },
-  { name: "Furniture Co.", count: 1 },
-  { name: "Knoll", count: 1 },
-  { name: "Bath Trends", count: 1 },
-  { name: "Apple", count: 14 },
-  { name: "Asus", count: 1 },
-  { name: "Huawei", count: 1 },
-  { name: "Lenovo", count: 1 },
-  { name: "Dell", count: 1 },
-  { name: "Fashion Trends", count: 1 },
-  { name: "Gigabyte", count: 1 },
-  { name: "Classic Wear", count: 1 },
-  { name: "Casual Comfort", count: 1 },
-  { name: "Urban Chic", count: 2 },
-  { name: "Nike", count: 2 },
-  { name: "Puma", count: 1 },
-  { name: "Off White", count: 2 },
-  { name: "Fashion Timepieces", count: 1 },
-  { name: "Longines", count: 1 },
-  { name: "Rolex", count: 6 },
-  { name: "Amazon", count: 1 },
-  { name: "Beats", count: 1 },
-  { name: "TechGear", count: 1 },
-  { name: "GadgetMaster", count: 1 },
-  { name: "SnapTech", count: 1 },
-  { name: "ProVision", count: 1 },
-  { name: "Generic Motors", count: 1 },
-  { name: "Kawasaki", count: 1 },
-  { name: "MotoGP", count: 1 },
-  { name: "ScootMaster", count: 1 },
-  { name: "SpeedMaster", count: 1 },
-  { name: "Attitude", count: 1 },
-  { name: "Olay", count: 1 },
-  { name: "Vaseline", count: 1 },
-  { name: "Oppo", count: 3 },
-  { name: "Realme", count: 3 },
-  { name: "Samsung", count: 5 },
-  { name: "Vivo", count: 3 },
-  { name: "Fashion Shades", count: 4 },
-  { name: "Fashion Fun", count: 1 },
-  { name: "Chrysler", count: 2 },
-  { name: "Dodge", count: 3 },
-  { name: "Fashionista", count: 1 },
-  { name: "Heshe", count: 1 },
-  { name: "Prada", count: 1 },
-  { name: "Elegance Collection", count: 1 },
-  { name: "Comfort Trends", count: 1 },
-  { name: "Fashion Diva", count: 1 },
-  { name: "Pampi", count: 1 },
-  { name: "Fashion Express", count: 1 },
-  { name: "IWC", count: 1 },
-  { name: "Fashion Gold", count: 1 },
-  { name: "Fashion Co.", count: 1 }
+	{ name: "Essence", count: 1 },
+	{ name: "Glamour Beauty", count: 1 },
+	{ name: "Velvet Touch", count: 1 },
+	{ name: "Chic Cosmetics", count: 1 },
+	{ name: "Nail Couture", count: 1 },
+	{ name: "Calvin Klein", count: 2 },
+	{ name: "Chanel", count: 1 },
+	{ name: "Dior", count: 1 },
+	{ name: "Dolce & Gabbana", count: 1 },
+	{ name: "Gucci", count: 1 },
+	{ name: "Annibale Colombo", count: 2 },
+	{ name: "Furniture Co.", count: 1 },
+	{ name: "Knoll", count: 1 },
+	{ name: "Bath Trends", count: 1 },
+	{ name: "Apple", count: 14 },
+	{ name: "Asus", count: 1 },
+	{ name: "Huawei", count: 1 },
+	{ name: "Lenovo", count: 1 },
+	{ name: "Dell", count: 1 },
+	{ name: "Fashion Trends", count: 1 },
+	{ name: "Gigabyte", count: 1 },
+	{ name: "Classic Wear", count: 1 },
+	{ name: "Casual Comfort", count: 1 },
+	{ name: "Urban Chic", count: 2 },
+	{ name: "Nike", count: 2 },
+	{ name: "Puma", count: 1 },
+	{ name: "Off White", count: 2 },
+	{ name: "Fashion Timepieces", count: 1 },
+	{ name: "Longines", count: 1 },
+	{ name: "Rolex", count: 6 },
+	{ name: "Amazon", count: 1 },
+	{ name: "Beats", count: 1 },
+	{ name: "TechGear", count: 1 },
+	{ name: "GadgetMaster", count: 1 },
+	{ name: "SnapTech", count: 1 },
+	{ name: "ProVision", count: 1 },
+	{ name: "Generic Motors", count: 1 },
+	{ name: "Kawasaki", count: 1 },
+	{ name: "MotoGP", count: 1 },
+	{ name: "ScootMaster", count: 1 },
+	{ name: "SpeedMaster", count: 1 },
+	{ name: "Attitude", count: 1 },
+	{ name: "Olay", count: 1 },
+	{ name: "Vaseline", count: 1 },
+	{ name: "Oppo", count: 3 },
+	{ name: "Realme", count: 3 },
+	{ name: "Samsung", count: 5 },
+	{ name: "Vivo", count: 3 },
+	{ name: "Fashion Shades", count: 4 },
+	{ name: "Fashion Fun", count: 1 },
+	{ name: "Chrysler", count: 2 },
+	{ name: "Dodge", count: 3 },
+	{ name: "Fashionista", count: 1 },
+	{ name: "Heshe", count: 1 },
+	{ name: "Prada", count: 1 },
+	{ name: "Elegance Collection", count: 1 },
+	{ name: "Comfort Trends", count: 1 },
+	{ name: "Fashion Diva", count: 1 },
+	{ name: "Pampi", count: 1 },
+	{ name: "Fashion Express", count: 1 },
+	{ name: "IWC", count: 1 },
+	{ name: "Fashion Gold", count: 1 },
+	{ name: "Fashion Co.", count: 1 }
 ];
 
 
@@ -1374,7 +1449,7 @@ export const E_CollectionFood = [
 
 export const E_WeekDeals = [
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 		img: "/basket/Perfums/perfum9.png",
 		label: "Vegetables",
 		title: "Chanel Coco Noir Eau De",
@@ -1386,7 +1461,7 @@ export const E_WeekDeals = [
 	},
 
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/Perfums/perfum7.png",
 		label: "Density To Taste",
@@ -1398,7 +1473,7 @@ export const E_WeekDeals = [
 		discount: "200$",
 	},
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/Perfums/perfum8.png",
 		label: "Amazing Taste",
@@ -1411,7 +1486,7 @@ export const E_WeekDeals = [
 	},
 
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/Perfums/perfum6.png",
 		label: "Tapas",
@@ -1423,7 +1498,7 @@ export const E_WeekDeals = [
 		discount: "200$",
 	},
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/furn/bed1.png",
 		label: "Pan Pizza",
@@ -1436,7 +1511,7 @@ export const E_WeekDeals = [
 	},
 
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/furn/bed2.png",
 		label: "Carbonara",
@@ -1448,7 +1523,7 @@ export const E_WeekDeals = [
 		discount: "200$",
 	},
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/furn/bed3.png",
 		label: "Tomato Flavor",
@@ -1460,7 +1535,7 @@ export const E_WeekDeals = [
 		discount: "200$",
 	},
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 		img: "/basket/furn/caution2.png",
 		label: "Tomato Flavor",
 		title: "Annibale Colombo Bed",
@@ -1471,7 +1546,7 @@ export const E_WeekDeals = [
 		discount: "200$",
 	},
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/furn/caution.png",
 		label: "Tomato Flavor",
@@ -1516,7 +1591,7 @@ export const E_WeekDeals = [
 
 export const E_HotDeal = [
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 		img: "/basket/Perfums/perfum9.png",
 		label: "Vegetables",
 		title: "Chanel Coco Noir Eau De",
@@ -1528,7 +1603,7 @@ export const E_HotDeal = [
 	},
 
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/Perfums/perfum7.png",
 		label: "Density To Taste",
@@ -1540,7 +1615,7 @@ export const E_HotDeal = [
 		discount: "200$",
 	},
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/Perfums/perfum8.png",
 		label: "Amazing Taste",
@@ -1553,7 +1628,7 @@ export const E_HotDeal = [
 	},
 
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/Perfums/perfum6.png",
 		label: "Tapas",
@@ -1565,7 +1640,7 @@ export const E_HotDeal = [
 		discount: "200$",
 	},
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/furn/bed1.png",
 		label: "Pan Pizza",
@@ -1578,7 +1653,7 @@ export const E_HotDeal = [
 	},
 
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/furn/bed2.png",
 		label: "Carbonara",
@@ -1590,7 +1665,7 @@ export const E_HotDeal = [
 		discount: "200$",
 	},
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/furn/bed3.png",
 		label: "Tomato Flavor",
@@ -1602,7 +1677,7 @@ export const E_HotDeal = [
 		discount: "200$",
 	},
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 		img: "/basket/furn/caution2.png",
 		label: "Tomato Flavor",
 		title: "Annibale Colombo Bed",
@@ -1613,7 +1688,7 @@ export const E_HotDeal = [
 		discount: "200$",
 	},
 	{
-		id: crypto.randomUUID(),
+		id: generateId(),
 
 		img: "/basket/furn/caution.png",
 		label: "Tomato Flavor",

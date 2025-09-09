@@ -61,6 +61,8 @@ const SignUppage = () => {
                     formFieldInput: 'border rounded px-3 py-2',
                     formButtonPrimary: 'bg-primary_blue',
                     dividerText: 'text-white',
+                    formFieldLabel: "text-white", // only this SignIn has black labels
+
 
 
                   },

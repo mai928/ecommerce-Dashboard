@@ -20,7 +20,7 @@ const AuthNav = () => {
                     <div className='flex text-white gap-1 text-sm lg:text-lg'>{rotate('#ffff')}<Link href={'/AdminDashboard'}>Dashboard</Link></div>
                     <div className='flex text-white gap-1 text-sm lg:text-lg'>{profileIcon('#ffff')}<Link href={'/AdminDashboard/pages/profile'}>Profile</Link></div>
                     <div className='flex text-white gap-1 text-sm lg:text-lg'>{circleUser('#ffff')}<Link href={'/AdminDashboard/sign-up'}>Sign Up</Link></div>
-                    <div className='flex text-white gap-1 text-sm lg:text-lg'> {keyIcon('#fff')}<Link href={'/AdminDashboard/sign-in'}>Sign In</Link></div>
+                    <div className='flex text-white gap-1 text-sm lg:text-lg'>{keyIcon('#fff')}<Link href={'/AdminDashboard/sign-in'}>Sign In</Link></div>
 
                 </div>
                 <button className='lg:hidden relative z-50' onClick={() => setShowToggle(!showToggle)} >

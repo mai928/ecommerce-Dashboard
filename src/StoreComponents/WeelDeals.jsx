@@ -1,153 +1,183 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { E_WeekDeals, EmptyStar, FullStar, HalfStar } from '../../data'
 import { hover, motion } from 'framer-motion'
-import { ArrowBigRight, ArrowRight, ArrowRightFromLine, ArrowRightSquare, ArrowRightToLine, ArrowUpRight, ChevronsRight, Eye, EyeClosed, EyeOff, Heart, ShoppingBag, ShoppingBasket, ShoppingCart } from 'lucide-react'
+import { ArrowBigRight, ArrowRight, ArrowRightFromLine, ArrowRightSquare, ArrowRightToLine, ArrowUpRight, ChevronsRight, Eye, EyeClosed, EyeOff, Heart, ShieldAlert, ShoppingBag, ShoppingBasket, ShoppingCart } from 'lucide-react'
 import { FaEye, FaEyeDropper, FaEyeSlash, FaRegEye, FaShoppingBasket, FaShoppingCart } from 'react-icons/fa'
+import useWishListStore from './zustand/WishListStore'
+import ProductCard from './ProductCard'
+import { ShowToast } from './Toast'
+import { ToastWrapper } from './Toast'
+import useCartStore from './zustand/CartStore'
+import CustomToast from './Toast'
 
 const WeelDeals = () => {
 
-    const Rating = ({ rate }) => {
-        const fullStars = Math.max(0 || Math.floor(rate || 0))
-        const hasHalfStar = rate % 1 >= 0.25 && rate % 1 <= 0.75
-        const emptyStar = 5 - fullStars - (hasHalfStar ? 1 : 0)
-        console.log(emptyStar)
+    const [model, openModel] = useState(false)
+    const [itemToRemove, setItemToRemove] = useState(null)
 
-        return (
-            <div className='flex'>
-                {[...Array(fullStars)].map((_, i) => (<FullStar key={`f-${i}`} />))}
-                {hasHalfStar && <HalfStar />}
-                {[...Array(emptyStar)].map((_, i) => <EmptyStar key={`e-${i}`} />)}
+    const addToWishList = useWishListStore((state) => state.addToWishList)
+    const removeFromWishList = useWishListStore((state) => state.removeFromWishList)
+    const items = useWishListStore((state) => state.items)
 
 
-            </div>
-        )
+    const addToCart = useCartStore((state) => state.addToCart)
+    const removeFromCart = useCartStore((state) => state.removeFromCart)
+    const Cart = useCartStore((state) => state.Cart)
+
+    console.log(Cart , addToCart)
+
+    useEffect(() => {
+        if (model) {
+            document.body.classList.add('open-Model')
+        } else {
+            document.body.classList.remove('open-Model')
+
+        }
+
+        return () => { document.body.classList.remove('open-Model') }
+
+
+    }, [model])
+
+    const handleWishListClick = (item) => {
+
+        const isInWishList = items?.some((product) =>
+            product.id === item.id)
+
+        if (isInWishList) {
+            openModel(true)
+            setItemToRemove(item)
+
+
+
+        } else {
+            addToWishList(item)
+            ShowToast('Product addded Successfully to Your Wishlist', { isLoading: false })
+        }
+    }
+
+    const ConfirmRemove = () => {
+
+        if (itemToRemove) {
+            // ShowToast('Product Removed Successfully to Your Wishlist', { isLoading: true })
+
+            removeFromWishList(itemToRemove.id)
+                ShowToast('Product Removed Successfully to Your Wishlist', { isLoading: true })
+
+
+        }
+
+
+        openModel(false)
+        setItemToRemove(null)
+
+    }
+
+    // const ConfirmRemove = () => {
+    //     if (!itemToRemove) {
+    //         return; // Safety check
+    //     }
+    
+    //     // --- START: The Update Pattern ---
+    
+    //     // 1. Create a loading toast and grab its ID.
+    //     //    We disable autoClose while it's loading.
+    //     const toastId = toast(<CustomToast message="Removing from wishlist..." isLoading={true} />, {
+    //         autoClose: false, // Disable auto-close during loading
+    //         closeButton: false, // Optional: hide close button while loading
+    //     });
+    
+    //     // 2. Perform your action.
+    //     //    (Since Zustand is synchronous, this happens instantly. I'll add a tiny delay
+    //     //    so you can actually see the loader, simulating a real API call).
+    //     setTimeout(() => {
+    //       removeFromWishList(itemToRemove.id)
+    
+    //         // 3. UPDATE the toast using its ID to show the success state.
+    //         toast.update(toastId, {
+    //             // Pass the updated component to the 'render' property
+    //             render: <CustomToast message="Removed from wishlist!" isLoading={false} />,
+    //             type: toast.TYPE.SUCCESS, // Use the built-in success type
+    //             isLoading: false, // A required property for react-toastify v9+ when updating
+    //             autoClose: 3000, // Re-enable auto-close
+    //             closeButton: true, // Re-enable the close button
+    //         });
+    //     }, 500); // 500ms delay to make the loader visible
+    
+    //     // --- END: The Update Pattern ---
+    
+    //     // 4. Close the modal and clean up state immediately.
+    //     openModel(false);
+    //     setItemToRemove(null);
+    // }
+
+    const CancelRemove = () => {
+        openModel(false)
+        setItemToRemove(null)
     }
 
 
-
+    const handleCartClick =(item)=>{
+       addToCart(item)
+       ShowToast('Product addded Successfully to Your Cart', { isLoading: false })
+    }
 
     return (
         <div className='px-5 lg:px-40 py-10'>
             <div className='bg-e_secondaryColor w-full h-10  flex items-center ps-10 font-semibold uppercase text-lg'>
                 Weekly Hot Offer
             </div>
-        <div className='grid grid-flow-row grid-cols-1 lg:grid-cols-3  overflow-hidden'>
-            {
-                E_WeekDeals?.map((item) => (
-                    <motion.div
-                        key={item.id}
-                        whileHover='hover'
-                        initial="initial"
-                        animate="initial"
-                        variants={{
-                            hover:{scale:.96}
-                        }}
-                        className='border-[1px] py-4 relative overflow-hidden'>
-                        <p className='absolute top-5  start-10 bg-e_primaryColor px-4 rounded-md font-semibold text-white'>{item.offer}</p>
-                        <img className='h-80 m-auto ' src={item.img} />
-                        <div className='ms-10'>
-                            <p className='font-semibold text-lg my-3'>{item.title}</p>
-                            <p className='text-green-600 font-semibold '>{item.stock}</p>
-                            <p className='flex my-1'> <Rating rate={item.rate} /> ({(item.rate)} review)</p>
-                            <p className='text-e_primaryColor font-semibold text-lg'>{item.price} <span className='text-gray-400  line-through'>{item.discount}</span></p>
+            <ToastWrapper />
+            <div className='grid grid-flow-row grid-cols-1 lg:grid-cols-3 '>
+                {
+                    E_WeekDeals?.map((item) => {
+                        const inWishList = items.some((product) => product.id === item.id)
+                        return (
+
+
+                            <ProductCard key={item.id} item={item} inWishList={inWishList} handleWishListClick={handleWishListClick} handleCartClick={handleCartClick} />
+
+                        )
+                    })
+                }
+
+
+
+            </div>
+
+
+            <div>
+                {model && (
+                    <div className="fixed inset-0 flex items-center justify-center bg-gray-600 bg-opacity-35 h-screen z-50 overflow-hidden">
+
+                        <div className="bg-white rounded-lg shadow-lg  w-[90%] max-w-xl py-20 text-center">
+                            <ShieldAlert className='m-auto mb-5' size={70} color='red' />
+                            <h2 className="text-3xl  font-semibold text-gray-600 mb-2 ">Are you sure?</h2>
+                            <p className="text-lg text-gray-600 mb-4">You won't be able to revert this!</p>
+
+                            <div className="flex justify-center gap-3 mt-10">
+                                <button
+
+                                    onClick={ConfirmRemove}
+                                    className="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
+                                >
+                                    Yes, Delete it
+                                </button>
+                                <button
+                                    onClick={CancelRemove}
+                                    className="px-6 py-2 bg-gray-300 text-black rounded-lg hover:bg-gray-400 transition"
+                                >
+                                    Cancel
+                                </button>
+                            </div>
                         </div>
-
-                        <motion.div
-                            variants={{
-                                hover: { opacity: 1, x: -10 },
-                                initial: { opacity: 0, y: 0 }
-                            }}
-
-                            transition={{
-                                type: 'spring',
-                                stiffness: 30,
-                                damping: 12
-                            }}
-
-                            className='absolute top-32 end-3'>
-                            <motion.div
-                                key={item.id}
-                                whileHover='hover'
-                                initial="initial"
-                                animate="initial"
-                                className='bg-e_primaryColor cursor-pointer hover:bg-e_secondaryColor py-2  relative flex'>
-                                <FaRegEye size={20} className=' text-white m-auto ' />
-                                {/* Toolip */}
-                                <motion.div variants={{
-                                    hover: { opacity: 1 },
-                                    initial: { opacity: 0 }
-                                }}
-
-                                    transition={{
-                                        type: 'spring',
-                                        stiffness: 30,
-                                        damping: 12
-                                    }} >  <div className=' z-10 absolute top-[4px] -start-[85px] py-1 px-2  text-white font-semibold  text-[13px]  bg-e_primaryColor'>Quick Buy
-                                    </div>
-                                    <div className="z-0 absolute top-[10px] end-[41px] w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[10px] border-l-red-700"></div>
-                                </motion.div>
-
-                            </motion.div>
+                    </div>
+                )}
+            </div>
 
 
-                            {/*  */}
-                            <motion.div
-                                key={item.id}
-                                whileHover='hover'
-                                initial="initial"
-                                animate="initial"
-                                className='bg-e_primaryColor cursor-pointer hover:bg-e_secondaryColor py-2 px-2 my-2 relative flex'>
-                                <ShoppingCart size={22} className=' text-white m-auto ' />
-                                <motion.div variants={{
-                                    hover: { opacity: 1 },
-                                    initial: { opacity: 0 }
-                                }}
-
-                                    transition={{
-                                        type: 'spring',
-                                        stiffness: 30,
-                                        damping: 12
-                                    }} >
-                                    <div className=' z-10 absolute top-[4px] -start-[93px] py-1 px-2  text-white font-semibold  text-[13px]  bg-e_primaryColor'>Add to Cart
-                                    </div>
-                                    <div className="z-0 absolute top-[9px] end-[40px] w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[10px] border-l-red-700"></div>
-                                </motion.div>
-                            </motion.div>
-
-
-
-                            {/* wishlist */}
-
-                            <motion.div
-                                key={item.id}
-                                whileHover='hover'
-                                initial="initial"
-                                animate="initial"
-                                className='bg-e_primaryColor cursor-pointer hover:bg-e_secondaryColor py-2 px-2 my-2 relative flex'>
-                                <Heart size={22} className=' text-white m-auto ' />
-                                <motion.div
-                                    variants={{
-                                        hover: { opacity: 1 },
-                                        initial: { opacity: 0 }
-                                    }}
-
-                                    transition={{
-                                        type: 'spring',
-                                        stiffness: 30,
-                                        damping: 12
-                                    }} >
-                                    <div className=' z-10 absolute top-[4px] -start-[111px] py-1 px-2  text-white font-semibold  text-[13px]  bg-e_primaryColor'>Add to wishlist
-                                    </div>
-                                    <div className="z-0 absolute top-[9px] end-[40px] w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[10px] border-l-red-700"></div>
-                                </motion.div>
-                            </motion.div>
-
-                        </motion.div>
-                    </motion.div>
-                ))
-            }
-        </div></div>
+        </div>
     )
 }
 

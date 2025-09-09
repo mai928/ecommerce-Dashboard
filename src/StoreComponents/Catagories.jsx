@@ -3,7 +3,7 @@ import { E_Catagories } from '../../data'
 
 const Catagories = () => {
     return (
-        <div className='py-5  px-5 lg:px-40'>
+        <div className='pb-5  px-5 lg:px-40'>
             <div className='bg-e_secondaryColor w-full h-10  flex items-center ps-10 font-semibold uppercase text-lg'>
                 SuperMarket Catagories
             </div>   

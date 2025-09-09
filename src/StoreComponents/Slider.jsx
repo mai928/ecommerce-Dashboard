@@ -10,7 +10,7 @@ import "swiper/css/effect-fade";
 
 const Slider = () => {
     return (
-        <div className='lg:my-10 relative z-10'>
+        <div className='lg:mt-10 relative z-10'>
             <Swiper
                 loop={true}
                 autoplay={{ delay: 5000 }}

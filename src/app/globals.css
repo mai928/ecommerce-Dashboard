@@ -12,7 +12,10 @@ body {
   overflow-x: hidden;
   font-family: 'Plus Jakarta Sans", sans-serif';
 
-  /* NOTE: Corrected the path */
+}
+
+body.open-Model{
+  overflow: hidden;
 }
 
 .bg-dashboard-Body {
@@ -64,8 +67,9 @@ body {
   color: #fff !important;
 }
 
-.cl-formFieldLabel {
-  color: white;
+.signin-store .cl-internal-p8bmz4{
+  width: 40rem;
+  border-radius: 7px !important;
 }
 
 /* For WebKit (Chrome, Safari) */
@@ -204,4 +208,15 @@ body {
 .deal-prev::after{
   font-size: 16px !important;
 
+}
+
+.Toastify__progress-bar--custom {
+  background: #22c55e !important; /* Tailwind green-500 */
+}
+
+.Toastify__progress-bar--success {
+  background: #22c55e !important;
+}
+.Toastify__progress-bar--error {
+  background: #ef4444 !important;
 }

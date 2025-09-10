@@ -1,28 +1,25 @@
-"use client"
-import { useParams } from 'next/navigation'
 import React from 'react'
 import { productsByCategory } from '../../../../../data'
 
-const SingleProduct = () => {
-    const {id}= useParams()
+const SingleProduct = ({params}) => {
+  const {id} =params
 
-  const allProduct=  Object.values(productsByCategory).filter(value =>Array.isArray(value)).flat()
-//   console.log(allProduct)
+  const allProduct = Object.values(productsByCategory).filter(value => Array.isArray(value)).flat()
+  const product = allProduct.find((item) =>item.id === id)
 
-  const product=  allProduct.find((item)=> item.id === id)
   console.log(product)
-  console.log(id)
   return (
-        <div className='flex'>
-            <div>
-{id}
-            </div>
+    <div className='flex'>
+      <div>
+      <img  className='w-full h-full' src={id.img}/>
+      <h2>{product.title}</h2>
+      </div>
 
-            <div>
+      <div>
 
-            </div>
-        </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default SingleProduct

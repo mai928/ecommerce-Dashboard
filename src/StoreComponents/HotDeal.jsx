@@ -13,7 +13,7 @@ const HotDeal = () => {
         const fullStars = Math.max(0 || Math.floor(rate || 0))
         const hasHalfStar = rate % 1 >= 0.25 && rate % 1 <= 0.75
         const emptyStar = 5 - fullStars - (hasHalfStar ? 1 : 0)
-        console.log(emptyStar)
+        // console.log(emptyStar)
 
         return (
             <div className='flex'>

@@ -25,7 +25,7 @@ const WeelDeals = () => {
     const removeFromCart = useCartStore((state) => state.removeFromCart)
     const Cart = useCartStore((state) => state.Cart)
 
-    console.log(Cart , addToCart)
+    // console.log(Cart , addToCart)
 
     useEffect(() => {
         if (model) {

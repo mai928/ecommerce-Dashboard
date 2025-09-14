@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import useCartStore from '@/StoreComponents/zustand/CartStore'
 import { ShowToast } from '@/StoreComponents/Toast'
 import { ToastWrapper } from '@/StoreComponents/Toast'
+import CartButtons from '@/StoreComponents/CartButtons'
 
 const Shop = () => {
 
@@ -15,10 +16,10 @@ const Shop = () => {
   const [showCategorySideBar, setSHowCategorySideBar] = useState(false)
 
 
-  const increaseQuantity = useCartStore((state) => state.increaseQuantity)
-  const addToCart = useCartStore((state) => state.addToCart)
-  const Cart = useCartStore((state) => state.Cart)
-  const decreaseQuantity = useCartStore((state) => state.decreaseQuantity)
+  // const increaseQuantity = useCartStore((state) => state.increaseQuantity)
+  // const addToCart = useCartStore((state) => state.addToCart)
+  // const Cart = useCartStore((state) => state.Cart)
+  // const decreaseQuantity = useCartStore((state) => state.decreaseQuantity)
 
 
 
@@ -87,22 +88,22 @@ const Shop = () => {
 
   // }
 
-  const handleIncrement = (prod) => {
-    addToCart(prod)
-    ShowToast('Product added successfully to your cart', { isLoading: false })
-  }
+  // const handleIncrement = (prod) => {
+  //   addToCart(prod)
+  //   ShowToast('Product added successfully to your cart', { isLoading: false })
+  // }
 
-  const handleDecrement = (id) => {
-    decreaseQuantity(id)
-    ShowToast('Product removed successfully to your cart', { isLoading: true })
+  // const handleDecrement = (id) => {
+  //   decreaseQuantity(id)
+  //   ShowToast('Product removed successfully to your cart', { isLoading: true })
 
-  }
+  // }
 
-  const isDecrement =(id)=>{
-      const cartItem = Cart.find((item) => item.id === id)
-       return   !cartItem || cartItem.quantity <1
+  // const isDecrement = (id) => {
+  //   const cartItem = Cart.find((item) => item.id === id)
+  //   return !cartItem || cartItem.quantity < 1
 
-  }
+  // }
 
   const [checkedCategories, setProductChecked] = useState([])
   const [hasInteracted, sethasInteracted] = useState(false)
@@ -330,33 +331,20 @@ const Shop = () => {
                   displayProducts?.length > 0 && (
                     <div className='grid grid-flow-row  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
                       {
-                        displayProducts.map((prod) => {
+                        displayProducts.map((product) => {
                           return (
-                            <div key={prod.id} className='border-[1px] py-4 relative rounded-md overflow-hidden'>
-                              <p className='absolute top-5  start-10 bg-e_primaryColor px-4 rounded-md font-semibold text-white'>{prod.offer}</p>
-                              <img className='w-52 m-auto' src={prod.img} />
+                            <div key={product.id} className='border-[1px] py-4 relative rounded-md overflow-hidden'>
+                              <p className='absolute top-5  start-10 bg-e_primaryColor px-4 rounded-md font-semibold text-white'>{product.offer}</p>
+                              <img className='w-52 m-auto' src={product.img} />
                               <div className='ms-5'>
-                                <p className='font-semibold  my-3'>{prod.title}</p>
-                                <p className='text-green-600 font-semibold '>{prod.stock}</p>
-                                <p className='flex my-1'> <Rating rate={prod.rate} /> <span className='text-sm text-gray-500'>({(prod.rate)} review)</span> </p>
-                                <p className='text-e_primaryColor font-semibold text-lg'>{prod.price} <span className='text-gray-400  line-through'>{prod.discount}</span></p>
+                                <p className='font-semibold  my-3'>{product.title}</p>
+                                <p className='text-green-600 font-semibold '>{product.stock}</p>
+                                <p className='flex my-1'> <Rating rate={product.rate} /> <span className='text-sm text-gray-500'>({(product.rate)} review)</span> </p>
+                                <p className='text-e_primaryColor font-semibold text-lg'>{product.price} <span className='text-gray-400  line-through'>{product.discount}</span></p>
                               </div>
                               {/* btn Counter */}
-                              <div className=' flex justify-center items-center gap-6 mt-6'>
-                                <button
-    disabled={isDecrement(prod.id)}
-    className="bg-gray-200 px-4 py-1 rounded-s-lg disabled:cursor-not-allowed"
-                                  onClick={() => handleDecrement(prod.id)}
-                                >
-                                  -
-                                </button>
-                                {/* {count[prod.id] || 0} 
-                                */}  {Cart.find(item => item.id === prod.id)?.quantity || 0}
-
-                                <button className='bg-e_secondaryColor px-4 py-1 rounded-e-lg' onClick={() => handleIncrement(prod)}
-
-                                >+</button>
-                              </div>
+                              <div className='mt-6'>                      <CartButtons product={product}/>
+</div>
                             </div>
                           )
                         })

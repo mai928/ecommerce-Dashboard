@@ -1,14 +1,12 @@
 'use client'
 import SignModule from '@/StoreComponents/SignModule'
 import useCartStore from '@/StoreComponents/zustand/CartStore'
-import useWishListStore from '@/StoreComponents/zustand/WishListStore'
 import { useUser } from '@clerk/nextjs'
-import { Bus, Car, Caravan, Copy, Delete, Lock, ShieldHalf, ShoppingBag, ShoppingBagIcon, ShoppingBasket, ShoppingCart, Trash } from 'lucide-react'
+import { Bus, ShieldHalf } from 'lucide-react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
-import { FaFacebook, FaShopify, FaShoppingCart, FaTwitter } from 'react-icons/fa'
-import { EmptyStar, FullStar, global, HalfStar, lock, trash } from '../../../../data'
+import {  FaShoppingCart } from 'react-icons/fa'
+import { EmptyStar, FullStar, HalfStar, lock, trash } from '../../../../data'
 import CartButtons from '@/StoreComponents/CartButtons'
 
 
@@ -60,7 +58,7 @@ const Cart = () => {
                                                 <div className='border-t-2 mx-5 border-gray-200' />
 
                                                 <div className='flex items-center justify-between'>
-                                                    <img className='w-40' src={item.img} />
+                                                    <img className='w-40' src={item.imageUrl} />
                                                     <div>
                                                         <h2 className='font-bold text-gray-700'>{item.title}</h2>
                                                         <p className='flex my-1'> <Rating rate={item.rate} /> ({(item.rate)} review)</p>

@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { bannerLinks, categories_menu, E_NavLinks } from '../../data'
 import Link from 'next/link'
 import { AlignLeft, ChevronDown, Heart, Menu, Search, ShoppingBasket, ShoppingCart, User2, X } from 'lucide-react'
@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import useWishListStore from './zustand/WishListStore'
 import useCartStore from './zustand/CartStore'
 import { ClerkLoaded, SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+import { useProducts } from './zustand/useAllProduct'
 
 const Banner = () => {
   const router = useRouter()
@@ -17,8 +18,27 @@ const Banner = () => {
   const [openCatagory, setOpenCatagory] = useState(false)
   const wrapperRef = useRef(null)
 
-  const total = Cart.reduce((sum, item) => sum + item.quantity, 0)
-  // console.log('total>>>>', total)
+  const { productsByCategory, loading, error } = useProducts()
+
+
+  const [search, setSearch] = useState('')
+
+
+  const filteredProduct = useMemo(() => {
+    if (search.trim()) {
+      return productsByCategory.filter((item) =>
+        item.title.toLowerCase().includes(search.toLowerCase()) || item.category.toLowerCase().includes(search.toLowerCase()))
+
+    } else {
+      setSearch('')
+    }
+
+  }, [search, productsByCategory])
+
+
+  console.log(filteredProduct)
+  // console.log(productsByCategory)
+
 
   useEffect(() => {
 
@@ -34,6 +54,7 @@ const Banner = () => {
     return () => { window.removeEventListener('pointerdown', handleCatagory) }
 
   }, [openCatagory])
+
   const path = usePathname()
 
   return (
@@ -74,9 +95,26 @@ const Banner = () => {
         </div>
 
         <div className='hidden lg:block relative w-[66%]'>
-          <input className=' rounded-md w-full bg-gray-100 py-3 ps-5 ' placeholder='Search For Products .....' />
+          <input value={search} onChange={(e) => setSearch(e.target.value)} className=' rounded-md w-full bg-gray-100 py-3 ps-5 ' placeholder='Search For Products .....' />
           <div className='absolute top-3 end-5'><Search /></div>
+
+          {/* autocomplete products search */}
+          <div className='absolute top-14 bg-gray-100 z-40 shadow-md rounded-md  w-[60%]'>
+            {
+              filteredProduct?.map((item) => (
+                <div className='shadow-sm py-1 rounded-md px-4 hover:bg-white'>
+                  <Link className='flex items-center gap-3' href={`/Store/product/${item.id}`}  onClick={()=>setSearch('')}>
+                    <img className='w-10' src={item.imageUrl} />
+                    <p className='text-gray-900 text-[15px]'>{item.title}</p>
+                  </Link>
+                </div>
+              ))
+            }
+          </div>
+
+
         </div>
+
 
         <div className='flex  gap-3  items-center'>
           <div className='p-2 border-[1px] border-gray-200 rounded-full'><User2 size={20} /></div>
@@ -133,7 +171,7 @@ const Banner = () => {
               {
                 categories_menu?.map((item, index) => (
                   <div key={index} className='hover:bg-white py-2'>
-                    <Link href={'/'} className='ms-5'>{item.name}</Link>
+                    <Link href={`/Store/shop?category=${item.slug}`} className='ms-5'>{item.name}</Link>
                   </div>
                 ))
               }

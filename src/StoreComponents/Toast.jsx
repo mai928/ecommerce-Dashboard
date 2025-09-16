@@ -25,7 +25,7 @@ export const ShowToast = (message, option = {}) => {
     const {isLoading , ...toastOption}=option
 
     toast(<CustomToast message={message} isLoading={isLoading} />, {
-        progressClassName: 'Toastify__progress-bar--custom',
+        progressClassName: `${isLoading ?'Toastify__progress-bar--error':'Toastify__progress-bar--success'}`,
         autoClose: 3000,
         hideProgressBar: false,
         pauseOnHover: true,

@@ -1,15 +1,17 @@
 import React from 'react'
-import { EmptyStar, FullStar, HalfStar, productsByCategory } from '../../../../../data'
+import { EmptyStar, FullStar, HalfStar } from '../../../../../data'
 import CartButtons from '@/StoreComponents/CartButtons'
 import Add_BuyToCart from '@/StoreComponents/Add_BuyToCart'
+import { FetchAllProduct } from '@/StoreComponents/FetchAllProduct'
 
-const SingleProduct = ({ params }) => {
+const SingleProduct =async ({ params }) => {
 
   const { id } = params
 
-  const allProduct = Object.values(productsByCategory).filter(value => Array.isArray(value)).flat()
+  // const allProduct = Object.values(productsByCategory).filter(value => Array.isArray(value)).flat()
+   const productsByCategory = await FetchAllProduct()
 
-  const product = allProduct.find((item) => item.id === id)
+  const product = productsByCategory.find((item) => item.id === id)
 
 
 
@@ -32,7 +34,7 @@ const SingleProduct = ({ params }) => {
 
   return (
     <div className='flex gap-10 p-20 bg-gray-50 '>
-      <img className='w-[450px] border-[1px] bg-gray-100' src={product.img} />
+      <img className='w-[450px] border-[1px] bg-gray-100' src={product?.imageUrl} />
 
       <div className='bg-white ps-5 shadow-md w-full pt-3'>
         <p className='text-e_secondaryColor bg-yellow-200 font-semibold  w-20 text-center rounded-lg text-sm py-1'>{product.stock}</p>

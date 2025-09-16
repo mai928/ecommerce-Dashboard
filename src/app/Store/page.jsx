@@ -6,12 +6,14 @@ import Features from '@/StoreComponents/Features'
 import HotDeal from '@/StoreComponents/HotDeal'
 import LocalsBanner from '@/StoreComponents/LocalsBanner'
 import Slider from '@/StoreComponents/Slider'
+import { ToastWrapper } from '@/StoreComponents/Toast'
 import WeelDeals from '@/StoreComponents/WeelDeals'
 import React from 'react'
 
 export default function StoreHome() {
   return (
     <div>
+      <ToastWrapper/>
       <Slider />
       <Features/>
 

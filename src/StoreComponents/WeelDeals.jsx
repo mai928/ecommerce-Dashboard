@@ -1,15 +1,32 @@
 'use client'
-import React, { useState } from 'react'
-import { E_WeekDeals } from '../../data'
+import React, { useEffect, useState } from 'react'
+// import { E_WeekDeals } from '../../data'
 import useWishListStore from './zustand/WishListStore'
 import ProductCard from './ProductCard'
 import { ShowToast } from './Toast'
 import { ToastWrapper } from './Toast'
 import useCartStore from './zustand/CartStore'
 import Model from './Model'
-import { el } from 'date-fns/locale'
 
 const WeelDeals = () => {
+
+
+      const [E_WeekDeals , setProducts] = useState([]);
+      useEffect(() => {
+        const getProducts = async () => {
+          try {
+            const res = await fetch("/api/home_offer");
+            const data = await res.json();
+            setProducts(data);
+          } catch (error) {
+            console.error("Error fetching products:", error);
+          }
+        };
+        getProducts();
+      }, []);
+
+
+
 
     const [model, openModel] = useState(false)
     const [itemToRemove, setItemToRemove] = useState(null)
@@ -105,7 +122,7 @@ const WeelDeals = () => {
             <div className='bg-e_secondaryColor w-full h-10  flex items-center ps-10 font-semibold uppercase text-lg'>
                 Weekly Hot Offer
             </div>
-            <ToastWrapper />
+            {/* <ToastWrapper /> */}
             <div className='grid grid-flow-row grid-cols-1 lg:grid-cols-3 '>
                 {
                     E_WeekDeals?.map((item) => {

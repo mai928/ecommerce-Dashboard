@@ -3,7 +3,7 @@ import React from 'react'
 import useCartStore from './zustand/CartStore'
 import { ShowToast } from './Toast'
 
-const CartButtons = ({product}) => {
+const CartButtons = ({ product }) => {
     const addToCart = useCartStore((state) => state.addToCart)
     const Cart = useCartStore((state) => state.Cart)
     const decreaseQuantity = useCartStore((state) => state.decreaseQuantity)

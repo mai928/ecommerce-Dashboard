@@ -22,6 +22,9 @@ const ProductCard = ({ item, handleWishListClick, inWishList, inCartList, handle
             </div>
         )
     }
+
+
+
     return (
         <motion.button
             key={item.id}
@@ -34,7 +37,7 @@ const ProductCard = ({ item, handleWishListClick, inWishList, inCartList, handle
             className='border-[1px] py-4 relative overflow-hidden cursor-pointer'>
             <p className='absolute top-5  start-10 bg-e_primaryColor px-4 rounded-md font-semibold text-white'>{item.offer}</p>
             <img onClick={() => navigate.push(`/Store/product/${item.id}`)}
-                className='h-80 m-auto ' src={item.img} />
+                className='h-80 m-auto ' src={item.imageUrl} />
             <div className='ms-20 text-start'>
                 <p className='font-semibold text-lg mb-3'>{item.title}</p>
                 <p className='text-green-600 font-semibold '>{item.stock}</p>

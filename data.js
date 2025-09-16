@@ -1,6 +1,6 @@
 import { generateStableIds } from "@/lib/utils";
 import { Badge, Beef, Coffee, Home, Pizza } from "lucide-react";
-import { v4 as uuidv4,idv4 } from 'uuid'; // Import the v4 uuidv4(),ID generator
+import { v4 as uuidv4, idv4 } from 'uuid'; // Import the v4 uuidv4(),ID generator
 
 export const downIcon = (fill) => (
 	<svg
@@ -675,191 +675,219 @@ export const categories_menu = [
 ];
 
 
-
-
-
-
 export const productsByCategory = {
 	beauty: [
 		{
-		id:'beauty-01',
+			// done
+			id: 'beauty-01',
 			img: "/basket/makeup/makeup1.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Luxury Fragrance", // Modified label
+			title: "Chanel Coco Mademoiselle", // Modified title
+			details: "An oriental-fresh, vibrant and sophisticated scent, reminding us of a daring young Coco Chanel. This powerful, yet elegant composition is perfect for modern women.", // Added details
 			stock: "IN STOCK",
 			rate: 4.5,
-			offer: "16.5%",
-			price: "300$",
+			offer: "10%", // Modified offer
+			price: "350$", // Modified price
 			discount: "200$",
 		},
-		,
 		{
-		id:'beauty-02',
+			id: 'beauty-02',
 			img: "/basket/makeup/makeup2.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Premium Skincare", // Modified label
+			title: "Dior Capture Totale Serum", // Modified title
+			details: "A global anti-aging serum that revitalizes and plumps the skin, restoring its youthful radiance.", // Added details
 			stock: "IN STOCK",
-			rate: 4.5,
-			offer: "16.5%",
-			price: "200$",
-			discount: "200$",
+			rate: 4.8,
+			offer: "15%",
+			price: "180$",
+			discount: "150$",
 		},
 		{
-		id:'beauty-03',
+			id: 'beauty-03',
 			img: "/basket/makeup/makeup3.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "High-End powder", // Modified label
+			title: "Yves Saint Laurent Rouge Pur Couture", // Modified title
+			details: "A luxurious lipstick that delivers intense color and hydration in one swipe, with a satin finish.", // Added details
 			stock: "IN STOCK",
-			rate: 4.5,
-			offer: "16.5%",
-			price: "150$",
-			discount: "200$",
+			rate: 4.2,
+			offer: "5%",
+			price: "45$",
+			discount: "40$",
 		},
+
+
 		{
-		id:'beauty-04',
+			id: "beauty-04",
 			img: "/basket/makeup/makeup4.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Classic Mascara",
+			title: "Lancôme Hypnôse Drama Mascara",
+			details: "A volume-boosting mascara with a unique S-shaped brush to create dramatic, full lashes that appear up to 12x thicker. The formula is enriched with pro-vitamin B5 to leave lashes soft and supple.",
 			stock: "IN STOCK",
-			rate: 4.5,
+			rate: 4.6,
 			offer: "16.5%",
-			price: "1000$",
-			discount: "200$",
+			price: 1000,
+			discount: 200
 		},
 		{
-		id:'beauty-05',
+			id: "beauty-05",
 			img: "/basket/makeup/makeup5.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Nourishing Face Cream",
+			title: "La Mer Crème de la Mer",
+			details: "An ultra-rich moisturizing cream that helps heal dryness, providing deep hydration and restoring a radiant look. It is infused with the brand's Miracle Broth, a potent blend of sea kelp and other natural ingredients.",
 			stock: "IN STOCK",
-			rate: 4.5,
+			rate: 4.9,
 			offer: "16.5%",
-			price: "400$",
-			discount: "200$",
-		},
+			price: 400,
+			discount: 200
+		}
+
 	],
 	fragrances: [
 		{
-			id:'fragrances-01',
+			id: 'fragrances-01',
 			img: "/basket/Perfums/perfum1.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Men's Classic Scent", // Modified label
+			title: "Giorgio Armani Acqua di Gio", // Modified title
+			details: "A timeless aquatic fragrance for men, inspired by the fresh sea, warm sun and the richness of the earth.", // Added details
 			stock: "IN STOCK",
-			rate: 4.5,
-			offer: "16.5%",
-			price: "1050$",
-			discount: "200$",
+			rate: 4.7,
+			offer: "10%",
+			price: "120$",
+			discount: "100$",
 		},
 		{
-			id:'fragrances-02',
+			// done
+			id: 'fragrances-02',
 			img: "/basket/Perfums/perfum2.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Elegant Floral Perfume", // Modified label
+			title: "Marc Jacobs Daisy Eau de Toilette", // Modified title
+			details: "A charmingly simple and elegant floral creation that transports you to a place of optimism and purity.", // Added details
 			stock: "IN STOCK",
-			rate: 4.5,
+			rate: 4.4,
 			offer: "16.5%",
-			price: "2050$",
+			price: "95$",
 			discount: "200$",
 		},
 		{
-			id:'fragrances-03',
+			id: 'fragrances-03',
 			img: "/basket/Perfums/perfum3.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
-			stock: "IN STOCK",
-			rate: 4.5,
-			offer: "16.5%",
-			price: "3050$",
+			label: "Intense Men's Fragrance", // Modified label
+			title: "Dior Sauvage Elixir", // Modified title
+			details: "An extraordinarily concentrated fragrance steeped in the emblematic freshness of Sauvage with an intoxicating heart of spices, a 'bespoke' Lavender essence and a blend of rich Woods.", // Added details
+			stock: "LOW STOCK", // Modified stock
+			rate: 4.9,
+			offer: "10%", // Modified offer
+			price: "320$", // Modified price
 			discount: "200$",
 		},
+
 		{
-			id:'fragrances-04',
+			//  done
+			id: 'fragrances-04',
 			img: "/basket/Perfums/perfum4.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Feminine Evening Scent",
+			title: "Yves Saint Laurent Black Opium",
+			details: "A captivating floral gourmand scent with notes of black coffee, white flowers, and vanilla for a sensual and addictive fragrance.",
 			stock: "IN STOCK",
-			rate: 4.5,
+			rate: 4.6,
 			offer: "16.5%",
 			price: "4050$",
 			discount: "200$",
 		},
 		{
-			id:'fragrances-05',
+			id: 'fragrances-05',
 			img: "/basket/Perfums/perfum5.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Unisex Citrus Fragrance",
+			title: "Tom Ford Neroli Portofino",
+			details: "A sparkling, fresh, and zesty fragrance inspired by the Italian Riviera, blending notes of citrus, floral, and amber.",
 			stock: "IN STOCK",
-			rate: 4.5,
+			rate: 4.8,
 			offer: "16.5%",
 			price: "2050$",
 			discount: "200$",
 		},
-
 		{
-			id:'fragrances-06',
+			// done
+			id: 'fragrances-06',
 			img: "/basket/Perfums/perfum6.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Warm Vanilla Perfume",
+			title: "Viktor & Rolf Flowerbomb",
+			details: "An explosive floral bouquet with notes of jasmine, freesia, and rose, grounded by a warm and sweet vanilla base.",
 			stock: "IN STOCK",
 			rate: 4.5,
 			offer: "16.5%",
 			price: "1000$",
 			discount: "200$",
 		},
-
 		{
-			id:'fragrances-07',
+			id: 'fragrances-07',
 			img: "/basket/Perfums/perfum7.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Spicy Oriental Scent",
+			title: "Byredo Gypsy Water",
+			details: "A woody and aromatic fragrance that evokes a sense of nomadic freedom with notes of bergamot, incense, pine needles, and vanilla.",
 			stock: "IN STOCK",
-			rate: 4.5,
+			rate: 4.7,
 			offer: "16.5%",
 			price: "1500$",
 			discount: "200$",
 		},
-
 		{
-			id:'fragrances-08',
+			// done
+			id: 'fragrances-08',
 			img: "/basket/Perfums/perfum8.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Fresh Aquatic Cologne",
+			title: "Creed Aventus",
+			details: "A sophisticated and powerful fragrance with a blend of blackcurrant, pineapple, and birch, creating a fresh and masculine scent.",
 			stock: "IN STOCK",
-			rate: 4.5,
+			rate: 4.9,
 			offer: "16.5%",
 			price: "1450$",
 			discount: "200$",
 		},
-
 		{
-			id:'fragrances-09',
+			id: 'fragrances-09',
 			img: "/basket/Perfums/perfum9.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Soft Floral Fragrance",
+			title: "Jo Malone Peony & Blush Suede",
+			details: "A charming and lush floral fragrance with notes of red apple, peony, and jasmine, wrapped in a soft suede accord.",
 			stock: "IN STOCK",
-			rate: 4.5,
+			rate: 4.3,
 			offer: "16.5%",
 			price: "1200$",
 			discount: "200$",
 		},
-
 		{
-			id:'fragrances-0120',
+			id: 'fragrances-0120',
 			img: "/basket/Perfums/perfum10.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Rich Woody Perfume",
+			title: "Le Labo Santal 33",
+			details: "An iconic and intoxicating woody fragrance with notes of cardamom, iris, violet, and Australian sandalwood.",
 			stock: "IN STOCK",
-			rate: 4.5,
+			rate: 4.8,
 			offer: "16.5%",
 			price: "3500$",
 			discount: "200$",
 		},
-
 		{
-			id:'fragrances-0121',
+			id: 'fragrances-0121',
 			img: "/basket/Perfums/perfum11.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
+			label: "Citrus Aromatic Scent",
+			title: "Hermès Terre d'Hermès",
+			details: "A warm and masculine fragrance with a blend of citrus, pepper, and woody notes, inspired by the earth and its elements.",
+			stock: "IN STOCK",
+			rate: 4.6,
+			offer: "16.5%",
+			price: "1050$",
+			discount: "200$",
+		},
+		{
+
+			// done
+			id: 'fragrances-0123',
+			img: "/basket/Perfums/perfum12.png",
+			label: "Sweet Gourmand Fragrance",
+			title: "Lancôme La Vie Est Belle",
+			details: "A joyful and sweet fragrance featuring notes of iris, patchouli, and vanilla, symbolizing a new era of happiness.",
 			stock: "IN STOCK",
 			rate: 4.5,
 			offer: "16.5%",
@@ -867,313 +895,306 @@ export const productsByCategory = {
 			discount: "200$",
 		},
 
-		{
-			id:'fragrances-0123',
-			img: "/basket/Perfums/perfum12.png",
-			label: "Vegetables",
-			title: "Chanel Coco Noir Eau De",
-			stock: "IN STOCK",
-			rate: 4.5,
-			offer: "16.5%",
-			price: "1050$",
-			discount: "200$",
-		},
+
 	],
 	furniture: [
 		{
-
-			id:'furniture-01',
+			id: 'furniture-01',
 			img: "/basket/furn/bed1.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
+			label: "Luxury King Size Bed", // Modified label
+			title: "Handcrafted Italian Upholstered Bed", // Modified title
+			details: "Experience unparalleled comfort and style with this exquisitely crafted bed, featuring plush upholstery and a sturdy frame.", // Added details
 			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "2500$",
+			rate: 4.5, // Modified rate
+			offer: "15%",
+			price: "2800$", // Modified price
 			discount: "200$",
 		},
 		{
-
-			id:'furniture-02',
-			img: "/basket/furn/bed1.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
+			id: 'furniture-02',
+			img: "/basket/furn/bed1.png", // Assuming this might be a different view or similar model
+			label: "Modern Platform Bed", // Modified label
+			title: "Minimalist Wooden Platform Bed", // Modified title
+			details: "A sleek, low-profile bed frame made from sustainably sourced solid wood, perfect for a contemporary aesthetic.", // Added details
 			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "2000$",
+			rate: 4.2,
+			offer: "10%",
+			price: "1800$",
 			discount: "200$",
 		},
-		{
 
-			id:'furniture-03',
+		{
+			id: "furniture-03",
 			img: "/basket/furn/bed3.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
+			label: "Vintage Style Bed",
+			title: "Ornate French Provincial Bed",
+			details: "A beautifully crafted bed with intricate carvings and a distressed finish, perfect for adding a touch of vintage elegance to your bedroom. Made from solid oak with a plush upholstered headboard.",
 			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "1500$",
-			discount: "200$",
-		},
-		{
-
-			id:'furniture-04',
-			img: "/basket/furn/bed2.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "1500$",
-			discount: "200$",
-		},
-		{
-
-			id:'furniture-05',
-			img: "/basket/furn/bed4.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
+			rate: 3.0,
 			offer: "20%",
 			price: "1000$",
-			discount: "200$",
+			discount: "200$"
 		},
 		{
-
-			id:'furniture-06',
-			img: "/basket/furn/caution.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
+			id: "furniture-04",
+			img: "/basket/furn/bed2.png",
+			label: "Guest Room Bed",
+			title: "Compact Single Bed with Storage",
+			details: "A space-saving single bed featuring two large under-bed drawers, ideal for guest rooms or small apartments. Constructed from durable pine wood with a clean, minimalist design.",
 			stock: "IN STOCK",
-			rate: 3,
+			rate: 3.0,
+			offer: "20%",
+			price: "1500$",
+			discount: "200$"
+		},
+		{
+			id: 'furniture-05',
+			img: "/basket/furn/bed4.png",
+			label: "Bedroom Furniture", // Modified label
+			title: "Modern Minimalist Bed Frame", // Modified title
+			details: "A sleek and sturdy bed frame designed for contemporary bedrooms, made from high-quality solid wood.", // Added details
+			stock: "IN STOCK",
+			rate: 4.8, // Modified rate
+			offer: "20%",
+			price: "1200$", // Modified price
+			discount: "200$",
+		},
+
+		{
+			id: "furniture-06",
+			img: "/basket/furn/caution.png",
+			label: "Comfortable Armchair",
+			title: "Ergonomic Velvet Armchair",
+			details: "A plush armchair with an ergonomic design, providing excellent back support. Upholstered in soft, luxurious velvet with sturdy wooden legs, perfect for a cozy reading nook or living room.",
+			stock: "IN STOCK",
+			rate: 3.0,
 			offer: "20%",
 			price: "2050$",
-			discount: "200$",
+			discount: "200$"
 		},
 		{
-
-			id:'furniture-07',
+			id: "furniture-07",
 			img: "/basket/furn/caution2.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
+			label: "Stylish Coffee Table",
+			title: "Glass and Steel Coffee Table",
+			details: "A contemporary coffee table featuring a tempered glass top and a polished stainless steel base. Its sleek and minimalist design adds a modern touch to any living space, and it's easy to clean.",
 			stock: "IN STOCK",
-			rate: 3,
+			rate: 3.0,
 			offer: "20%",
 			price: "1050$",
-			discount: "200$",
+			discount: "200$"
 		},
 		{
-
-			id:'furniture-08',
+			id: "furniture-08",
 			img: "/basket/furn/caution3.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
+			label: "Rustic Wooden Desk",
+			title: "Solid Oak Home Office Desk",
+			details: "A durable and spacious desk made from solid oak, featuring a rustic finish and two large drawers for storage. It's an ideal choice for a functional and stylish home office setup.",
 			stock: "IN STOCK",
-			rate: 3,
+			rate: 3.0,
 			offer: "20%",
 			price: "1050$",
-			discount: "200$",
+			discount: "200$"
 		},
-
 		{
-
-			id:'furniture-09',
+			id: "furniture-09",
 			img: "/basket/furn/sufa.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
+			label: "Spacious Sofa Set",
+			title: "Modular L-Shaped Sectional Sofa",
+			details: "A versatile and comfortable sectional sofa that can be configured to fit your space. Upholstered in a durable fabric with plush cushions, it's perfect for relaxing with family and friends.",
 			stock: "IN STOCK",
-			rate: 3,
+			rate: 3.0,
 			offer: "20%",
 			price: "4050$",
-			discount: "200$",
+			discount: "200$"
 		},
-
 		{
-
-			id:'furniture-0120',
+			id: "furniture-0120",
 			img: "/basket/furn/chair.webp",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
+			label: "Dining Chair Set",
+			title: "Mid-Century Modern Dining Chairs (Set of 4)",
+			details: "A set of four stylish dining chairs with a timeless mid-century modern design. They feature a contoured wooden seat and sleek metal legs, offering both comfort and aesthetic appeal.",
 			stock: "IN STOCK",
-			rate: 3,
+			rate: 3.0,
 			offer: "20%",
 			price: "800$",
-			discount: "200$",
-		},
+			discount: "200$"
+		}
+
 	],
 	groceries: [
 		{
 
-		id:'grocery-01',
+			id: 'grocery-01',
 			img: "/basket/gros/animalFood.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
+			label: "Premium Pet Food", // Modified label
+			title: "Organic Salmon & Sweet Potato Dog Food", // Modified title
+			details: "A complete and balanced meal for adult dogs, packed with essential nutrients and natural ingredients.", // Added details
 			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "20$",
-			discount: "200$",
-		},
-		,
-		{
-
-		id:'grocery-02',
-			img: "/basket/gros/animalFood2.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "35$",
-			discount: "200$",
-		},
-		{
-
-		id:'grocery-03',
-			img: "/basket/gros/bread.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "3$",
-			discount: "200$",
-		},
-		{
-
-		id:'grocery-04',
-			img: "/basket/gros/chicken.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "10$",
-			discount: "200$",
-		},
-
-		{
-
-		id:'grocery-05',
-			img: "/basket/gros/egg.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "5$",
-			discount: "200$",
-		},
-		{
-
-		id:'grocery-06',
-			img: "/basket/gros/honey.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
+			rate: 4.6,
+			offer: "10%",
 			price: "25$",
 			discount: "200$",
 		},
-		{
 
-		id:'grocery-07',
-			img: "/basket/gros/kewei.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "40$",
-			discount: "200$",
-		},
-		{
-
-		id:'grocery-08',
-			img: "/basket/gros/meat1.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "50$",
-			discount: "200$",
-		},
-		{
-
-		id:'grocery-09',
-			img: "/basket/gros/pepper.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "15$",
-			discount: "200$",
-		},
-		{
-
-		id:'grocery-0120',
-			img: "/basket/gros/snacks1.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "30$",
-			discount: "200$",
-		},
-		{
-
-		id:'grocery-0122',
-			img: "/basket/gros/steak.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "60$",
-			discount: "200$",
-		},
-		{
-
-		id:'grocery-0123',
-			img: "/basket/gros/salmon.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "100$",
-			discount: "200$",
-		},
-		{
-
-		id:'grocery-0124',
-			img: "/basket/gros/oil.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "4$",
-			discount: "200$",
-		},
-		{
-
-		id:'grocery-0125',
-			img: "/basket/gros/vegetables.png",
-			label: "Pan Pizza",
-			title: "Annibale Colombo Bed",
-			stock: "IN STOCK",
-			rate: 3,
-			offer: "20%",
-			price: "10$",
-			discount: "200$",
-		},
+		[
+			{
+				id: "grocery-02",
+				img: "/basket/gros/animalFood2.png",
+				label: "Gourmet Cat Treats",
+				title: "Tuna & Chicken Flakes for Cats",
+				details: "Premium, all-natural tuna and chicken flakes packed in a savory broth. A high-protein, low-calorie treat that your feline friend will adore.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "35$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-03",
+				img: "/basket/gros/bread.png",
+				label: "Freshly Baked Bread",
+				title: "Artisan Sourdough Loaf",
+				details: "A rustic sourdough loaf with a crunchy crust and a soft, tangy interior. Made with a traditional long fermentation process for a rich flavor.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "3$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-04",
+				img: "/basket/gros/chicken.png",
+				label: "Organic Chicken Breast",
+				title: "Farm-Fresh Boneless Chicken Breast",
+				details: "Responsibly sourced, hormone-free chicken breast, perfect for grilling, baking, or pan-searing. A lean and versatile protein for any meal.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "10$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-05",
+				img: "/basket/gros/egg.png",
+				label: "Free-Range Eggs",
+				title: "Large Brown Eggs (Dozen)",
+				details: "A dozen large brown eggs from chickens raised on open pastures. Known for their rich yolks and robust flavor, perfect for all your cooking needs.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "5$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-06",
+				img: "/basket/gros/honey.png",
+				label: "Pure Local Honey",
+				title: "Wildflower Honey (Raw & Unfiltered)",
+				details: "Unprocessed, raw honey collected from local wildflowers. It retains all its natural enzymes and beneficial properties, with a unique floral sweetness.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "25$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-07",
+				img: "/basket/gros/kewei.png",
+				label: "Fresh Organic Kiwi",
+				title: "Sweet Green Kiwi (Pack of 6)",
+				details: "A pack of six juicy, sweet, and tangy organic kiwis. A great source of vitamin C and dietary fiber for a healthy snack.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "40$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-08",
+				img: "/basket/gros/meat1.png",
+				label: "Grass-Fed Beef Mince",
+				title: "Lean Ground Beef (500g)",
+				details: "High-quality, lean ground beef from grass-fed cattle. Ideal for making flavorful burgers, meatballs, and sauces.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "50$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-09",
+				img: "/basket/gros/pepper.png",
+				label: "Assorted Bell Peppers",
+				title: "Mixed Color Bell Peppers (3-pack)",
+				details: "A vibrant trio of red, yellow, and green bell peppers. Crisp, sweet, and full of vitamins, they are perfect for salads, stir-fries, and roasting.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "15$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-0120",
+				img: "/basket/gros/snacks1.png",
+				label: "Healthy Snack Mix",
+				title: "Organic Nut & Dried Fruit Trail Mix",
+				details: "A delicious and energizing mix of organic nuts and dried fruits. Packed with protein and healthy fats, it's the perfect on-the-go snack.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "30$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-0122",
+				img: "/basket/gros/steak.png",
+				label: "Premium Beef Steak",
+				title: "USDA Prime Ribeye Steak",
+				details: "A tender and juicy ribeye steak with excellent marbling for maximum flavor. Sourced from high-quality USDA Prime beef.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "60$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-0123",
+				img: "/basket/gros/salmon.png",
+				label: "Fresh Atlantic Salmon",
+				title: "Wild-Caught Salmon Fillet (200g)",
+				details: "A fresh, wild-caught Atlantic salmon fillet. Rich in Omega-3 fatty acids and a great source of protein, with a buttery texture and delicate flavor.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "100$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-0124",
+				img: "/basket/gros/oil.png",
+				label: "Extra Virgin Olive Oil",
+				title: "Cold-Pressed Italian Olive Oil",
+				details: "A premium, cold-pressed olive oil from Italy. Its rich, fruity flavor and low acidity make it perfect for salads, dipping, and light cooking.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "4$",
+				discount: "200$"
+			},
+			{
+				id: "grocery-0125",
+				img: "/basket/gros/vegetables.png",
+				label: "Assorted Fresh Vegetables",
+				title: "Seasonal Organic Vegetable Basket",
+				details: "A curated basket of the freshest organic vegetables in season. A convenient way to get a variety of nutritious, farm-fresh produce.",
+				stock: "IN STOCK",
+				rate: 3.0,
+				offer: "20%",
+				price: "10$",
+				discount: "200$"
+			}
+		]
 	],
 	// ... add more for each slug
 };
@@ -1443,11 +1464,11 @@ export const E_CollectionFood = [
 	},
 ];
 
-export const E_WeekDeals = 
+export const E_WeekDeals =
 	[
 		{
 
-			id:'fragrances-09',
+			id: 'fragrances-09',
 			img: "/basket/Perfums/perfum9.png",
 			label: "Vegetables",
 			title: "Chanel Coco Noir Eau De",
@@ -1461,7 +1482,7 @@ export const E_WeekDeals =
 		{
 
 
-			id:'fragrances-07',
+			id: 'fragrances-07',
 			img: "/basket/Perfums/perfum7.png",
 			label: "Density To Taste",
 			title: "Dior J'adore",
@@ -1474,7 +1495,7 @@ export const E_WeekDeals =
 		{
 
 
-			id:'fragrances-08',
+			id: 'fragrances-08',
 			img: "/basket/Perfums/perfum8.png",
 			label: "Amazing Taste",
 			title: "Dolce Shine Eau de",
@@ -1488,7 +1509,7 @@ export const E_WeekDeals =
 		{
 
 
-			id:'fragrances-06',
+			id: 'fragrances-06',
 			img: "/basket/Perfums/perfum6.png",
 			label: "Tapas",
 			title: "Gucci Bloom Eau de",
@@ -1501,7 +1522,7 @@ export const E_WeekDeals =
 		{
 
 
-			id:'furniture-01',
+			id: 'furniture-01',
 			img: "/basket/furn/bed1.png",
 			label: "Pan Pizza",
 			title: "Annibale Colombo Bed",
@@ -1514,7 +1535,7 @@ export const E_WeekDeals =
 
 		{
 
-			id:'furniture-02',
+			id: 'furniture-02',
 
 			img: "/basket/furn/bed2.png",
 			label: "Carbonara",
@@ -1527,7 +1548,7 @@ export const E_WeekDeals =
 		},
 		{
 
-			id:'furniture-03',
+			id: 'furniture-03',
 
 			img: "/basket/furn/bed3.png",
 			label: "Tomato Flavor",
@@ -1539,7 +1560,7 @@ export const E_WeekDeals =
 			discount: "200$",
 		},
 		{
-			id:'furniture-07',
+			id: 'furniture-07',
 
 			img: "/basket/furn/caution2.png",
 			label: "Tomato Flavor",
@@ -1551,7 +1572,7 @@ export const E_WeekDeals =
 			discount: "200$",
 		},
 		{
-			id:'furniture-06',
+			id: 'furniture-06',
 
 
 			img: "/basket/furn/caution.png",

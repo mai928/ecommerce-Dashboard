@@ -4,26 +4,30 @@ import React, { useEffect, useState } from 'react'
 import useWishListStore from './zustand/WishListStore'
 import ProductCard from './ProductCard'
 import { ShowToast } from './Toast'
-import { ToastWrapper } from './Toast'
 import useCartStore from './zustand/CartStore'
 import Model from './Model'
+import { RotatingLines } from 'react-loader-spinner'
 
 const WeelDeals = () => {
 
 
-      const [E_WeekDeals , setProducts] = useState([]);
-      useEffect(() => {
+    const [E_WeekDeals, setProducts] = useState([]);
+    const [isLoading, setLoading] = useState(true)
+
+    useEffect(() => {
         const getProducts = async () => {
-          try {
-            const res = await fetch("/api/home_offer");
-            const data = await res.json();
-            setProducts(data);
-          } catch (error) {
-            console.error("Error fetching products:", error);
-          }
+            try {
+                const res = await fetch("/api/home_offer");
+                const data = await res.json();
+                setProducts(data);
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            } finally {
+                setLoading(false)
+            }
         };
         getProducts();
-      }, []);
+    }, []);
 
 
 
@@ -32,7 +36,7 @@ const WeelDeals = () => {
     const [itemToRemove, setItemToRemove] = useState(null)
     const [cartToRemove, setCartToRemove] = useState(null)
 
-     const [removeType, setRemoveType] = useState(null)
+    const [removeType, setRemoveType] = useState(null)
 
     const addToWishList = useWishListStore((state) => state.addToWishList)
     const removeFromWishList = useWishListStore((state) => state.removeFromWishList)
@@ -48,7 +52,7 @@ const WeelDeals = () => {
 
         const isInWishList = items?.some((product) =>
             product.id === item.id)
-           setRemoveType('Wishlist')
+        setRemoveType('Wishlist')
         if (isInWishList) {
             openModel(true)
             setItemToRemove(item)
@@ -64,13 +68,10 @@ const WeelDeals = () => {
     const ConfirmRemove = () => {
 
         if (itemToRemove && removeType === 'Wishlist') {
-            // ShowToast('Product Removed Successfully to Your Wishlist', { isLoading: true })
 
             removeFromWishList(itemToRemove.id)
             ShowToast('Product Removed Successfully to Your Wishlist', { isLoading: true })
 
-
-        } else {
             openModel(false)
 
             setItemToRemove(null)
@@ -83,11 +84,19 @@ const WeelDeals = () => {
             removeFromCart(cartToRemove.id)
             ShowToast('Product Removed Successfully to Your Cart', { isLoading: true })
 
-        } else {
             openModel(false)
             setCartToRemove(null)
 
         }
+
+
+        if (!itemToRemove && !cartToRemove) {
+            openModel(false);
+            setItemToRemove(null);
+            setCartToRemove(null);
+        }
+        // You might also want to ensure removeType is reset:
+        setRemoveType(null);
 
     }
 
@@ -102,7 +111,7 @@ const WeelDeals = () => {
 
         const isInCartList = Cart?.some((product) =>
             product.id === item.id)
-            setRemoveType('Cart')
+        setRemoveType('Cart')
         if (isInCartList) {
             openModel(true)
             setCartToRemove(item)
@@ -117,6 +126,33 @@ const WeelDeals = () => {
 
     }
 
+    if (isLoading) {
+        return (
+            <div className='flex  justify-center items-center '>
+                <RotatingLines
+                    visible={true}
+                    height="96"
+                    width="96"
+                    strokeColor="rgb(244 182 24)" // Changed to yellow
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    ariaLabel="rotating-lines-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                />
+
+            </div>
+        )
+    }
+
+    if (E_WeekDeals.length === 0 && !isLoading) {
+        return (
+            <div className='text-center'>
+                No Data at this moment
+            </div>
+        )
+    }
+
     return (
         <div className='px-5 lg:px-40 py-10'>
             <div className='bg-e_secondaryColor w-full h-10  flex items-center ps-10 font-semibold uppercase text-lg'>
@@ -126,8 +162,8 @@ const WeelDeals = () => {
             <div className='grid grid-flow-row grid-cols-1 lg:grid-cols-3 '>
                 {
                     E_WeekDeals?.map((item) => {
-                        const inWishList = items.some((product) => product.id === item.id)
-                        const inCartList = Cart.some((product) => product.id === item.id)
+                        const inWishList = items?.some((product) => product.id === item.id)
+                        const inCartList = Cart?.some((product) => product.id === item.id)
                         return (
 
 

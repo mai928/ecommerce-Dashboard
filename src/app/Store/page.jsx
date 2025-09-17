@@ -21,7 +21,9 @@ export default function StoreHome() {
       <LocalsBanner />
 
       <WeelDeals />
-      <CardOffer />    {/* */}
+      <CardOffer />  
+      
+        {/* */}
 
       {/* <CollectionFood/> */}
       <HotDeal />

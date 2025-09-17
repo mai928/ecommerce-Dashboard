@@ -1,5 +1,6 @@
+'use client'
 import React from 'react'
-import { hover, motion } from 'framer-motion'
+import {  motion } from 'framer-motion'
 import { Heart, ShoppingCart } from 'lucide-react'
 import { FaRegEye } from 'react-icons/fa'
 import { EmptyStar, FullStar, HalfStar } from '../../data'
@@ -113,7 +114,7 @@ const ProductCard = ({ item, handleWishListClick, inWishList, inCartList, handle
 
                 {/* wishlist */}
 
-                <motion.div
+                <motion.button
                     whileHover='hover'
                     initial="initial"
                     animate="initial"
@@ -143,7 +144,7 @@ const ProductCard = ({ item, handleWishListClick, inWishList, inCartList, handle
 
                         <div className="z-0 absolute top-[9px] end-[40px] w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[10px] border-l-red-700"></div>
                     </motion.div>
-                </motion.div>
+                </motion.button>
 
             </motion.div>
 

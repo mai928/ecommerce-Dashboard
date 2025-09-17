@@ -129,7 +129,7 @@ const Banner = () => {
           </div>
 
           <div className='relative'>
-            <p className='absolute z-10 bottom-5 start-5 px-[5px] bg-red-300 text-red-600 text-sm font-semibold rounded-full'>{Cart.length}</p>
+            <p className='absolute z-10 bottom-5 start-5 px-[5px] bg-red-300 text-red-600 text-sm font-semibold rounded-full'>{Cart?.length}</p>
             <button onClick={() => router.push('/Store/cart')} className=' relative p-2  z-0 rounded-full'>
               <ShoppingCart size={20} />
             </button>

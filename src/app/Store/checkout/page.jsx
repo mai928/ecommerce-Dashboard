@@ -201,7 +201,7 @@ const Checkout = () => {
                                                 <Link href={''} className="flex  justify-between my-3 p-2 border-b border-gray-200">
                                                     <img
                                                         className="w-16 h-16 object-cover border border-gray-200 rounded-lg bg-gray-100"
-                                                        src={item.img}
+                                                        src={item.imageUrl}
                                                         alt={item.title}
                                                     />
 

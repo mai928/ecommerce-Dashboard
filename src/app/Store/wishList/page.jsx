@@ -57,7 +57,7 @@ const WishList = () => {
                                             <div className='border-t-2 mx-5 border-gray-200' />
 
                                             <div className='flex items-center justify-between'>
-                                                <img className='w-40' src={item.img} />
+                                                <img className='w-40' src={item.imageUrl} />
                                                 <div>
                                                     <h2 className='font-bold text-gray-700'>{item.title}</h2>
                                                     <p className='flex my-1'> <Rating rate={item.rate} /> ({(item.rate)} review)</p>

@@ -72,7 +72,7 @@ export default function Chatbot() {
         {chatbotIcon('white', 35)}
       </button>
       {openChat &&
-        <div className="fixed z-50 bottom-20 right-20 w-96 shadow-lg rounded-xl bg-gray-100 border p-4">
+        <div className="fixed z-50 bottom-20 right-5 lg:right-20 w-80 lg:w-96 shadow-lg rounded-xl bg-gray-100 border p-4">
 
           {/* header */}
           <div className="flex items-center pb-2 justify-between border-b-[1px] border-gray-300">

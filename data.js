@@ -1319,37 +1319,29 @@ export const E_NavLinks = [
 export const E_Slider = [
 	// slide.png
 	{
-		label: "Home Made Dish On Your Doorstep",
-		title: "Great Dish @ Great Price ",
+		label: "Home Made element On Your Doorstep",
+		title: "Great element @ Great Price ",
 		discount: "10 - 50% OFF",
 		btnText: "Shop Now",
 		slide: "/slide.png",
 	},
-
 	{
-		label: "Home Made Dish On Your Doorstep",
-		title: "Great Dish @ Great Price ",
-		discount: "10 - 50% OFF",
-		btnText: "Shop Now",
-		slide: "/side4.png",
-	},
-	{
-		label: "Home Made Dish On Your Doorstep",
-		title: "Great Dish @ Great Price ",
+		label: "Home Made element On Your Doorstep",
+		title: "Great element @ Great Price ",
 		discount: "10 - 50% OFF",
 		btnText: "Shop Now",
 		slide: "/slide2.png",
 	},
 	{
-		label: "Home Made Dish On Your Doorstep",
-		title: "Great Dish @ Great Price ",
+		label: "Home Made element On Your Doorstep",
+		title: "Great element @ Great Price ",
 		discount: "10 - 50% OFF",
 		btnText: "Shop Now",
 		slide: "/slide3.png",
 	},
 
 	{
-		label: "Home Made Dish On Your Doorstep",
+		label: "Home Made element On Your Doorstep",
 		title: "Great Dish @ Great Price ",
 		discount: "10 - 50% OFF",
 		btnText: "Shop Now",

@@ -1,4 +1,5 @@
 import { createClient } from "@sanity/client";
+// supposed to add the ids in .env
 
 export const client = createClient({
   projectId: 'd87h5ewi',  // <--- Find this in sanity.io/manage

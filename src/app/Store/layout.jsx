@@ -3,6 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import Banner from "../../StoreComponents/Banner";
 import Footer from "../../StoreComponents/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
+import Chatbot from "@/StoreComponents/Chatbot";
 
 
 const fontSans = FontSans({
@@ -21,6 +22,7 @@ export default function StoreLayout({ children }) {
             <div className={`min-h-screen  font-sans antialiased `}>
                 <Banner />
                 {children}
+                <Chatbot/>
                 <Footer />
             </div>
         </ClerkProvider>

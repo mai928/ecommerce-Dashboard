@@ -10,8 +10,9 @@ import "swiper/css/effect-fade";
 
 const Slider = () => {
     return (
-        <div className='lg:mt-10 relative z-10'>
+        <div className='lg:mt-10 relative z-10 group'>
             <Swiper
+            
                 loop={true}
                 autoplay={{ delay: 5000 }}
                 effect="fade"
@@ -23,9 +24,11 @@ const Slider = () => {
                 }}
             >
 
-                <div className={`swiper-button-next `}></div>
-                <div className={`swiper-button-prev `}></div>
-
+             <div>
+                    <div className={`swiper-button-next opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                    <div className={`swiper-button-prev opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                </div>
+             
                 {
                     E_Slider?.map((item ,index) => (
                         <SwiperSlide>

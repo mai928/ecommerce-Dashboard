@@ -26,8 +26,15 @@ const Banner = () => {
 
   const filteredProduct = useMemo(() => {
     if (search.trim()) {
-      return productsByCategory.filter((item) =>
-        item.title.toLowerCase().includes(search.toLowerCase()) || item.category.toLowerCase().includes(search.toLowerCase()))
+         const searchWords =search.toLowerCase().split(' ').filter(Boolean)
+
+         return  productsByCategory.filter((item)=>{
+          const title =item.title.toLowerCase()
+          const category =item.category.toLowerCase()
+
+
+          return searchWords.some((word)=>title.includes(word)   ||  category.includes(word))
+         })
 
     } else {
       setSearch('')
@@ -90,7 +97,7 @@ const Banner = () => {
       <div className='flex items-center  lg:gap-5  w-full px-5 lg:px-32 lg:py-2'>
         <div className='flex items-center'>
           <AlignLeft onClick={() => setToggle(!toggle)} className='block md:hidden lg:hidden' />
-          <img className='w-28 lg:w-32' src={'/basket/ai-logo1.png'} />
+          <img className='w-28 lg:w-32' src={'/basket/ai-logo3.png'} />
 
         </div>
 

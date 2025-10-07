@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import {  motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Heart, ShoppingCart } from 'lucide-react'
 import { FaRegEye } from 'react-icons/fa'
 import { EmptyStar, FullStar, HalfStar } from '../../data'
@@ -35,15 +35,19 @@ const ProductCard = ({ item, handleWishListClick, inWishList, inCartList, handle
             variants={{
                 hover: { scale: .96 }
             }}
-            className='border-[1px] py-4 relative overflow-hidden cursor-pointer'>
-            <p className='absolute top-5  start-10 bg-e_primaryColor px-4 rounded-md font-semibold text-white'>{item.offer}</p>
+            className=' py-4 w-full relative overflow-hidden cursor-pointer'>
+            <p className='absolute top-7  start-4 bg-red-600 px-3 py-[2px] rounded-sm  text-white text-sm'>{item.offer}</p>
+            <div className='bg-gray-200  rounded-md h-52'> 
             <img onClick={() => navigate.push(`/Store/product/${item.id}`)}
-                className='h-80 m-auto ' src={item.imageUrl} />
-            <div className='ms-20 text-start'>
-                <p className='font-semibold text-lg mb-3'>{item.title}</p>
+                className=' object-cover w-52 m-auto   ' src={item.imageUrl} />
+            </div>
+
+            <div className=' text-start my-2'>
+                <p className='font-semibold text-[18px] mb-2'>{item.title}</p>
                 <p className='text-green-600 font-semibold '>{item.stock}</p>
-                <p className='flex my-1'> <Rating rate={item.rate} /> ({(item.rate)} review)</p>
-                <p className='text-e_primaryColor font-semibold text-lg'>{item.price} <span className='text-gray-400  line-through'>{item.discount}</span></p>
+                <p className='flex items-center'> <Rating rate={item.rate} /> <span className='text-sm font-semibold ms-1'>({(item.rate)} review)</span>    
+                  <p className='text-e_primaryColor ms-5 font-semibold text-lg'>{item.price} <span className='text-gray-400  line-through'>{item.discount}</span></p>
+                </p>
             </div>
 
             <motion.div
@@ -58,13 +62,13 @@ const ProductCard = ({ item, handleWishListClick, inWishList, inCartList, handle
                     damping: 12
                 }}
 
-                className='absolute top-32 end-3'>
+                className='absolute top-12 end-3 border-[2px] bg-white border-gray-200 rounded-full'>
                 <motion.div
                     whileHover='hover'
                     initial="initial"
                     animate="initial"
-                    className='bg-e_primaryColor cursor-pointer hover:bg-e_secondaryColor py-2  relative flex'>
-                    <FaRegEye size={20} className=' text-white m-auto ' />
+                    className=' cursor-pointer hover:bg-e_mainColor rounded-tr-full rounded-tl-full py-3 hover:text-white  border-b-[1px] border-gray-400 relative flex'>
+                    <FaRegEye size={20} className='  m-auto  ' />
                     {/* Toolip */}
                     <motion.div variants={{
                         hover: { opacity: 1 },
@@ -88,8 +92,8 @@ const ProductCard = ({ item, handleWishListClick, inWishList, inCartList, handle
                     whileHover='hover'
                     initial="initial"
                     animate="initial"
-                    className='bg-e_primaryColor cursor-pointer hover:bg-e_secondaryColor py-2 px-2 my-2 relative flex'>
-                    <ShoppingCart onClick={() => handleCartClick(item)} size={22} className=' text-white m-auto ' />
+                    className=' cursor-pointer hover:bg-e_mainColor hover:text-white py-3 px-2  border-b-[1px] border-gray-400 relative flex'>
+                    <ShoppingCart onClick={() => handleCartClick(item)} size={22} className=' m-auto ' />
                     <motion.div variants={{
                         hover: { opacity: 1 },
                         initial: { opacity: 0 }
@@ -118,8 +122,8 @@ const ProductCard = ({ item, handleWishListClick, inWishList, inCartList, handle
                     whileHover='hover'
                     initial="initial"
                     animate="initial"
-                    className='bg-e_primaryColor cursor-pointer hover:bg-e_secondaryColor py-2 px-2 my-2 relative flex'>
-                    <Heart onClick={() => handleWishListClick(item)} size={22} className=' text-white m-auto ' />
+                    className=' cursor-pointer hover:bg-e_mainColor  hover:text-white rounded-br-full rounded-bl-full  py-3 px-2  relative flex'>
+                    <Heart onClick={() => handleWishListClick(item)} size={22} className=' m-auto ' />
                     <motion.div
                         variants={{
                             hover: { opacity: 1 },

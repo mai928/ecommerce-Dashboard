@@ -20,6 +20,8 @@ const Shop = () => {
 
   const { productsByCategory, loading, error } = useProducts()
 
+  console.log(productsByCategory)
+
 
 
   const [showBrand, setShowBrand] = useState(false)
@@ -122,6 +124,8 @@ const Shop = () => {
       // when check category
       filteredProduct = productsByCategory.filter(product => checkedCategories.includes(product.category))
 
+       console.log('filteredProduct...',filteredProduct )
+       console.log('productsByCategory...',productsByCategory )
     }
 
 
@@ -187,7 +191,7 @@ const Shop = () => {
   return (
     <div>
       <ToastWrapper />
-      <div className={` w-full flex ${showCategory ? ' lex-row  items-start  ' : 'flex-col items-center'} px-5 lg:px-10 py-14`}>
+      <div className={` w-full flex ${showCategory ? ' lex-row  items-start  ' : 'flex-col items-center'} px-5 lg:px-20 py-3 gap-3`}>
         {
           !showCategory ? (
             <div className='bg-gray-100 mb-3 w-full px-3 rounded-md py-2' >
@@ -196,7 +200,7 @@ const Shop = () => {
 
             (
 
-              <div className='w-1/4 me-6'>
+              <div className='w-1/4 py-2 border-[1px] border-t-0 border-gray-100 rounded-md border-t-md'>
 
                 <Shop_Categories checkedCategories={checkedCategories} handleChecked={handleChecked} maxPrice={maxPrice} setMaxPrice={setMaxPrice} minPrice={minPrice} setMinPrice={setMinPrice} setShowBrand={setShowBrand} showBrand={showBrand} />
               </div>)

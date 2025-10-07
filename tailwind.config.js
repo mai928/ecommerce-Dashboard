@@ -14,6 +14,7 @@ module.exports = {
 				// E-commerce
 				e_primaryColor: "#c00a27",
 				e_secondaryColor: "#f4b618",
+				e_mainColor:'#1a1a2c',
 
 				// Dashboard
 				primary_Color: "#0e091e",
@@ -75,6 +76,7 @@ module.exports = {
 			fontFamily: {
 				pacifico: ["Pacifico", "cursive"],
 				"jakarta-sans": ['"Plus Jakarta Sans"', "sans-serif"],
+				Albert:[ "Albert Sans", 'sans-serif']
 			},
 
 			keyframes:{

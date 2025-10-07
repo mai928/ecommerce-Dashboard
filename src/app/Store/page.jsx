@@ -13,20 +13,22 @@ import React from 'react'
 export default function StoreHome() {
   return (
     <div>
-      <ToastWrapper/>
+      <ToastWrapper />
       <Slider />
-      <Features/>
-
+      <Features />
       <Catagories />
-      <LocalsBanner />
 
+      <HotDeal />
+
+
+      {/* <LocalsBanner /> */}
+
+      <CardOffer />
       <WeelDeals />
-      <CardOffer />  
-      
-        {/* */}
+
+      {/* */}
 
       {/* <CollectionFood/> */}
-      <HotDeal />
       <CardDiscount />
     </div>
   )

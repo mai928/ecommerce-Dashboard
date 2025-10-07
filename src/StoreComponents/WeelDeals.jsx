@@ -7,8 +7,10 @@ import { ShowToast } from './Toast'
 import useCartStore from './zustand/CartStore'
 import Model from './Model'
 import { RotatingLines } from 'react-loader-spinner'
+import { useRouter } from 'next/navigation'
 
 const WeelDeals = () => {
+    const navigate =useRouter()
 
 
     const [E_WeekDeals, setProducts] = useState([]);
@@ -154,12 +156,16 @@ const WeelDeals = () => {
     }
 
     return (
-        <div className='px-5 lg:px-40 py-10'>
-            <div className='bg-e_secondaryColor w-full h-10  flex items-center ps-10 font-semibold uppercase text-lg'>
-                Weekly Hot Offer
+        <div className='px-5 lg:px-20 py-10'>
+
+             <div className=' flex items-center gap-2'>
+                <div className='h-7 bg-e_secondaryColor w-[10px] rounded-sm' />
+                <p className='text-e_primaryColor text-sm font-semibold'>Offers</p>
             </div>
-            {/* <ToastWrapper /> */}
-            <div className='grid grid-flow-row grid-cols-1 lg:grid-cols-3 '>
+
+            <h2 className='text-3xl font-semibold  mt-2  mb-4'>Weekly Hot Offer</h2>
+
+            <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-2'>
                 {
                     E_WeekDeals?.map((item) => {
                         const inWishList = items?.some((product) => product.id === item.id)
@@ -175,7 +181,10 @@ const WeelDeals = () => {
 
 
 
-            </div>
+              </div>
+               <div className='flex justify-center'>
+                <button className='px-10 py-2 bg-e_secondaryColor text-white font-semibold text-lg rounded-sm' onClick={()=>navigate.push('/Store/shop')}>All Products</button>
+               </div>
 
 
             <div>

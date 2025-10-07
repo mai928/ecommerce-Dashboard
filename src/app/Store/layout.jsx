@@ -19,7 +19,7 @@ export const metadata = {
 export default function StoreLayout({ children }) {
     return (
         <ClerkProvider signInUrl="/Store/sign-in" signUpUrl="/Store/sign-up">
-            <div className={`min-h-screen  font-sans antialiased `}>
+            <div className={`min-h-screen  `}>
                 <Banner />
                 {children}
                 <Chatbot/>

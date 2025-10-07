@@ -1,5 +1,5 @@
 import { generateStableIds } from "@/lib/utils";
-import { Badge, Beef, Coffee, Home, Pizza } from "lucide-react";
+import { Badge, Beef, Bone, BrainCog, Brush, Coffee, Gamepad2, Gem, Home, icons, Laptop, Pizza, Shirt, SoapDispenserDroplet, Sofa, Volleyball } from "lucide-react";
 import { v4 as uuidv4, idv4 } from 'uuid'; // Import the v4 uuidv4(),ID generator
 
 export const downIcon = (fill) => (
@@ -290,20 +290,20 @@ export const apple_paypal = (fill) => (
 
 )
 
-export const gripLine =(fill ,width)=>(
-	<svg fill={fill} width={width} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M128 352C110.3 352 96 366.3 96 384C96 401.7 110.3 416 128 416L512 416C529.7 416 544 401.7 544 384C544 366.3 529.7 352 512 352L128 352zM128 224C110.3 224 96 238.3 96 256C96 273.7 110.3 288 128 288L512 288C529.7 288 544 273.7 544 256C544 238.3 529.7 224 512 224L128 224z"/></svg>
+export const gripLine = (fill, width) => (
+	<svg fill={fill} width={width} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M128 352C110.3 352 96 366.3 96 384C96 401.7 110.3 416 128 416L512 416C529.7 416 544 401.7 544 384C544 366.3 529.7 352 512 352L128 352zM128 224C110.3 224 96 238.3 96 256C96 273.7 110.3 288 128 288L512 288C529.7 288 544 273.7 544 256C544 238.3 529.7 224 512 224L128 224z" /></svg>
 )
 
-export const headerChat =(fill ,width)=>(
-	<svg fill={fill} width={width}  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 72C183 72 72 183 72 320C72 457 183 568 320 568C457 568 568 457 568 320C568 183 457 72 320 72zM491.3 230.6C476.1 265.1 460.9 299.6 445.7 334.1C443.3 339.6 438.8 342.3 432.7 342.3C409.7 342.3 386.7 342.4 363.7 342.3C358.6 342.3 355.5 344.2 353.4 349C343.2 372.6 332.8 396 322.4 419.5C320.9 423 318.3 424.8 314.5 424.8C268.6 424.8 222.6 424.8 176.7 424.8C173.6 424.8 171.1 423.7 169 421.4C157.8 409.1 146.5 396.8 135.3 384.5C132.6 381.5 132.5 378.3 134.1 374.8C142.8 355.3 151.4 335.7 160 316.1C172.9 286.7 185.9 257.4 198.7 228C200.4 224.1 203 222.3 207.2 222.3C221.4 222.4 235.7 222.3 249.9 222.3C256.1 222.3 259.1 227.1 256.6 232.9C243 263.7 229.4 294.5 215.9 325.2C210.2 338.2 204.5 351.2 198.8 364.2C194.9 373.2 205.9 376.2 209.8 369.8C210 369.4 208.4 374 239.8 302.1C241.2 299 243.2 297.7 246.6 297.7C261.8 297.8 277 297.7 292.2 297.7C297.8 297.7 300.1 301.3 297.9 306.4C289.6 325.4 281.2 344.3 272.9 363.3C267.9 374.7 281 375.8 284.2 368.6C284.2 368.5 312.1 305.3 316.4 295.4C318.4 290.8 321.8 288.9 326.7 288.9C353.1 289 379.6 288.9 406 288.9C418.4 288.9 419.9 275.3 409.9 275.3C384.6 275.3 359.4 275.3 334.1 275.3C327.8 275.3 326.3 272.8 328.8 267C334.6 253.9 340.4 240.9 346.1 227.8C347.8 223.8 350.6 222 354.9 222C378 222.1 380.9 222 485.7 222C491.8 222 493.7 224.8 491.3 230.3z"/></svg>
+export const headerChat = (fill, width) => (
+	<svg fill={fill} width={width} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 72C183 72 72 183 72 320C72 457 183 568 320 568C457 568 568 457 568 320C568 183 457 72 320 72zM491.3 230.6C476.1 265.1 460.9 299.6 445.7 334.1C443.3 339.6 438.8 342.3 432.7 342.3C409.7 342.3 386.7 342.4 363.7 342.3C358.6 342.3 355.5 344.2 353.4 349C343.2 372.6 332.8 396 322.4 419.5C320.9 423 318.3 424.8 314.5 424.8C268.6 424.8 222.6 424.8 176.7 424.8C173.6 424.8 171.1 423.7 169 421.4C157.8 409.1 146.5 396.8 135.3 384.5C132.6 381.5 132.5 378.3 134.1 374.8C142.8 355.3 151.4 335.7 160 316.1C172.9 286.7 185.9 257.4 198.7 228C200.4 224.1 203 222.3 207.2 222.3C221.4 222.4 235.7 222.3 249.9 222.3C256.1 222.3 259.1 227.1 256.6 232.9C243 263.7 229.4 294.5 215.9 325.2C210.2 338.2 204.5 351.2 198.8 364.2C194.9 373.2 205.9 376.2 209.8 369.8C210 369.4 208.4 374 239.8 302.1C241.2 299 243.2 297.7 246.6 297.7C261.8 297.8 277 297.7 292.2 297.7C297.8 297.7 300.1 301.3 297.9 306.4C289.6 325.4 281.2 344.3 272.9 363.3C267.9 374.7 281 375.8 284.2 368.6C284.2 368.5 312.1 305.3 316.4 295.4C318.4 290.8 321.8 288.9 326.7 288.9C353.1 289 379.6 288.9 406 288.9C418.4 288.9 419.9 275.3 409.9 275.3C384.6 275.3 359.4 275.3 334.1 275.3C327.8 275.3 326.3 272.8 328.8 267C334.6 253.9 340.4 240.9 346.1 227.8C347.8 223.8 350.6 222 354.9 222C378 222.1 380.9 222 485.7 222C491.8 222 493.7 224.8 491.3 230.3z" /></svg>
 )
 
 export const chatbotIcon = (fill, width) => (
-	<svg  fill={fill} width={width} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M316.5 288.8C309.8 288.8 303.2 290.9 297.6 294.6C292 298.3 287.7 303.7 285.1 310C282.5 316.3 281.9 323.1 283.2 329.7C284.5 336.3 287.8 342.4 292.6 347.1C297.4 351.8 303.5 355.1 310.1 356.4C316.7 357.7 323.6 357 329.8 354.4C336 351.8 341.3 347.4 345.1 341.8C348.9 336.2 350.8 329.6 350.8 322.9C350.8 313.8 347.1 305.1 340.7 298.7C334.3 292.3 325.6 288.7 316.5 288.8zM206.1 288.8C199.4 288.8 192.8 290.9 187.2 294.6C181.6 298.3 177.3 303.7 174.7 310C172.1 316.3 171.5 323.1 172.8 329.7C174.1 336.3 177.4 342.4 182.2 347.1C187 351.8 193.1 355.1 199.7 356.4C206.3 357.7 213.2 357 219.4 354.4C225.6 351.8 230.9 347.4 234.7 341.8C238.5 336.2 240.4 329.6 240.4 322.9C240.4 313.8 236.7 305.1 230.3 298.7C223.9 292.3 215.2 288.7 206.1 288.7L206.1 288.7zM427 288.8C408.2 288.9 393 304.3 393.1 323.1C393.2 341.9 408.6 357.1 427.4 357C446.2 356.9 461.4 341.5 461.3 322.7C461.2 303.9 445.8 288.7 427 288.8zM580.8 233.5C565.3 209.3 543.5 187.9 516.1 169.9C463.2 135.1 393.7 115.9 320.4 115.9C296.2 115.9 272.1 118 248.4 122.3C233.5 108 216.9 95.7 198.9 85.7C132.1 52.4 73.3 64.8 43.6 75.5C41.3 76.3 39.3 77.6 37.7 79.4C36.1 81.2 35 83.3 34.4 85.6C33.8 87.9 33.9 90.3 34.5 92.7C35.1 95.1 36.3 97.1 38 98.8C59 120.5 93.6 163.3 85.1 202.3C52 236.2 34 277 34 319.6C34 363 52 403.8 85.1 437.7C93.6 476.7 59 519.6 38 541.2C36.3 543 35.2 545.1 34.5 547.4C33.8 549.7 33.8 552.1 34.4 554.4C35 556.7 36.1 558.9 37.7 560.6C39.3 562.3 41.3 563.7 43.6 564.5C73.3 575.2 132.1 587.6 198.9 554.3C216.9 544.3 233.6 532 248.4 517.7C272.2 522 296.3 524.1 320.4 524.1C393.7 524.1 463.2 504.9 516.1 470.1C543.5 452.1 565.2 430.7 580.8 406.5C598.1 379.6 606.9 350.6 606.9 320.4C606.9 289.4 598.1 260.4 580.8 233.5L580.8 233.5zM317.4 473.9C287.2 474 257.1 470.1 228 462.4L207.9 481.8C196.7 492.5 184.3 501.8 170.8 509.4C154.4 517.6 136.6 522.7 118.3 524.3C119.3 522.5 120.2 520.7 121.1 518.9C141.3 481.8 146.7 448.4 137.4 418.8C104.4 392.8 84.6 359.6 84.6 323.4C84.6 240.3 188.9 172.9 317.4 172.9C445.9 172.9 550.3 240.3 550.3 323.4C550.3 406.5 446 473.9 317.4 473.9z" /></svg>
+	<svg fill={fill} width={width} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M316.5 288.8C309.8 288.8 303.2 290.9 297.6 294.6C292 298.3 287.7 303.7 285.1 310C282.5 316.3 281.9 323.1 283.2 329.7C284.5 336.3 287.8 342.4 292.6 347.1C297.4 351.8 303.5 355.1 310.1 356.4C316.7 357.7 323.6 357 329.8 354.4C336 351.8 341.3 347.4 345.1 341.8C348.9 336.2 350.8 329.6 350.8 322.9C350.8 313.8 347.1 305.1 340.7 298.7C334.3 292.3 325.6 288.7 316.5 288.8zM206.1 288.8C199.4 288.8 192.8 290.9 187.2 294.6C181.6 298.3 177.3 303.7 174.7 310C172.1 316.3 171.5 323.1 172.8 329.7C174.1 336.3 177.4 342.4 182.2 347.1C187 351.8 193.1 355.1 199.7 356.4C206.3 357.7 213.2 357 219.4 354.4C225.6 351.8 230.9 347.4 234.7 341.8C238.5 336.2 240.4 329.6 240.4 322.9C240.4 313.8 236.7 305.1 230.3 298.7C223.9 292.3 215.2 288.7 206.1 288.7L206.1 288.7zM427 288.8C408.2 288.9 393 304.3 393.1 323.1C393.2 341.9 408.6 357.1 427.4 357C446.2 356.9 461.4 341.5 461.3 322.7C461.2 303.9 445.8 288.7 427 288.8zM580.8 233.5C565.3 209.3 543.5 187.9 516.1 169.9C463.2 135.1 393.7 115.9 320.4 115.9C296.2 115.9 272.1 118 248.4 122.3C233.5 108 216.9 95.7 198.9 85.7C132.1 52.4 73.3 64.8 43.6 75.5C41.3 76.3 39.3 77.6 37.7 79.4C36.1 81.2 35 83.3 34.4 85.6C33.8 87.9 33.9 90.3 34.5 92.7C35.1 95.1 36.3 97.1 38 98.8C59 120.5 93.6 163.3 85.1 202.3C52 236.2 34 277 34 319.6C34 363 52 403.8 85.1 437.7C93.6 476.7 59 519.6 38 541.2C36.3 543 35.2 545.1 34.5 547.4C33.8 549.7 33.8 552.1 34.4 554.4C35 556.7 36.1 558.9 37.7 560.6C39.3 562.3 41.3 563.7 43.6 564.5C73.3 575.2 132.1 587.6 198.9 554.3C216.9 544.3 233.6 532 248.4 517.7C272.2 522 296.3 524.1 320.4 524.1C393.7 524.1 463.2 504.9 516.1 470.1C543.5 452.1 565.2 430.7 580.8 406.5C598.1 379.6 606.9 350.6 606.9 320.4C606.9 289.4 598.1 260.4 580.8 233.5L580.8 233.5zM317.4 473.9C287.2 474 257.1 470.1 228 462.4L207.9 481.8C196.7 492.5 184.3 501.8 170.8 509.4C154.4 517.6 136.6 522.7 118.3 524.3C119.3 522.5 120.2 520.7 121.1 518.9C141.3 481.8 146.7 448.4 137.4 418.8C104.4 392.8 84.6 359.6 84.6 323.4C84.6 240.3 188.9 172.9 317.4 172.9C445.9 172.9 550.3 240.3 550.3 323.4C550.3 406.5 446 473.9 317.4 473.9z" /></svg>
 )
 
-export const sendIcon =(fill ,width)=>(
-	<svg fill={fill} width={width} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M568.4 37.7C578.2 34.2 589 36.7 596.4 44C603.8 51.3 606.2 62.2 602.7 72L424.7 568.9C419.7 582.8 406.6 592 391.9 592C377.7 592 364.9 583.4 359.6 570.3L295.4 412.3C290.9 401.3 292.9 388.7 300.6 379.7L395.1 267.3C400.2 261.2 399.8 252.3 394.2 246.7C388.6 241.1 379.6 240.7 373.6 245.8L261.2 340.1C252.1 347.7 239.6 349.7 228.6 345.3L70.1 280.8C57 275.5 48.4 262.7 48.4 248.5C48.4 233.8 57.6 220.7 71.5 215.7L568.4 37.7z"/></svg>
+export const sendIcon = (fill, width) => (
+	<svg fill={fill} width={width} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M568.4 37.7C578.2 34.2 589 36.7 596.4 44C603.8 51.3 606.2 62.2 602.7 72L424.7 568.9C419.7 582.8 406.6 592 391.9 592C377.7 592 364.9 583.4 359.6 570.3L295.4 412.3C290.9 401.3 292.9 388.7 300.6 379.7L395.1 267.3C400.2 261.2 399.8 252.3 394.2 246.7C388.6 241.1 379.6 240.7 373.6 245.8L261.2 340.1C252.1 347.7 239.6 349.7 228.6 345.3L70.1 280.8C57 275.5 48.4 262.7 48.4 248.5C48.4 233.8 57.6 220.7 71.5 215.7L568.4 37.7z" /></svg>
 )
 
 export const logo = (
@@ -663,35 +663,23 @@ export const featuresData = [
 ]
 
 export const categories_menu = [
-	{ id: 1, name: "Beauty", slug: "beauty" },
-	{ id: 2, name: "Fragrances", slug: "fragrances" },
-	{ id: 3, name: "Furniture", slug: "furniture" },
-	{ id: 4, name: "Groceries", slug: "groceries" },
-	{ id: 5, name: "Home Decoration", slug: "home-decoration" },
-	{ id: 6, name: "Kitchen Accessories", slug: "kitchen-accessories" },
-	{ id: 7, name: "Laptops", slug: "laptops" },
-	{ id: 8, name: "Mens Shirts", slug: "mens-shirts" },
-	{ id: 9, name: "Mens Shoes", slug: "mens-shoes" },
-	{ id: 10, name: "Mens Watches", slug: "mens-watches" },
-	{ id: 11, name: "Mobile Accessories", slug: "mobile-accessories" },
-	{ id: 12, name: "Motorcycle", slug: "motorcycle" },
-	{ id: 13, name: "Skin Care", slug: "skin-care" },
-	{ id: 14, name: "Smartphones", slug: "smartphones" },
-	{ id: 15, name: "Sports Accessories", slug: "sports-accessories" },
-	{ id: 16, name: "Sunglasses", slug: "sunglasses" },
-	{ id: 17, name: "Tablets", slug: "tablets" },
-	{ id: 18, name: "Tops", slug: "tops" },
-	{ id: 19, name: "Vehicle", slug: "vehicle" },
-	{ id: 20, name: "Womens Bags", slug: "womens-bags" },
-	{ id: 21, name: "Womens Dresses", slug: "womens-dresses" },
-	{ id: 22, name: "Womens Jewellery", slug: "womens-jewellery" },
-	{ id: 23, name: "Womens Shoes", slug: "womens-shoes" },
-	{ id: 24, name: "Womens Watches", slug: "womens-watches" },
+	{ id: 1, name: "Women's Fashion", slug: "Women's-Fashion", icon: <BrainCog size={19} className="text-[#909090] hover:text-gray-600 " /> },
+	{ id: 2, name: "Men's Fashion", slug: "Men's-Fashion", icon: <Shirt size={19} className="text-[#909090] hover:text-gray-600 " /> },
+	{ id: 3, name: "Fragrances", slug: "Fragrances", icon: <Shirt size={19} className="text-[#909090] hover:text-gray-600 " /> },
+	{ id: 4, name: "Cosmetics", slug: "Cosmetics", icon: <Brush size={19} className="text-[#909090] hover:text-gray-600 " /> },
+	{ id: 5, name: "Electronics", slug: "Electronics", icon: <Laptop size={19} className="text-[#909090] hover:text-gray-600 " /> },
+	{ id: 6, name: "Jewelry", slug: "Jewelry", icon: <Gem size={19} className="text-[#909090] hover:text-gray-600 " /> },
+	{ id: 7, name: "SkinCare", slug: "SkinCare", icon: <SoapDispenserDroplet size={19} className="text-[#909090] hover:text-gray-600 " /> },
+	{ id: 8, name: "Game & Console", slug: "Game-Console", icon: <Gamepad2 size={19} className="text-[#909090] hover:text-gray-600 " /> },
+	{ id: 9, name: "Food Pets", slug: "Food-Pets", icon: <Bone size={19} className="text-[#909090] hover:text-gray-600 " /> },
+	{ id: 10, name: "Sneakers", slug: "Sneakers", icon: <Volleyball size={19} className="text-[#909090] hover:text-gray-600 " /> },
+	{ id: 11, name: "Furniture", slug: "Furniture", icon: <Sofa size={19} className="text-[#909090] hover:text-gray-600 " /> },
+	{ id: 12, name: "Groceries", slug: "Groceries", icon: <Volleyball size={19} className="text-[#909090] hover:text-gray-600 " /> },
 ];
 
 
 export const productsByCategory = {
-	beauty: [
+	Cosmetics: [
 		{
 			// done
 			id: 'beauty-01',
@@ -912,7 +900,7 @@ export const productsByCategory = {
 
 
 	],
-	furniture: [
+	Furniture: [
 		{
 			id: 'furniture-01',
 			img: "/basket/furn/bed1.png",
@@ -1037,7 +1025,7 @@ export const productsByCategory = {
 		}
 
 	],
-	groceries: [
+	Groceries: [
 		{
 
 			id: 'grocery-01',
@@ -1293,89 +1281,67 @@ export const E_NavLinks = [
 		path: "/Store/shop",
 	},
 	{
-		label: "meats & seafood",
+		label: "About",
 		path: "/Store/meats&seafood",
-		icon: <Beef color="#9ea1ac" />,
+		// icon: <Beef color="#9ea1ac" />,
 	},
-	{
-		label: "Bakery",
-		path: "/Store/bakery",
-		icon: <Pizza color="#9ea1ac" />,
-	},
-	{
-		label: "Beverages",
-		path: "/Store/beverages",
-		icon: <Coffee color="#9ea1ac" />,
-	},
-	{
-		label: "Blog",
-		path: "/Store/blog",
-	},
+
 	{
 		label: "Contact",
 		path: "/Store/contact",
 	},
 ];
+
+
 export const E_Slider = [
-	// slide.png
 	{
-		label: "Home Made element On Your Doorstep",
-		title: "Great element @ Great Price ",
-		discount: "10 - 50% OFF",
-		btnText: "Shop Now",
-		slide: "/slide.png",
+		id: '#11',
+		label: "Exclusive Offer",
+		dec: 'Modern Fashion ,New Arrival',
+		title: "Up to 10% off Voucher",
+		slide: "/8.jpg",
 	},
 	{
-		label: "Home Made element On Your Doorstep",
-		title: "Great element @ Great Price ",
-		discount: "10 - 50% OFF",
-		btnText: "Shop Now",
-		slide: "/slide2.png",
+		id: '#22',
+		label: "Exclusive Offer",
+		title: "Buy One , Get One Free",
+		dec: 'Modern Fashion ,New Arrival',
+		slide: "/1.png",
 	},
 	{
-		label: "Home Made element On Your Doorstep",
-		title: "Great element @ Great Price ",
-		discount: "10 - 50% OFF",
-		btnText: "Shop Now",
-		slide: "/slide3.png",
+		id: '#33',
+		title: "Up to 10% off Voucher",
+		icon: '/apple1.png',
+		slide: "/2.png",
 	},
 
 	{
-		label: "Home Made element On Your Doorstep",
-		title: "Great Dish @ Great Price ",
-		discount: "10 - 50% OFF",
-		btnText: "Shop Now",
-		slide: "/basket/slide1.jpg",
+		id: '#44',
+		title: "Up to 10% off Voucher",
+		dec: 'Modern Electronics , Speakers , Phones , Bluthoos and HeadPhones',
+		icon: '/apple1.png',
+		slide: "/3.png",
 	},
 
 	{
+		id: '#55',
 		label: "Exclusive Offer",
-		title: "Specialist in the Grocery Store",
-		discount: "from $7.99",
-		btnText: "Shop Now",
-		slide: "/basket/slide3.webp",
+		dec: 'Modern Fashion ,New Arrival',
+		title: "Up to 10% off Voucher",
+		slide: "/4.png",
 	},
+
 	{
+		id: '#66',
+
 		label: "Exclusive Offer",
-		title: "Specialist in the Grocery Store",
-		discount: "from $7.99",
-		btnText: "Shop Now",
-		slide: "/basket/slide4.webp",
+		dec: 'Modern Fashion ,New Arrival',
+		title: "Up to 10% off Voucher",
+		slide: "/6.jpg",
 	},
-	{
-		label: "Exclusive Offer",
-		title: "Specialist in the Grocery Store",
-		discount: "from $7.99",
-		btnText: "Shop Now",
-		slide: "/basket/slide5.webp",
-	},
-	{
-		label: "Exclusive Offer",
-		title: "Specialist in the Grocery Store",
-		discount: "from $7.99",
-		btnText: "Shop Now",
-		slide: "/basket/slide6.webp",
-	},
+
+
+
 ];
 
 export const E_Shop_Slider = [
@@ -1392,67 +1358,46 @@ export const E_Shop_Slider = [
 	{
 		slide: "/basket/banner4.jpg",
 	},
-	// {
-
-	// 	slide: "/basket/banner6.webp",
-	// },
 ];
 
 export const E_Catagories = [
 	{
-		img: "/basket/bg/snacks.png",
-		label: "Biscuits & Snacks",
+		img: "/Category1.png",
+		label: "phones",
 		numberOfItems: "5 Items",
-		width: "w-32",
 	},
 	{
-		img: "/basket/bg/bread.png",
-		label: "Breads & Bakery",
+		img: "/Category2.png",
+		label: "Computers",
 		numberOfItems: "5 Items",
 
-		width: "w-36",
 	},
 	{
-		img: "/basket/bg/breakfast.png",
-		label: "Breakfast & Dairy",
+		img: "/Category3.png",
+		label: "SmartWatch",
 		numberOfItems: "5 Items",
 	},
 	{
-		img: "/basket/bg/frozen.png",
-		label: "Frozen Foods",
+		img: "/Category6.png",
+		label: "PlayStation",
 		numberOfItems: "5 Items",
 	},
 	{
-		img: "/basket/bg/drinks.png",
-		label: "Beverages",
+		img: "/Category4.png",
+		label: "Camera",
 		numberOfItems: "5 Items",
 	},
 	{
-		img: "/basket/bg/vegetables.png",
-		label: "Fruits & Vegetables",
+		img: "/Category5.png",
+		label: "HeadPhones",
 		numberOfItems: "5 Items",
 	},
 	{
-		img: "/basket/bg/grocery.png",
-		label: "Grocery & Staples",
+		img: "/Category6.png",
+		label: "Gaming",
 		numberOfItems: "5 Items",
-	},
-	{
-		img: "/basket/bg/houseNeed.png",
-		label: "Household Needs",
-		numberOfItems: "5 Items",
-	},
-	{
-		img: "/basket/bg/meat.png",
-		label: "Meats & Seafood",
-		numberOfItems: "5 Items",
-	},
+	}
 
-	{
-		img: "/basket/bg/seeds.png",
-		label: "Herbs & spices",
-		numberOfItems: "5 Items",
-	},
 ];
 
 export const E_CollectionFood = [
@@ -1797,26 +1742,46 @@ export const E_HotDeal = [
 	// 	title: "Canederli",
 	// },
 ];
-export const E_CardDiscount = [
+
+export const E_NewArrival = [
 	{
-		img: "/basket/bg/offer1.png",
-		label: "Weekend Discount 40%",
-		Title: "Organic Eggs",
-		slugon: "Eat one every day",
+		id: 1,
+		title: "PlayStation 5",
+		description: "Black and White version of the PS5 coming out on sale.",
+		buttonText: "Shop Now",
+		image: "/playStation.png",
+		bgColor: "#000", // you can use it for custom styling
+		textColor: "#fff"
 	},
 	{
-		img: "/basket/bg/offer2.png",
-		label: "Weekend Discount 40%",
-		Title: "Organic Eggs",
-		slugon: "Eat one every day",
+		id: 2,
+		title: "Women’s Collections",
+		description: "Featured woman collections that give you another vibe.",
+		buttonText: "Shop Now",
+		image: "/fashion.png",
+		bgColor: "#111",
+		textColor: "#fff"
 	},
 	{
-		img: "/basket/bg/offer3.png",
-		label: "Weekend Discount 40%",
-		Title: "Organic Eggs",
-		slugon: "Eat one every day",
+		id: 3,
+		title: "Speakers",
+		description: "Amazon wireless speakers",
+		buttonText: "Shop Now",
+		image: "/elec.png",
+		bgColor: "#111",
+		textColor: "#fff"
 	},
+	{
+		id: 4,
+		title: "Perfume",
+		description: "GUCCI INTENSE OUD EDP",
+		buttonText: "Shop Now",
+		image: "/Gucci.png",
+		bgColor: "#111",
+		textColor: "#fff"
+	}
 ];
+
 
 export const E_LocalBanner = [
 	{

@@ -5,7 +5,7 @@ import { AnimatePresence ,motion } from 'framer-motion'
 
 const Shop_Categories = ({checkedCategories ,handleChecked ,setShowBrand ,showBrand , minPrice ,setMinPrice ,maxPrice ,setMaxPrice}) => {
   return (
-    <div>
+    <div className='ms-5'>
          <h2 className='font-semibold text-base uppercase text-gray-700 font-jakarta-sans'>Product Categries</h2>
                 {/* Product Categories */}
                 <div>

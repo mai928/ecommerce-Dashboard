@@ -10,6 +10,7 @@ import "swiper/css/effect-fade";
 import useCartStore from './zustand/CartStore';
 import { ShowToast } from './Toast';
 import { Audio, Circles, RotatingLines, Vortex } from 'react-loader-spinner';
+import ProductCard from './ProductCard';
 
 const HotDeal = () => {
     const Rating = ({ rate }) => {
@@ -89,26 +90,31 @@ const HotDeal = () => {
 
 
     return (
-        <div className='py-10  relative px-5 lg:px-40 z-0 bg-slate-50'>
-            <div
-                className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 swiper-button-prev deal-prev cursor-pointer p-2 rounded-full bg-white shadow-md hover:bg-gray-100"
-            >
-
+        <div className='py-16 relative ps-5 lg:px-20 z-0 bg-slate-50'>
+            <div className=' flex items-center gap-2'>
+                <div className='h-7 bg-e_secondaryColor w-[10px] rounded-sm' />
+                <p className='text-e_primaryColor text-sm font-semibold'>Today's</p>
             </div>
-            <div
-                className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 swiper-button-next deal-prev cursor-pointer p-2 rounded-full bg-white shadow-md hover:bg-gray-100"
-            >
 
+            <h2 className='text-2xl font-semibold  mt-2  mb-4'>Flash Sales</h2>
+
+            <div className="absolute top-28 end-36 z-20 flex gap-2">
+                <div className=" swiper-button-prev deal-prev cursor-pointer   bg-white shadow-md hover:bg-gray-100">
+
+                </div>
+                <div className=" swiper-button-next  deal-prev cursor-pointer  bg-white shadow-md hover:bg-gray-100">
+
+                </div>
             </div>
 
 
             <Swiper
                 loop={true}
-                autoplay={{ delay: 2000, disableOnInteraction: false }}
+                autoplay={{ delay: 2000, disableOnInteraction: true }}
                 speed={1000}
                 pagination={{ clickable: true }}
                 modules={[Navigation, Autoplay]}
-                spaceBetween={20}
+                spaceBetween={10}
                 breakpoints={{
                     0: {
                         slidesPerView: 1,
@@ -120,7 +126,7 @@ const HotDeal = () => {
                         slidesPerView: 3,
                     },
                     1280: {
-                        slidesPerView: 5,
+                        slidesPerView: 4,
                     },
                 }}
                 navigation={{
@@ -134,25 +140,8 @@ const HotDeal = () => {
                     const disabledbtn = Cart?.some((ele) => ele.id === item.id)
                     return (
 
-                        <SwiperSlide key={item.id}>
-
-                            <div className='border-[1px] bg-white rounded-3xl  py-5'>
-                                <img className='object-cover w-52 h-52  m-auto lg:m-0' src={item.imageUrl} alt='image-slide' />
-                                <p className='absolute top-3 start-5 text-white bg-e_primaryColor px-2 rounded-full text-sm py-1 font-semibold'>{item.offer}</p>
-
-                                <div className={`lg:mx-3  text-center lg:text-start`}>
-                                    <h2 className='text-[16px] font-bold mb-5 h-14'>{item.title}</h2>
-                                    <p className='font-semibold text-green-600'>{item.stock}</p>
-                                    <p className='flex my-1 lg:justify-start justify-center'> <Rating rate={item.rate} /> ({(item.rate)} review)</p>
-
-                                    <p className={'text-e_primaryColor font-semibold '}> {item.price} <span className='line-through text-gray-500'>{item.discount}</span></p>
-                                    <div className='flex justify-end'>
-                                        <button disabled={disabledbtn} onClick={() => handleAddProduct(item)} className={`  text-white font-bold text-lg  px-3 py-1 rounded-full mt-10   ${disabledbtn ? 'bg-gray-300' : 'bg-e_secondaryColor '}  ${disabledbtn ? 'cursor-not-allowed' : 'cursor-pointer '} `}>+</button>
-
-                                    </div>
-                                </div>
-
-                            </div>
+                        <SwiperSlide key={item.id} className='m-auto'>
+                            <ProductCard item={item} />
                         </SwiperSlide>
                     )
                 })

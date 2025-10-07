@@ -16,7 +16,7 @@ export async function FetchAllProduct() {
    "imageUrl": img.asset->url
 
   }`;
-    return await clientCommrerce.fetch(query);
+    return await clientCommrerce.fetch(query , {}, { cache: "no-store" });
 }
 
 

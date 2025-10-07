@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +10,7 @@ body {
   padding: 0px;
   margin: 0px;
   overflow-x: hidden;
-  font-family: 'Plus Jakarta Sans", sans-serif';
+  font-family: "Albert Sans", 'sans-serif';
 
 }
 
@@ -165,14 +165,10 @@ body.open-Model{
 
 /* E-commerce */
 
-.swiper-button-prev,
+/* .swiper-button-prev,
 .swiper-button-next {
-  /* left: var(--swiper-navigation-sides-offset, 10px); */
-  /* right: auto; */
+
   color: white !important;
-  /* font-size: 0px; */
-  /* font-weight: 900; */
-  /* font-size: x-large; */
   background-color: #c00a27;
   width: 40px !important;
   border-radius: 4px;
@@ -182,31 +178,27 @@ body.open-Model{
 .swiper-button-next:hover {
   background-color: #f4b618;
 
-}
-
+}*/
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-size: 20px !important;
   font-weight: bold;
-}
+} 
 
 .deal-prev{
-  /* position: absolute;
-  background-color: #000;
-  right: -20px !important;
-  z-index: 9999; */
+
   background-color: #fff !important;
   color: #be0b27 !important;
   border-radius: 50%;
   border: 1px solid rgb(226, 220, 220);
-  width: 40px !important;
-  /* font-size: 16px !important; */
+  width: 45px !important;
+  height:  45px !important;
 }
 
 .swiper-button-next,
 .deal-prev::after{
-  font-size: 16px !important;
+  font-size: 14px !important;
 
 }
 
@@ -220,3 +212,37 @@ body.open-Model{
 .Toastify__progress-bar--error {
   background: #ef4444 !important;
 }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url('/bg/pattern1.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  will-change: transform;
+}
+
+.overlay2 {
+  position: absolute;
+  inset: 0;
+  background-image: url('/bg/pattern2.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  will-change: transform;
+}
+
+/* All pagination bullets */
+.swiper-pagination-bullet {
+  background: white !important;      /* default bullet color */
+  opacity: 0.7 !important;
+  transition: all 0.3s ease;
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+  background: #f4b618 !important;        /* active bullet color */
+  /* opacity: 1; */
+}
+

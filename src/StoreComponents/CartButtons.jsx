@@ -30,7 +30,7 @@ const CartButtons = ({ product }) => {
         <div className=' flex justify-center items-center gap-6 '>
             <button
                 disabled={isDecrement(product.id)}
-                className="bg-gray-200 px-4 py-1 rounded-s-lg disabled:cursor-not-allowed"
+                className="bg-gray-200  px-3 lg:px-4 py-1 rounded-s-lg disabled:cursor-not-allowed"
                 onClick={() => handleDecrement(product.id)}
             >
                 -
@@ -38,7 +38,7 @@ const CartButtons = ({ product }) => {
             {/* {count[product.id] || 0} 
                                 */}  {Cart.find(item => item.id === product.id)?.quantity || 0}
 
-            <button className='bg-e_secondaryColor px-4 py-1 rounded-e-lg' onClick={() => handleIncrement(product)}
+            <button className='bg-e_secondaryColor px-3 lg:px-4 py-1 rounded-e-lg' onClick={() => handleIncrement(product)}
 
             >+</button>
         </div>

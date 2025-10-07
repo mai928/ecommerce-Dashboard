@@ -16,7 +16,7 @@ const Slider = () => {
     const [hoverIndex, setHoverIndex] = useState(null);
 
     return (
-        <div className=' relative z-10 gap-3 flex  px-5 lg:px-20 bg-gray-100 pb-3'>
+        <div className=' relative z-10 gap-3 flex  px-2 lg:px-20 bg-gray-100 pb-3'>
 
 
             <div className=" hidden lg:block relative w-[calc(25%_-_8px)] bg-white pt-2 border border-gray-100 shadow-md rounded-b-md overflow-hidden">
@@ -71,12 +71,12 @@ const Slider = () => {
                     E_Slider?.map((item, ) => (
                         <SwiperSlide key={item.id}>
                             <div className='relative '>
-                                <img className='object-cover w-full h-[500px] lg:h-[500px] rounded-lg' src={item.slide} />
+                                <img className='lg:object-cover w-full h-[300px] lg:h-[500px] rounded-lg object-center' src={item.slide} />
                                 <div className='absolute inset-0 bg-gray-600 bg-opacity-20 rounded-lg' />
                                 <div className='absolute top-[20%] start-14'>
                                     <p className='text-sm font-semibold text-e_secondaryColor'>{item.label}</p>
                                     <img className='mb-5' src={item?.icon} />
-                                    <h2 className='text-white font-semibold text-6xl w-[60%] my-3'>{item.title}</h2>
+                                    <h2 className='text-white font-semibold lg:text-6xl w-[60%] my-3'>{item.title}</h2>
                                     <p className='text-gray-300 my-5'>{item.dec}</p>
                                     <button className='text-white border-gray-400 border-[1px] px-6  py-1 rounded-sm flex items-center gap-3'> Shop now<ArrowRight  size={15}/></button>
 

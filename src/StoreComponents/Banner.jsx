@@ -103,11 +103,11 @@ const Banner = () => {
 
         {/* Second Banner */}
 
-        <div className='flex items-center   w-full gap-24 px-5 lg:px-20 lg:py-2'>
+        <div className='flex items-center   w-full gap-24 px-5 lg:px-20 py-4 lg:py-2'>
 
           <div className='flex  items-center w-full'>
             <AlignLeft onClick={() => setToggle(!toggle)} size={30} className=' block ms-1  lg:hidden' />
-            <img className='w-36 lg:w-32 ' src={'/logo1.png'} />
+            <img className='w-52 lg:w-32 ' src={'/logo1.png'} />
 
           </div>
 
@@ -156,7 +156,7 @@ const Banner = () => {
 
               <div>
                 <ClerkLoaded>
-                  <div className="text-[15px] font-semibold">
+                  <div className=" text-sm lg:text-[15px] font-semibold">
                     <SignedOut>
                       <div className="">
                         <SignInButton />

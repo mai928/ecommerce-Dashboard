@@ -73,7 +73,7 @@ const Slider = () => {
                             <div className='relative '>
                                 <img className='lg:object-cover w-full h-[270px] lg:h-[500px] rounded-lg  object-center' src={item.slide} />
                                 <div className='absolute inset-0 bg-gray-600 bg-opacity-20 rounded-lg' />
-                                <div className='absolute top-[20%] start-5 lg:start-14'>
+                                <div className='absolute  top-[15%] lg:top-[20%] start-5 lg:start-14'>
                                     <p className='text-sm font-semibold text-e_secondaryColor'>{item.label}</p>
                                     <img className='mb-5' src={item?.icon} />
                                     <h2 className='text-white font-semibold lg:text-6xl w-[60%] my-3'>{item.title}</h2>

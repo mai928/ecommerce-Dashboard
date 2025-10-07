@@ -56,9 +56,6 @@ const Banner = () => {
   }, [search, productsByCategory])
 
 
-  console.log(filteredProduct)
-  // console.log(productsByCategory)
-
 
   useEffect(() => {
 
@@ -229,65 +226,6 @@ const Banner = () => {
       </div>
 
 
-
-      {/* <nav ref={wrapperRef} className='px-3  lg:px-40 w-full hidden lg:flex items-center gap-5 lg:gap-24'> */}
-
-      {/* <button onClick={() => setOpenCatagory(!openCatagory)} className='hidden lg:block relative'>
-          <p className='bg-e_secondaryColor text-white py-1 lg:py-3  px-0 lg:px-14 text-sm lg:text-base font-semibold rounded-full uppercase shadow-md'>All Categories</p>
-          <p className='bg-gray-200 border-[1px] border-white rounded-full text-[10px] font-semibold text-gray-500 px-3 py-1 absolute -bottom-4 start-14 '>TOTAL 30 PRODUCTS</p>
-
-          <div className='absolute  top-16 bg-gray-50 w-full rounded-md shadow-md text-start   z-50'>{
-            openCatagory && <div className='overflow-y-scroll overflow-visible h-[450px] '>
-              {
-                categories_menu?.map((item, index) => (
-                  <div key={index} className='hover:bg-white py-2'>
-                    <Link href={`/Store/shop?category=${item.slug}`} className='ms-5'>{item.name}</Link>
-                  </div>
-                ))
-              }
-            </div>
-          }
-
-          </div>
-        </button> */}
-
-
-
-
-      {/* <div className='hidden lg:flex items-center  p-2  rounded-full'>
-          {E_NavLinks?.map((item) => {
-            const isActive = path === item.path;
-
-            return (
-              <div key={item.path} className='relative'>
-                <Link
-                  href={item.path}
-                  className={`relative z-10 flex items-center gap-2 px-4 py-2 font-semibold uppercase transition-colors duration-300 ${isActive ? 'text-e_primaryColor' : 'text-gray-500 hover:text-e_primaryColor'
-                    }`}
-                >
-                  {item?.icon} {item.label}
-                  {item.path === '/Store' && <ChevronDown size={20} />}
-                </Link>
-
-                {isActive && (
-                  <motion.div
-                    layoutId='nav-pill'
-                    className="absolute inset-0 bg-gray-100 rounded-full z-0"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
-              </div>
-            );
-          })}
-        </div> */}
-
-
-
-
-      {/* </nav> */}
-
-
-
       {/* SideBar on Responsive SCreen */}
       <AnimatePresence>
         {
@@ -302,8 +240,22 @@ const Banner = () => {
               className=' fixed top-0 z-50 w-full h-full bg-white px-5' >
               <div className='text-e_primaryColor mt-5 mb-3  ' onClick={() => setToggle(false)}><X /></div>
               <div className='relative  my-3'>
-                <input className=' rounded-md w-full bg-gray-100 py-3 ps-5 ' placeholder='Search For Products .....' />
+                <input value={search} onChange={(e) => setSearch(e.target.value)} className=' rounded-md w-full bg-gray-100 py-3 ps-5 ' placeholder='Search For Products .....' />
                 <div className='absolute top-3 end-5'><Search /></div>
+
+
+                <div className={`absolute top-14 bg-gray-100 z-40 shadow-md rounded-md  w-[90%] overflow-y-auto ${search && isExist ? ' max-h-[430px]' : 'h-0'}`}>
+                  {
+                    filteredProduct?.map((item) => (
+                      <div className='shadow-sm py-1 rounded-md px-2 hover:bg-white'>
+                        <Link className='flex items-center gap-3' href={`/Store/product/${item.id}`} onClick={() => setSearch('')}>
+                          <img className='w-8' src={item.imageUrl} />
+                          <p className='text-gray-900 text-[12px] font-semibold'>{item.title}</p>
+                        </Link>
+                      </div>
+                    ))
+                  }
+                </div>
               </div>
 
               <button className='relative w-full'>

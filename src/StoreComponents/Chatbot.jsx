@@ -68,7 +68,7 @@ export default function Chatbot() {
 
   return (
     <div className="">
-      <button className="fixed z-50 bottom-5 right-10  shadow-lg rounded-full bg-e_secondaryColor border p-2" onClick={() => setOpenChat(!openChat)}>
+      <button className="fixed z-50 bottom-5 right-1  shadow-lg rounded-full bg-e_secondaryColor border p-2" onClick={() => setOpenChat(!openChat)}>
         {chatbotIcon('white', 35)}
       </button>
       {openChat &&

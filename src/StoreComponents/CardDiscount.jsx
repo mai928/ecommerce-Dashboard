@@ -3,7 +3,7 @@ import { E_NewArrival } from '../../data'
 
 const CardDiscount = () => {
   return (
-    <section className="container mx-auto py-14  lg:px-20">
+    <section className="container mx-auto py-14  px-3 lg:px-20">
          <div className=' flex items-center gap-2'>
                 <div className='h-7 bg-e_secondaryColor w-[10px] rounded-sm' />
                 <p className='text-e_primaryColor text-sm font-semibold'>Featured</p>

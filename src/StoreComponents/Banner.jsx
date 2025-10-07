@@ -103,11 +103,11 @@ const Banner = () => {
 
         {/* Second Banner */}
 
-        <div className='flex items-center   w-full gap-24 px-5 lg:px-20 py-4 lg:py-2'>
+        <div className='flex items-center   w-full gap-0 lg:gap-24 px-3 lg:px-20 py-4 lg:py-2'>
 
-          <div className='flex  items-center w-full'>
-            <AlignLeft onClick={() => setToggle(!toggle)} size={30} className=' block ms-1  lg:hidden' />
-            <img className='w-52 lg:w-32 ' src={'/logo1.png'} />
+          <div className='flex w-full items-center '>
+            <AlignLeft onClick={() => setToggle(!toggle)} size={20} className=' relative z-50 block ms-1 text-white lg:hidden' />
+            <img className='w-24 lg:w-32 ' src={'/logo1.png'} />
 
           </div>
 
@@ -135,28 +135,28 @@ const Banner = () => {
             </div>
 
 
-            <div className='flex  gap-3  items-center'>
-              <div className='p-2 border-[1px] border-gray-700 rounded-full'><User2 size={20} /></div>
+            <div className='flex  gap-1 lg:gap-3  items-center'>
+              <div className='p-2 border-[1px] border-gray-700 rounded-full'><User2 className=' size-4 lg:size-5 ' /></div>
               {/* <div className='font-semibold'>$0.00</div> */}
 
 
               <div className='relative'>
-                <div className='absolute z-10 bottom-5 start-5  w-5 h-5 bg-e_primaryColor text-white text-sm font-semibold rounded-full'> <p className='text-center'>{items.length}</p></div>
+                <div className='absolute z-10 bottom-5 start-5  w-4 h-4 lg:w-5 lg:h-5 bg-e_primaryColor text-white  text-[12px] lg:text-sm  lg:font-semibold rounded-full'> <p className='text-center '>{items.length}</p></div>
                 <button onClick={() => router.push('/Store/wishList')} className=' relative p-2  z-0 rounded-full'>
-                  <Heart size={20} />
+                  <Heart className=' size-4 lg:size-5 ' />
                 </button>
               </div>
 
               <div className='relative'>
-                <p className='absolute z-10 bottom-5 start-5 w-5 h-5 bg-e_primaryColor text-white text-sm font-semibold rounded-full'><p className='text-center'>{Cart.length}</p></p>
+                <p className='absolute z-10 bottom-5 start-5 w-4 h-4 lg:w-5 lg:h-5 bg-e_primaryColor text-white text-[12px] lg:text-sm  lg:font-semibold rounded-full'><p className='text-center'>{Cart.length}</p></p>
                 <button onClick={() => router.push('/Store/cart')} className=' relative p-2  z-0 rounded-full'>
-                  <ShoppingCart size={20} />
+                  <ShoppingCart className=' size-4 lg:size-5 ' />
                 </button>
               </div>
 
               <div>
                 <ClerkLoaded>
-                  <div className=" text-sm lg:text-[15px] font-semibold">
+                  <div className=" text-[12px] lg:text-[15px] font-semibold">
                     <SignedOut>
                       <div className="">
                         <SignInButton />

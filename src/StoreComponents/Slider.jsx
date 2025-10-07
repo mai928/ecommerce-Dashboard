@@ -71,13 +71,13 @@ const Slider = () => {
                     E_Slider?.map((item, ) => (
                         <SwiperSlide key={item.id}>
                             <div className='relative '>
-                                <img className='lg:object-cover w-full h-[300px] lg:h-[500px] rounded-lg object-center' src={item.slide} />
+                                <img className='lg:object-cover w-full h-[270px] lg:h-[500px] rounded-lg  object-center' src={item.slide} />
                                 <div className='absolute inset-0 bg-gray-600 bg-opacity-20 rounded-lg' />
                                 <div className='absolute top-[20%] start-5 lg:start-14'>
                                     <p className='text-sm font-semibold text-e_secondaryColor'>{item.label}</p>
                                     <img className='mb-5' src={item?.icon} />
                                     <h2 className='text-white font-semibold lg:text-6xl w-[60%] my-3'>{item.title}</h2>
-                                    <p className='text-gray-300   my-3 lg:my-5'>{item.dec}</p>
+                                    <p className='text-gray-300  text-sm lg:text-base  my-3 lg:my-5'>{item.dec}</p>
                                     <button className='text-white border-gray-400 border-[1px] px-4 lg:px-6  py-1 rounded-sm flex items-center gap-3'> Shop now<ArrowRight  size={15}/></button>
 
                                 </div>

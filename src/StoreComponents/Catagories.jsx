@@ -19,7 +19,7 @@ const Catagories = () => {
 
             <h2 className='text-2xl font-semibold  mt-2 '>Flash Category</h2>
 
-            <div className="absolute top-28 end-36 z-20 flex gap-2">
+            <div className="absolute top-28 end-20 lg:end-36 z-20 flex gap-2">
                 <div className=" swiper-button-prev deal-prev cursor-pointer   bg-white shadow-md hover:bg-gray-100">
 
                 </div>

@@ -51,7 +51,9 @@ const Shop = () => {
 
       }
 
-    };
+    }; 
+         handleSize()
+
 
     window.addEventListener('resize', handleSize)
     return () => { window.removeEventListener('resize', handleSize) }

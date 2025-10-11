@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
 import { FaFacebook, FaShoppingCart, FaTwitter } from 'react-icons/fa'
 import { EmptyStar, FullStar, global, HalfStar, lock, trash } from '../../../../data'
+import SingleProductRow from '@/StoreComponents/SingleProductRow'
 
 const WishList = () => {
     const pathname = usePathname()
@@ -42,7 +43,7 @@ const WishList = () => {
     const items = useWishListStore((state) => state.items)
     const removeFromWishList = useWishListStore((state) => state.removeFromWishList)
     return (
-        <section className='lg:flex justify-center w-full px-5 lg:px-28  gap-5 my-10'>
+        <section className='lg:flex justify-center w-full px-5 lg:px-20  gap-5 my-5 lg:my-10'>
             {/* Wishlist */}
             <div className='border-[2px] h-[90vh] border-gray-200 rounded-lg w-full lg:w-[70%]   flex flex-col'>
                 <h2 className='py-5 px-5 shadow-sm text-2xl font-semibold  text-gray-800'>Your Wishlist</h2>
@@ -54,19 +55,8 @@ const WishList = () => {
                                 {
                                     items?.map((item) => (
                                         <div >
-                                            <div className='border-t-2 mx-5 border-gray-200' />
-
-                                            <div className='flex items-center justify-between'>
-                                                <img className='w-40' src={item.imageUrl} />
-                                                <div>
-                                                    <h2 className='font-bold text-gray-700'>{item.title}</h2>
-                                                    <p className='flex my-1'> <Rating rate={item.rate} /> ({(item.rate)} review)</p>
-
-                                                </div>
-                                                <p className='text-e_primaryColor font-semibold text-lg'>{item.price} <span className='text-gray-400  line-through'>{item.discount}</span></p>
-                                                <button className='bg-e_secondaryColor px-5 py-1 text-white font-semibold rounded-md '>add to cart</button>
-                                                <button onClick={() => removeFromWishList(item.id)}>{trash('red')}</button>
-                                            </div></div>
+                                             <SingleProductRow item={item} removeItem={removeFromWishList} Rating={Rating}/>
+                                            </div>
 
                                     ))
                                 }

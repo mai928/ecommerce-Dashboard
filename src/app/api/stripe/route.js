@@ -34,8 +34,8 @@ export async function POST(req) {
                 },
                 quantity: item.quantity
             })),
-            success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/success`,
-            cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/cancel`,
+            success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/Store/success`,
+            cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/Store/cancel`,
 
             shipping_address_collection: {
                 allowed_countries: ["US", "CA", "EG"],

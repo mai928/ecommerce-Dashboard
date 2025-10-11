@@ -7,7 +7,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import {  FaShoppingCart } from 'react-icons/fa'
 import { EmptyStar, FullStar, HalfStar, lock, trash } from '../../../../data'
-import CartButtons from '@/StoreComponents/CartButtons'
+import SingleProductRow from '@/StoreComponents/SingleProductRow'
 
 
 const Cart = () => {
@@ -43,7 +43,7 @@ const Cart = () => {
     return (
         <section className='relative'>
             <SignModule />
-            <div className='lg:flex justify-center w-full px-5 lg:px-28  gap-5 py-5 lg:my-10'>
+            <div className='lg:flex justify-center w-full px-5 lg:px-20 gap-5 py-5 lg:my-10'>
                 {/* Wishlist */}
                 <div className='border-[2px] h-[90vh] border-gray-200 rounded-lg w-full lg:w-[70%]   flex flex-col mb-5 lg:mb-0'>
                     <h2 className='py-5 px-5 shadow-sm text-2xl font-semibold  text-gray-800'>Shopping Cart</h2>
@@ -54,22 +54,9 @@ const Cart = () => {
                                     {
                                         Cart?.map((item) => (
                                             <div >
-                                                <div className='border-t-2 mx-5 border-gray-200 ' />
 
-                                                <div className='flex lg:flex-row flex-col items-center justify-between'>
-                                                    <img className=' w-28 lg:w-40' src={item.imageUrl} />
-                                                    <div className='text-center'>
-                                                        <h2 className='font-bold text-gray-700 '>{item.title}</h2>
-                                                        <p className='flex lg:justify-start justify-center my-1'> <Rating rate={item.rate} /> ({(item.rate)} review)</p>
-
-                                                    </div>
-                                                    <p className='text-e_primaryColor font-semibold text-lg'>{item.price} <span className='text-gray-400  line-through'>{item.discount}</span></p>
-                                                   
-                                                   <div className='flex items-center gap-3 mb-5 lg:mb-0'>
-                                                   < CartButtons product={item} />
-                                                    <button onClick={() => removeFromCart(item.id)}>{trash('red')}</button>
-                                                    </div> 
-                                                </div></div>
+                                             <SingleProductRow item={item} removeItem={removeFromCart} Rating={Rating}/>
+                                             </div>
 
                                         ))
                                     }

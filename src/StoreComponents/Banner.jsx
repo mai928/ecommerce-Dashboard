@@ -100,17 +100,17 @@ const Banner = () => {
 
         {/* Second Banner */}
 
-        <div className='flex items-center   w-full gap-0 lg:gap-24 px-3 lg:px-20 py-4 lg:py-2'>
+        <div className='flex items-center   w-full  px-3 lg:px-20 py-4 lg:py-2'>
 
-          <div className='flex w-full items-center '>
+          <div className='flex w-[29%] items-center '>
             <AlignLeft onClick={() => setToggle(!toggle)} size={20} className=' relative z-50 block ms-1 text-white lg:hidden' />
             <img className='w-24 lg:w-32 ' src={'/logo1.png'} />
 
           </div>
 
-          <div className='flex  justify-end   w-full'>
+          <div className='flex  justify-end  gap-12  w-[71%]'>
 
-            <div className='hidden lg:block relative w-[50%] m-auto'>
+            <div className='hidden lg:block relative w-[100%] m-auto'>
               <input value={search} onChange={(e) => setSearch(e.target.value)} className=' rounded-md w-full text-black bg-gray-100 py-3 ps-5  ' placeholder='Search For Products .....' />
               <div className='absolute top-0 end-0 w-10 bg-e_secondaryColor h-full  rounded-tr-md rounded-br-md '><Search className='absolute top-3 start-2' size={22} /></div>
 

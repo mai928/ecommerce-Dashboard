@@ -13,6 +13,8 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 
 const Checkout = () => {
 
+    
+
     const truncate = (title) => {
         return title?.length > 5 ? title.slice(0, 17) + "..." : title
     }
@@ -102,16 +104,16 @@ const Checkout = () => {
     }
 
     return (
-        <section className=' px-40 py-10 bg-gray-50'>
+        <section className='pc-5 lg:px-20 py-10 bg-gray-50'>
             <ShowToast />
-            <h2 className='text-2xl font-semibold'>Checkout</h2>
-            <div className='flex gap-5 w-full mt-7 '>
-                <div className='w-[70%] '>
+            <h2 className='text-2xl font-semibold lg:ms-0 ms-3'>Checkout</h2>
+            <div className='block lg:flex gap-5 w-full mt-7 '>
+                <div className='w-full lg:w-[70%] '>
                     {/* payment method */}
                     <div className='bg-white shadow-md rounded-md px-4 py-4'>
                         <p className='text-lg font-semibold'>Payment Method</p>
 
-                        <div className='flex items-center justify-between border-2 p-4 border-gray-200 rounded-lg mt-5 '>
+                        <div className='lg:flex items-center justify-between border-2 p-4 border-gray-200 rounded-lg mt-5 '>
                             <div className=' '>
                                 <label className='flex  items-center gap-2'>
                                     <input className='w-5 h-5' type={'radio'} value={'cash on delivery'} checked={selected === 'cash on delivery'} onChange={(e) => setSelected(e.target.value)} />
@@ -126,11 +128,11 @@ const Checkout = () => {
                                 }
                             </div>
 
-                            <p className='text-yellow-500  text-lg'>No Extra Charges</p>
+                            <p className='text-yellow-500  text-lg  lg:text-start text-center'>No Extra Charges</p>
 
                         </div>
 
-                        <div className='flex items-center justify-between border-2 p-4 border-gray-200 rounded-lg  mt-5 '>
+                        <div className='lg:flex items-center justify-between border-2 p-4 border-gray-200 rounded-lg  mt-5 '>
                             <div className=''>
                                 <label className='flex items-center gap-2'>
                                     <input className='w-5 h-5' type={'radio'} value={'online'} checked={selected === 'online'} onChange={(e) => setSelected(e.target.value)} />
@@ -144,7 +146,7 @@ const Checkout = () => {
                                     selected === 'online' && <p className='ms-6  border-[1px] border-blue-500 rounded-lg flex gap-1 text-blue-600 bg-blue-100 my-3 py-2 px-3'> <AlertCircle color='white' fill=' rgb(29 78 216 )' /> You will be redirected to secure payment gateway to complete your payment</p>
                                 }
                             </div>
-                            <p className='text-yellow-500  text-lg'>Recommended</p>
+                            <p className='text-yellow-500  text-lg lg:text-start text-center  mt-3 lg:mt-0'>Recommended</p>
 
                         </div>
                     </div>
@@ -187,7 +189,7 @@ const Checkout = () => {
 
                 </div>
 
-                <div className='w-[30%]'>
+                <div className='w-full lg:w-[30%]'>
                     <div className='bg-white p-5'>
                         <p className='font-semibold text-xl mb-3'>Order Summary</p>
                         <div>
